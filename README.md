@@ -1,73 +1,134 @@
-# React + TypeScript + Vite
+# Enicar Chronicle Presentation Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interactive storytelling website built with **React + Vite** to present the history and products of the Enicar watch brand.
 
-Currently, two official plugins are available:
+This project initially **clones the structure and interaction style** of the Omega Chronicle website(https://www.omegawatches.com/chronicle/), then replaces content with Enicar-specific materials (images, history timeline, products).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Goal: Create a **designer-friendly presentation website -> clone https://www.omegawatches.com/chronicle/** with animations, timeline storytelling, and responsive UI.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+Frontend
+- React
+- Vite
+- TypeScript
+- TailwindCSS
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Animation
+- Framer Motion
+- GSAP (optional for timeline)
+- ScrollTrigger
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Assets
+- Local images / video
+- Designer-provided assets
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Tools
+- Antigravity
+- Claude (UIUX Promax skill)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# Project Structure
+src/
+components/
+HeroSection/
+Timeline/
+ProductShowcase/
+Gallery/
+Contact/
+ui/
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+pages/
+Home
+Timeline
+Products
+ProviderLink
+Contact
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+data/
+timelineData.ts
+productsData.ts
+
+assets/
+images/
+videos/
+
+styles/
+
+
+
+---
+
+# Development Setup
+
+## Install
+
+
+Open:
+
+http://localhost:5173
+Design Strategy
+
+The site is divided into 5 main sections:
+
+Introduction
+
+Timeline Story
+
+Product Showcase
+
+Provider Link Page
+
+Contact Page
+
+Focus: scroll storytelling + animation
+
+Key UI Features
+
+Scroll-driven storytelling
+
+Timeline animation
+
+Fade / pop animations
+
+Video playback
+
+Responsive design
+
+Designer-friendly content replacement
+
+Content Replacement Workflow
+
+Designer will provide:
+
+Images
+
+Text
+
+Product highlights
+
+Timeline events
+
+Video
+
+These assets go into:
+
+src/assets/
+src/data/
+Timeline Implementation
+
+The timeline uses:
+
+vertical scroll
+→ event reveal
+→ image transitions
+→ animated progress indicator
+
+Recommended libraries:
+
+framer-motion
+
+GSAP ScrollTrigger
