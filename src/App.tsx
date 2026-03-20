@@ -12,7 +12,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <main className="bg-charcoal min-h-screen text-ivory">
+    <main className="bg-white min-h-screen text-black">
       <AnimatePresence mode="wait">
         {isLoading && (
           <Preloader key="loader" onComplete={() => setIsLoading(false)} />
