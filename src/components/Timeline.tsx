@@ -19,8 +19,10 @@ const YearCounter = ({ targetYear }: YearCounterProps) => {
       const elapsed = now - startTime;
       const progress = Math.min(elapsed / duration, 1);
       const easeProgress = 1 - Math.pow(1 - progress, 3);
-      
-      const current = Math.floor(startValue + (endValue - startValue) * easeProgress);
+
+      const current = Math.floor(
+        startValue + (endValue - startValue) * easeProgress,
+      );
       setDisplayYear(current.toString());
 
       if (progress < 1) {
@@ -48,18 +50,18 @@ export const Timeline = () => {
   });
 
   const getImagePath = (path: string | undefined) => {
-  if (!path) return '';
-  return `/images/Timeline/${path
-    .replace(/\\/g, '/')
-    .split('/')
-    .map(segment => encodeURIComponent(segment))
-    .join('/')}`;
-};
+    if (!path) return "";
+    return `/images/Timeline/${path
+      .replace(/\\/g, "/")
+      .split("/")
+      .map((segment) => encodeURIComponent(segment))
+      .join("/")}`;
+  };
 
   const handleScrollTo = (id: number) => {
     const element = document.getElementById(`year-${id}`);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      element.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   };
 
@@ -73,7 +75,7 @@ export const Timeline = () => {
       <div className="absolute left-[30px] md:left-1/2 top-0 bottom-0 w-[2px] bg-red/5 -translate-x-1/2 z-0 hidden md:block">
         <motion.div
           style={{ scaleY, originY: 0 }}
-          className="w-full h-full bg-red shadow-[0_0_15px_rgba(189,33,38,0.3)]" 
+          className="w-full h-full bg-red shadow-[0_0_15px_rgba(189,33,38,0.3)]"
         />
       </div>
 
@@ -99,8 +101,12 @@ export const Timeline = () => {
             const hasMultipleImages = item.images.length > 1;
             // 65/35 split for asymmetric gallery feel
             const splitPoint = Math.ceil(item.images.length * 0.65);
-            const firstBatch = hasMultipleImages ? item.images.slice(0, splitPoint) : item.images;
-            const secondBatch = hasMultipleImages ? item.images.slice(splitPoint) : [];
+            const firstBatch = hasMultipleImages
+              ? item.images.slice(0, splitPoint)
+              : item.images;
+            const secondBatch = hasMultipleImages
+              ? item.images.slice(splitPoint)
+              : [];
 
             return (
               <motion.div
@@ -175,7 +181,9 @@ export const Timeline = () => {
                 {/* Main Image Side (Batch 1 of images on desktop, ALL on mobile) */}
                 <div className="flex-1 w-full">
                   {/* Container for Desktop (First Batch) */}
-                  <div className={`hidden md:block columns-1 ${hasMultipleImages ? 'sm:columns-2' : ''} gap-4 space-y-4`}>
+                  <div
+                    className={`hidden md:block columns-1 ${hasMultipleImages ? "sm:columns-2" : ""} gap-4 space-y-4`}
+                  >
                     {firstBatch.map((img, imgIndex) => (
                       <motion.div
                         key={`desktop-${img}`}
@@ -215,10 +223,12 @@ export const Timeline = () => {
                       </motion.div>
                     ))}
                   </div>
-                  
+
                   {item.images.length === 0 && (
                     <div className="aspect-video bg-red/5 rounded-3xl flex items-center justify-center border border-red/10">
-                      <span className="text-red/10 font-serif text-4xl italic">{item.year}</span>
+                      <span className="text-red/10 font-serif text-4xl italic">
+                        {item.year}
+                      </span>
                     </div>
                   )}
                 </div>
@@ -231,11 +241,11 @@ export const Timeline = () => {
       {/* Fixed Navigation Scrubber (Horizontal Bar) */}
       <div className="fixed bottom-0 left-0 right-0 z-50">
         {/* Progress Bar Top Edge */}
-        <motion.div 
+        <motion.div
           className="h-[2px] bg-red shadow-[0_0_10px_rgba(189,33,38,0.5)]"
           style={{ scaleX: scrollYProgress, transformOrigin: "0%" }}
         />
-        
+
         <nav className="h-24 bg-white/95 backdrop-blur-sm border-t border-black/5 px-4 md:px-12 flex items-center overflow-x-auto no-scrollbar">
           <div className="flex items-center gap-12 md:gap-24 min-w-max mx-auto h-full">
             {timelineData.map((item) => (
