@@ -70,3 +70,14 @@
   font-family: "Yellowtail";
   src: url("/font/Yellowtail/Yellowtail-Regular.ttf") format("truetype");
 }
+
+/* Utility to hide scrollbar but allow scrolling */
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
