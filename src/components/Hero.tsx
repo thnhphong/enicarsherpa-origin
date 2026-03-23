@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { ArrowDown } from "lucide-react";
 
 export const Hero = () => {
   return (
@@ -56,26 +55,6 @@ export const Hero = () => {
           A legacy of Swiss precision and exploration. Discover the storied
           history of the watches that conquered Everest and mastered the depths.
         </motion.p>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2, duration: 1 }}
-          className="flex flex-col items-center pt-16 gap-4"
-        >
-          <a
-            href="#timeline"
-            className="group flex flex-col items-center gap-4 text-black/40 hover:text-red transition-all duration-300"
-          >
-            <span className="text-3xl uppercase tracking-[0.3em] group-hover:tracking-[0.5em] transition-all duration-500 font-eurostile-black">
-              Explore the Story
-            </span>
-            <div className="p-3 rounded-full border border-black/10 group-hover:border-red group-hover:bg-red/5 transition-all duration-300 shadow-sm group-hover:shadow-[0_0_15px_rgba(237,32,36,0.2)]">
-              <ArrowDown className="w-5 h-5 md:w-6 md:h-6 animate-bounce" />
-            </div>
-          </a>
-        </motion.div>
       </div>
 
       {/* Decorative Background Elements - Made more visible */}

@@ -1,9 +1,10 @@
 import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Introduction } from './components/Introduction';
-import { Timeline } from './components/Timeline';
+import { InteractiveMap } from './components/InteractiveMap';
 import { ProductShowcase } from './components/ProductShowcase';
 import { ProviderContact } from './components/ProviderContact';
 import { Preloader } from './components/Preloader';
@@ -20,14 +21,18 @@ function App() {
       </AnimatePresence>
 
       {!isLoading && (
-        <>
-          <Navbar />
-          <Hero />
-          <Introduction />
-          <Timeline />
-          <ProductShowcase />
-          <ProviderContact />
-        </>
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Navbar />
+              <Hero />
+              <Introduction />
+              <ProductShowcase />
+              <ProviderContact />
+            </>
+          } />
+          <Route path="/phase/:phaseId" element={<InteractiveMap />} />
+        </Routes>
       )}
     </main>
   );

@@ -1,0 +1,419 @@
+export interface GlobeEvent {
+  id: number;
+  year: string;
+  month?: string;
+  title: string;
+  location: string;
+  country: string;
+  lat: number;
+  lng: number;
+  description: string;
+  images: string[];
+  products: string[];
+}
+
+export const globeEventsData: GlobeEvent[] = [
+  {
+    "id": 1,
+    "year": "1955",
+    "title": "Launch of the Sea Pearl 600",
+    "description": "After Enicar registered the Sea Pearl 600 trademark in 1953, the model was introduced in 1955, pioneering the dive watch category and becoming one of the first Enicar models to adopt the innovative Super Compressor case designed by Ervin Piquerez S.A. (EPSA).",
+    "images": [
+      "1955 Launch of Sea Pearl 600/sea pearl 600 ads.webp",
+      "1955 Launch of Sea Pearl 600/sea pearl thermograph ads.webp"
+    ],
+    "lat": 47.1812,
+    "lng": 7.351,
+    "location": "Lengnau",
+    "country": "Switzerland",
+    "products": []
+  },
+  {
+    "id": 2,
+    "year": "1956",
+    "month": "March 3rd - May 23rd",
+    "title": "Conquering the Himalayas",
+    "description": "In 1956, a Swiss mountaineering expedition led by Dr. Albert Eggler successfully summited both Mount Everest and Mount Lhotse while equipped with Enicar Sea Pearl watches. To honor the Sherpa guides who made the ascent possible, Enicar later rebranded their durable explorer watch line under the name 'Sherpas'.",
+    "images": [
+      "March 3rd - May 23rd 1956 Lhotse and Everest/seapearladslhotse.webp",
+      "March 3rd - May 23rd 1956 Lhotse and Everest/066_Everest_1956.webp",
+      "March 3rd - May 23rd 1956 Lhotse and Everest/082_Everest_1956.webp"
+    ],
+    "lat": 28.5983,
+    "lng": 83.931,
+    "location": "Himalaya",
+    "country": "Nepal",
+    "products": []
+  },
+  {
+    "id": 3,
+    "year": "1957",
+    "title": "Signing the Giant",
+    "description": "In 1957 Enicar signed renowned British racing driver Stirling Moss as a brand ambassador and equipped him with the Ultrasonic Sherpa model proven during the Himalayan expeditions.",
+    "images": [
+      "1957 Sitrling Moss ambassador/img20260311_22464922.webp",
+      "1957 Sitrling Moss ambassador/img20260309_21501591.webp",
+      "1957 Sitrling Moss ambassador/img20260311_224419431.webp"
+    ],
+    "lat": 51.5074,
+    "lng": -0.1278,
+    "location": "London",
+    "country": "UK",
+    "products": []
+  },
+  {
+    "id": 4,
+    "year": "1957",
+    "month": "April 20 - July 1",
+    "title": "Sailing the Atlantic Ocean",
+    "description": "To demonstrate the durability of the Ultrasonic Sherpa watches, Enicar attached one to the keel of the Mayflower II ship during a 51-day voyage across the Atlantic from Plymouth to New York.",
+    "images": [
+      "April 20th - July 1st April Mayflower II/img20260309_19410032.webp",
+      "April 20th - July 1st April Mayflower II/img20260309_19433011.webp",
+      "April 20th - July 1st April Mayflower II/img20260309_194330111.webp"
+    ],
+    "lat": 50.3755,
+    "lng": -4.1427,
+    "location": "Plymouth",
+    "country": "UK",
+    "products": []
+  },
+  {
+    "id": 5,
+    "year": "1957",
+    "title": "Diving Deeper",
+    "description": "Austrian biologist and diving pioneer Dr. Hans Hass tested six Sherpa dive watches during the 1957–1958 Xarifa Expedition at depths of up to 600 feet.",
+    "images": [
+      "1957 Dr. Hans Hass ambassador/img20260310_01352718.webp",
+      "1957 Dr. Hans Hass ambassador/hans hass 1.webp"
+    ],
+    "lat": 12.1696,
+    "lng": -68.99,
+    "location": "Caribbean Sea",
+    "country": "Caribbean",
+    "products": []
+  },
+  {
+    "id": 6,
+    "year": "1957-1958",
+    "month": "December 1957 - January 1958",
+    "title": "Climbing Mt. Kenya",
+    "description": "Geologist Dr. Igor Loupekine led an expedition to Mount Kenya using Sherpa Ultrasonic watches, which maintained perfect accuracy despite extreme environmental changes.",
+    "images": [
+      "December 1957 - January 1958 Mt. Kenya/kenya 1.webp",
+      "December 1957 - January 1958 Mt. Kenya/kenya 3.webp",
+      "December 1957 - January 1958 Mt. Kenya/kenya 2.webp"
+    ],
+    "lat": -0.1521,
+    "lng": 37.3084,
+    "location": "Mt. Kenya",
+    "country": "Kenya",
+    "products": []
+  },
+  {
+    "id": 7,
+    "year": "1957-1958",
+    "title": "Discovering Spitzbergen",
+    "description": "An international scientific expedition led by Professor Jean-Frederic Lugeon used Sherpa chronometers during an 18-month Arctic research mission.",
+    "images": [
+      "July 1st 1957 - December 31s 1958 Spitzbergen/img20260310_21125802.webp",
+      "July 1st 1957 - December 31s 1958 Spitzbergen/img20260310_21190767.webp",
+      "July 1st 1957 - December 31s 1958 Spitzbergen/img20260310_21235236.webp"
+    ],
+    "lat": 78.2232,
+    "lng": 15.6267,
+    "location": "Spitzbergen",
+    "country": "Norway",
+    "products": []
+  },
+  {
+    "id": 8,
+    "year": "1958",
+    "title": "Japanese Antarctic Expeditions",
+    "description": "Beginning in 1958, Japanese Antarctic Observation Teams relied on Enicar Sherpa watches during their missions at Showa Station in extreme polar conditions.",
+    "images": [
+      "1958 Japanese Antarctic Observation Team/img20260310_21514938.webp",
+      "1958 Japanese Antarctic Observation Team/img20260310_194619461.webp"
+    ],
+    "lat": -90,
+    "lng": 0,
+    "location": "South Pole",
+    "country": "Antarctica",
+    "products": []
+  },
+  {
+    "id": 9,
+    "year": "1958",
+    "title": "U.S. Navy Dive Watch Testing",
+    "description": "The U.S. Navy Experimental Diving Unit tested the Enicar Sea Pearl 600 alongside other dive watches and confirmed its reliability under demanding conditions.",
+    "images": [
+      "1958 US Navy Testing/img20260310_01412534.webp"
+    ],
+    "lat": 38.8951,
+    "lng": -77.0364,
+    "location": "Washington D.C.",
+    "country": "USA",
+    "products": []
+  },
+  {
+    "id": 10,
+    "year": "1958",
+    "title": "From Great to Greatest",
+    "description": "Tennis legend Ken Rosewall joined Enicar’s roster of sporting ambassadors after his victory at the 1958 French Professional Championships.",
+    "images": [
+      "1958 Ken Rosewall ambassador/img20260310_00141886.webp",
+      "1958 Ken Rosewall ambassador/img20260310_001418861.webp"
+    ],
+    "lat": -33.8688,
+    "lng": 151.2093,
+    "location": "Sydney",
+    "country": "Australia",
+    "products": []
+  },
+  {
+    "id": 11,
+    "year": "1960",
+    "month": "April 23 - May 3",
+    "title": "Extending the Sherpa Line",
+    "description": "At the 1960 Basel Watch Fair, Enicar introduced multiple new Sherpa models designed for world travelers and aviation professionals.",
+    "images": [
+      "April 23rd - May 3rd 1960 Introduce 5 New Models/img20260310_01590342.webp",
+      "April 23rd - May 3rd 1960 Introduce 5 New Models/img20260310_014703312.webp",
+      "April 23rd - May 3rd 1960 Introduce 5 New Models/img20260310_02121188.webp",
+      "April 23rd - May 3rd 1960 Introduce 5 New Models/img20260310_021211881.webp"
+    ],
+    "lat": 47.5596,
+    "lng": 7.5886,
+    "location": "Basel",
+    "country": "Switzerland",
+    "products": []
+  },
+  {
+    "id": 12,
+    "year": "1960",
+    "title": "One of a Kind",
+    "description": "Formula One driver Jim Clark famously wore the Enicar Sherpa Graph chronograph shortly after its release.",
+    "images": [
+      "1960 Jim Clark ambassdor/img20260311_14135339.webp",
+      "1960 Jim Clark ambassdor/hillandcalrk.webp",
+      "1960 Jim Clark ambassdor/ads.webp"
+    ],
+    "lat": 55.9533,
+    "lng": -3.1883,
+    "location": "Scotland",
+    "country": "UK",
+    "products": []
+  },
+  {
+    "id": 13,
+    "year": "1961",
+    "title": "Searching for the Legend",
+    "description": "Divers recovering the historic Swedish warship Vasa relied on Enicar Sherpa Dive watches during the complex salvage operation.",
+    "images": [
+      "1961 Vasa Salvage/img20260310_00571623.webp",
+      "1961 Vasa Salvage/vasa1.webp",
+      "1961 Vasa Salvage/vasa3.webp"
+    ],
+    "lat": 59.3293,
+    "lng": 18.0686,
+    "location": "Stockholm",
+    "country": "Sweden",
+    "products": []
+  },
+  {
+    "id": 14,
+    "year": "1961",
+    "title": "Challenging Mt. McKinley",
+    "description": "Swiss mountaineer Dölf Reist tested his Enicar Sherpa watch during a challenging expedition to Mount McKinley.",
+    "images": [
+      "1961 Mt McKinley/DolfReist.webp"
+    ],
+    "lat": 63.0692,
+    "lng": -151.007,
+    "location": "Mt. McKinley",
+    "country": "USA",
+    "products": []
+  },
+  {
+    "id": 15,
+    "year": "1961",
+    "title": "Electrified",
+    "description": "Enicar introduced the Sherpa Electric powered by the Landeron 4750 electro-mechanical movement.",
+    "images": [
+      "1961 Sherpa Electric/img20260310_02155390.webp",
+      "1961 Sherpa Electric/img20260310_021553902.webp"
+    ],
+    "lat": 47.1812,
+    "lng": 7.351,
+    "location": "Lengnau",
+    "country": "Switzerland",
+    "products": []
+  },
+  {
+    "id": 16,
+    "year": "1963",
+    "month": "January 26",
+    "title": "Ski Test",
+    "description": "A Sherpa watch endured a 120-hour endurance test during an Austrian ski expedition.",
+    "images": [
+      "1963 Ski Test/brochure.webp",
+      "1963 Ski Test/img20260309_20170083.webp"
+    ],
+    "lat": 47.4917,
+    "lng": 10.9848,
+    "location": "Alps",
+    "country": "Austria",
+    "products": []
+  },
+  {
+    "id": 17,
+    "year": "1964",
+    "title": "Olympic Rifle Shooting",
+    "description": "Enicar collaborated with Swiss shooting captain Ludwig Hemauer to create the Enicar-Schützenuhr chronograph for the 1964 Tokyo Olympics.",
+    "images": [
+      "1964 Olympic Rifle Shooting/img20260310_00205000.webp",
+      "1964 Olympic Rifle Shooting/images.webp"
+    ],
+    "lat": 35.6762,
+    "lng": 139.6503,
+    "location": "Tokyo",
+    "country": "Japan",
+    "products": []
+  },
+  {
+    "id": 18,
+    "year": "1964",
+    "title": "Taking It Higher",
+    "description": "Enicar became an official chronometer supplier for airlines such as Swissair and Japan Airlines.",
+    "images": [
+      "1964 Supplier for major carriers/cockpit.webp",
+      "1964 Supplier for major carriers/swissair.webp"
+    ],
+    "lat": 47.4582,
+    "lng": 8.5555,
+    "location": "Zurich",
+    "country": "Switzerland",
+    "products": []
+  },
+  {
+    "id": 19,
+    "year": "1965",
+    "title": "Spearfishing World Champion",
+    "description": "The 7th World Spearfishing Championships in Tahiti showcased the sport’s reliance on precise timing and endurance.",
+    "images": [
+      "1965 Spearfishing Champions/-1965-french-polynesia-spearfishing-postage-stamp-retro-graphics.webp",
+      "1965 Spearfishing Champions/img20260313_10030873.webp"
+    ],
+    "lat": -17.6509,
+    "lng": -149.426,
+    "location": "Tahiti",
+    "country": "French Polynesia",
+    "products": []
+  },
+  {
+    "id": 20,
+    "year": "1965",
+    "title": "A Rising Star",
+    "description": "Enicar launched the Sherpa Star line featuring a distinct dial design and sapphire glass.",
+    "images": [
+      "1965 Spearfishing Champions/-1965-french-polynesia-spearfishing-postage-stamp-retro-graphics.webp",
+      "1965 Spearfishing Champions/img20260313_10030873.webp"
+    ],
+    "lat": 47.1812,
+    "lng": 7.351,
+    "location": "Lengnau",
+    "country": "Switzerland",
+    "products": []
+  },
+  {
+    "id": 21,
+    "year": "1967",
+    "title": "Fueling the Engine",
+    "description": "Swiss rally driver Siegfried Zwimpfer partnered with Enicar during the 1967 racing season.",
+    "images": [
+      "1967 Siegfried Zwimpfer ambassador/img20260309_22410420.webp",
+      "1967 Siegfried Zwimpfer ambassador/img20260309_22432889.webp",
+      "1967 Siegfried Zwimpfer ambassador/img20260311_23193311.webp",
+      "1967 Siegfried Zwimpfer ambassador/ads.webp"
+    ],
+    "lat": 46.8182,
+    "lng": 8.2275,
+    "location": "Switzerland",
+    "country": "Switzerland",
+    "products": []
+  },
+  {
+    "id": 22,
+    "year": "1967",
+    "title": "Enicar - Tigra Cycling Team",
+    "description": "Enicar sponsored the ENICAR-TIGRA professional cycling team to promote endurance sports.",
+    "images": [
+      "1967 Enicar Tigra cycling team/img20260310_000052422.webp",
+      "1967 Enicar Tigra cycling team/img20260310_000052421.webp"
+    ],
+    "lat": 47.3769,
+    "lng": 8.5417,
+    "location": "Zurich",
+    "country": "Switzerland",
+    "products": []
+  },
+  {
+    "id": 23,
+    "year": "1969",
+    "title": "Revisiting the Himalayas",
+    "description": "Dr. Georges Hartmann’s scientific expedition to Tukuche Peak used Sherpa watches for high-altitude research.",
+    "images": [
+      "1969 2nd Himalaya Expedition/69 himalaya.webp"
+    ],
+    "lat": 28.5983,
+    "lng": 83.931,
+    "location": "Tukuche Peak",
+    "country": "Nepal",
+    "products": []
+  },
+  {
+    "id": 24,
+    "year": "1971",
+    "title": "Finding the Mary Rose",
+    "description": "Divers discovered the wreck of Henry VIII’s warship Mary Rose using Enicar Sherpa dive watches.",
+    "images": [
+      "1971 Mary Rose Salvage/img20260310_00280774.webp"
+    ],
+    "lat": 50.713,
+    "lng": -1.3005,
+    "location": "Solent",
+    "country": "UK",
+    "products": []
+  },
+  {
+    "id": 25,
+    "year": "1971",
+    "title": "Taking the Chance",
+    "description": "Enicar served as official timekeeper for major sporting events including the cycling race 'À travers Lausanne'.",
+    "images": [
+      "1971 Eddy Merckx - A travers Lausanne/effort-eddy-merckx.webp",
+      "1971 Eddy Merckx - A travers Lausanne/img20260310_00035777.webp"
+    ],
+    "lat": 46.5197,
+    "lng": 6.6323,
+    "location": "Lausanne",
+    "country": "Switzerland",
+    "products": []
+  },
+  {
+    "id": 26,
+    "year": "1977-1987",
+    "title": "The Downfall of Enicar",
+    "description": "The Quartz Crisis devastated the traditional Swiss watch industry, eventually leading Enicar to bankruptcy in 1987.",
+    "images": [
+      "1977-1987 Downfall/machine selling.webp",
+      "1977-1987 Downfall/bankrupcy.webp",
+      "1977-1987 Downfall/end of production.webp"
+    ],
+    "lat": 47.1812,
+    "lng": 7.351,
+    "location": "Lengnau",
+    "country": "Switzerland",
+    "products": []
+  }
+];
