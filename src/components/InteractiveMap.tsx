@@ -70,6 +70,7 @@ export const InteractiveMap = () => {
   const [activeEventId, setActiveEventId] = useState<number | null>(null);
   const [showOverlayId, setShowOverlayId] = useState<number | null>(null);
   const [hoveredTimelineId, setHoveredTimelineId] = useState<number | null>(null);
+  const [isGlobeLoaded, setIsGlobeLoaded] = useState(false);
 
 
 
@@ -132,10 +133,54 @@ export const InteractiveMap = () => {
             setShowOverlayId(null);
           }, [])}
           onFocusComplete={useCallback((id: number) => setShowOverlayId(id), [])}
+          onLoaded={useCallback(() => setIsGlobeLoaded(true), [])}
         />
-
-
       </div>
+
+      {/* Cinematic Loading Overlay */}
+      <AnimatePresence>
+        {!isGlobeLoaded && (
+          <motion.div
+            key="globe-loading-overlay"
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
+            className="absolute inset-0 z-[200] flex flex-col items-center justify-center bg-zinc-950 backdrop-blur-xl"
+          >
+            <div className="flex flex-col items-center gap-10">
+              <div className="relative w-24 h-24">
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                  className="absolute inset-0 border-t-2 border-r-2 border-white/20 rounded-full"
+                />
+                <motion.div
+                  animate={{ rotate: -360 }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                  className="absolute inset-2 border-b-2 border-l-2 border-red/60 rounded-full"
+                />
+                <motion.div
+                  animate={{ scale: [0.8, 1.2, 0.8], opacity: [0.5, 1, 0.5] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute inset-[38%] bg-white rounded-full shadow-[0_0_15px_rgba(255,255,255,0.8)]"
+                />
+              </div>
+              <motion.div 
+                animate={{ opacity: [0.5, 1, 0.5] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                className="flex flex-col items-center gap-2"
+              >
+                <div className="text-white tracking-[0.4em] text-sm md:text-base font-eurostile-black uppercase">
+                  Initializing the Chronicle
+                </div>
+                <div className="text-white/40 tracking-[0.2em] text-[10px] md:text-xs">
+                  Loading Global Interface
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
 
       {/* Top Navigation */}

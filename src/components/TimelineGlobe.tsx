@@ -16,6 +16,7 @@ interface TimelineGlobeProps {
   activeEventId: number | null;
   onMarkerClick?: (id: number) => void;
   onFocusComplete?: (id: number) => void;
+  onLoaded?: () => void;
 }
 
 
@@ -35,7 +36,7 @@ function getPos(lat: number, lng: number, radius: number) {
 }
 
 // Particle Globe Component
-const ParticleGlobe = () => {
+const ParticleGlobe = ({ onLoaded }: { onLoaded?: () => void }) => {
   const [positions, setPositions] = useState<Float32Array | null>(null);
 
   useEffect(() => {
@@ -75,8 +76,9 @@ const ParticleGlobe = () => {
         }
       }
       setPositions(new Float32Array(pts));
+      onLoaded?.();
     };
-  }, []);
+  }, [onLoaded]);
 
   const geometry = useMemo(() => {
     if (!positions) return null;
@@ -206,7 +208,7 @@ const Markers = ({
 
 
 // Main Component
-export const TimelineGlobe = ({ events, activeEventId, onMarkerClick, onFocusComplete }: TimelineGlobeProps) => {
+export const TimelineGlobe = ({ events, activeEventId, onMarkerClick, onFocusComplete, onLoaded }: TimelineGlobeProps) => {
 
   const controlsRef = useRef<OrbitControlsImpl>(null);
 
@@ -258,7 +260,7 @@ export const TimelineGlobe = ({ events, activeEventId, onMarkerClick, onFocusCom
 
 
         <group>
-          <ParticleGlobe />
+          <ParticleGlobe onLoaded={onLoaded} />
           <Markers events={events} activeEventId={activeEventId} onMarkerClick={onMarkerClick} />
         </group>
 
