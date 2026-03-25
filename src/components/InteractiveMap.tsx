@@ -223,7 +223,7 @@ export const InteractiveMap = () => {
           key={`title-${currentPhaseId}`}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-5xl md:text-7xl font-eurostile-black font-bold italic tracking-tighter"
+          className="text-5xl md:text-7xl font-script  italic tracking-wide"
         >
           {currentPhase.title}
         </motion.h1>
@@ -254,7 +254,7 @@ export const InteractiveMap = () => {
                       exit={{ opacity: 0, y: 10, scale: 0.9 }}
                       className="absolute bottom-full left-1/2 -translate-x-1/2 mb-10 w-64 bg-black/95 backdrop-blur-xl rounded-lg p-5 z-[100] pointer-events-none shadow-[0_20px_50px_rgba(0,0,0,1)] text-center ring-1 ring-white/10"
                     >
-                      <div className="text-sm md:text-base font-eurostile-black  leading-tight text-white tracking-wide">
+                      <div className="text-sm md:text-base font-eurostile-black leading-tight text-white tracking-wide">
                         {event.title}
                       </div>
                       {/* Tooltip triangle */}
@@ -332,14 +332,14 @@ export const InteractiveMap = () => {
                 <div className="inline-block px-4 py-1.5 border border-red/50 rounded-full text-red font-eurostile-black tracking-widest text-sm uppercase">
                   {activeOverlayEvent.year}
                 </div>
-                <h2 className="text-5xl md:text-7xl font-serif font-bold leading-tight">
+                <h2 className="text-5xl md:text-7xl font-eurostile-black font-bold leading-tight">
                   {activeOverlayEvent.title}
                 </h2>
                 <p className="text-xl md:text-2xl font-light text-white/70 leading-relaxed">
                   {activeOverlayEvent.description}
                 </p>
                 {activeOverlayEvent.month && (
-                  <p className="text-sm text-white/40 tracking-widest uppercase font-bold">
+                  <p className="text-sm text-red   tracking-widest uppercase font-bold">
                     Date: {activeOverlayEvent.month}
                   </p>
                 )}
