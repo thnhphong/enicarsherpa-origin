@@ -38,7 +38,7 @@
     @apply bg-white;
   }
   ::-webkit-scrollbar-thumb {
-    @apply bg-cyan/50 rounded-full hover:bg-cyan;
+    @apply bg-red rounded-full hover:bg-red;
   }
 }
 
@@ -73,6 +73,14 @@
 
 /* Utility to hide scrollbar but allow scrolling */
 @layer utilities {
+  .safe-top-pad {
+    padding-top: calc(env(safe-area-inset-top) + 0.75rem);
+  }
+
+  .safe-bottom-pad {
+    padding-bottom: calc(env(safe-area-inset-bottom) + 0.75rem);
+  }
+
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
