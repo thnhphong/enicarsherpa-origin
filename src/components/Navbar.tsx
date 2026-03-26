@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "/logos/Logo BIGG@4x.png";
 
 const navLinks = [
-  { name: "Introduction", href: "#intro" },
-  { name: "Timeline", href: "#timeline" },
-  { name: "Products", href: "#products" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "Introduction", href: "/#intro" },
+  { name: "Timeline", href: "/phase/1" },
+  { name: "Products", href: "/products#products" },
+  { name: "Contact", href: "/products#contact" },
 ];
 
 export const Navbar = () => {
@@ -26,16 +28,19 @@ export const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-10">
           {navLinks.map((link, i) => (
-            <motion.a
+            <motion.div
               key={link.name}
-              href={link.href}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * i }}
-              className="text-2xl font-eurostile tracking-wide hover:text-red transition-colors duration-300"
             >
-              {link.name}
-            </motion.a>
+              <Link
+                to={link.href}
+                className="text-2xl font-eurostile tracking-wide hover:text-red transition-colors duration-300"
+              >
+                {link.name}
+              </Link>
+            </motion.div>
           ))}
         </div>
 
@@ -54,14 +59,14 @@ export const Navbar = () => {
           className="md:hidden bg-white border-b border-black/10 px-6 py-6 space-y-4"
         >
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
-              href={link.href}
+              to={link.href}
               onClick={() => setIsOpen(false)}
               className="block text-lg hover:text-cyan transition-colors"
             >
               {link.name}
-            </a>
+            </Link>
           ))}
         </motion.div>
       )}

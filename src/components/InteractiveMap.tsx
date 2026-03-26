@@ -1,11 +1,16 @@
-import { useState, useMemo, useCallback, useRef, useEffect } from "react";
+import { Suspense, lazy, useState, useMemo, useCallback, useRef, useEffect } from "react";
 
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, Home } from "lucide-react";
-import { TimelineGlobe } from "./TimelineGlobe";
 import type { GlobeEventData } from "./TimelineGlobe";
 import timelineData from "../Timeline.json";
+
+const TimelineGlobe = lazy(() =>
+  import("./TimelineGlobe").then((module) => ({
+    default: module.TimelineGlobe,
+  })),
+);
 
 const ALL_LOCATIONS: Record<
   number,
@@ -220,19 +225,21 @@ export const InteractiveMap = () => {
       <div
         className={`absolute inset-0 transition-all duration-1000 ${showOverlayId ? "blur-xl opacity-30 scale-105" : "blur-0 opacity-100 scale-100"}`}
       >
-        <TimelineGlobe
-          events={globeEvents}
-          activeEventId={activeEventId}
-          onMarkerClick={useCallback((id: number) => {
-            setActiveEventId(id);
-            setShowOverlayId(null);
-          }, [])}
-          onFocusComplete={useCallback(
-            (id: number) => setShowOverlayId(id),
-            [],
-          )}
-          onLoaded={useCallback(() => setIsGlobeLoaded(true), [])}
-        />
+        <Suspense fallback={null}>
+          <TimelineGlobe
+            events={globeEvents}
+            activeEventId={activeEventId}
+            onMarkerClick={useCallback((id: number) => {
+              setActiveEventId(id);
+              setShowOverlayId(null);
+            }, [])}
+            onFocusComplete={useCallback(
+              (id: number) => setShowOverlayId(id),
+              [],
+            )}
+            onLoaded={useCallback(() => setIsGlobeLoaded(true), [])}
+          />
+        </Suspense>
       </div>
 
       {/* Top gradient vignette */}
