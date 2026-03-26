@@ -82,11 +82,11 @@ export const Introduction = () => {
                 <div className="w-16 h-16 bg-black/[0.03] flex items-center justify-center rounded-2xl mb-8 group-hover:bg-red group-hover:text-white group-hover:scale-110 transition-all duration-500 border border-black/[0.05]">
                   {section.icon}
                 </div>
-                
+
                 <h3 className="text-3xl font-serif font-bold mb-6 group-hover:text-red transition-colors duration-500">
                   {section.title}
                 </h3>
-                
+
                 <p className="text-gray-500/80 font-light leading-relaxed text-lg mb-8 flex-grow">
                   {section.description}
                 </p>
@@ -103,33 +103,41 @@ export const Introduction = () => {
                   ))}
                 </ul>
 
-                <motion.div 
-                    initial={{ opacity: 0 }}
-                    whileHover={{ opacity: 1, x: 5 }}
-                    className="mt-8 flex items-center gap-2 text-red text-xs font-bold uppercase tracking-widest cursor-pointer"
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 1, x: 5 }}
+                  className="mt-8 flex items-center gap-2 text-red text-xs font-bold uppercase tracking-widest cursor-pointer"
                 >
-                    Learn More <ChevronRight className="w-4 h-4" />
+                  Learn More <ChevronRight className="w-4 h-4" />
                 </motion.div>
               </div>
             </motion.div>
           ))}
         </div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.5 }}
           className="mt-24 flex justify-center"
         >
-          <Link to="/phase/1" className="group flex items-center gap-4 bg-red text-white px-10 py-5 rounded-full font-serif text-lg hover:bg-black transition-colors duration-500 shadow-xl hover:shadow-[0_10px_40px_rgba(189,33,38,0.4)]">
-            <Globe2 className="w-6 h-6 group-hover:rotate-12 transition-transform duration-500" />
-            <span>Explore Interactive Timeline</span>
-            <ChevronRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-500" />
-          </Link>
+          <motion.div
+            className="bg-transparent"
+            animate={{ y: [0, -16, 0] }}
+            transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
+          >
+            <Link
+              to="/phase/1"
+              className="group flex items-center gap-4 bg-red text-white px-10 py-5 rounded-full font-serif text-lg hover:bg-black transition-colors duration-500 shadow-xl hover:shadow-[0_10px_40px_rgba(189,33,38,0.4)]"
+            >
+              <Globe2 className="w-6 h-6 group-hover:rotate-12 transition-transform duration-500" />
+              <span>Explore Interactive Timeline</span>
+              <ChevronRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-500" />
+            </Link>
+          </motion.div>
         </motion.div>
       </div>
     </section>
   );
 };
-
