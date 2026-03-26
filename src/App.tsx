@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
@@ -9,18 +9,37 @@ import { ProductShowcase } from './components/ProductShowcase';
 import { ProviderContact } from './components/ProviderContact';
 import { Preloader } from './components/Preloader';
 
+interface AppLocationState {
+  replayPreloader?: boolean;
+}
+
 function App() {
+  const location = useLocation();
+  const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(true);
+  const locationState = location.state as AppLocationState | null;
+  const shouldReplayPreloader =
+    location.pathname === '/' && locationState?.replayPreloader === true;
+  const showPreloader = isLoading || shouldReplayPreloader;
+
+  const handlePreloaderComplete = () => {
+    if (shouldReplayPreloader) {
+      navigate('/', { replace: true });
+      return;
+    }
+
+    setIsLoading(false);
+  };
 
   return (
     <main className="bg-white min-h-screen text-black">
       <AnimatePresence mode="wait">
-        {isLoading && (
-          <Preloader key="loader" onComplete={() => setIsLoading(false)} />
+        {showPreloader && (
+          <Preloader key="loader" onComplete={handlePreloaderComplete} />
         )}
       </AnimatePresence>
 
-      {!isLoading && (
+      {!showPreloader && (
         <Routes>
           <Route path="/" element={
             <>

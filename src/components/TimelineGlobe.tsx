@@ -232,22 +232,51 @@ const Markers = ({
 
 // Main Component
 
-const useResponsiveFov = () => {
-  const [fov, setFov] = useState(() => (typeof window !== "undefined" && window.innerWidth < 640 ? 62 : 45));
+interface ResponsiveGlobeSettings {
+  fov: number;
+  autoRotateSpeed: number;
+}
+
+const getResponsiveGlobeSettings = (): ResponsiveGlobeSettings => {
+  if (typeof window === "undefined") {
+    return { fov: 45, autoRotateSpeed: 0.5 };
+  }
+
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+  const isShortViewport = height < 740;
+
+  let fov = 45;
+
+  if (width < 480 || isShortViewport) {
+    fov = 65;
+  } else if (width < 640) {
+    fov = 58;
+  } else if (width < 1024) {
+    fov = 50;
+  }
+
+  return {
+    fov,
+    autoRotateSpeed: width >= 1024 && !isShortViewport ? 0.5 : 0.35,
+  };
+};
+
+const useResponsiveGlobeSettings = () => {
+  const [settings, setSettings] = useState<ResponsiveGlobeSettings>(
+    getResponsiveGlobeSettings,
+  );
 
   useEffect(() => {
-    const updateFov = () => {
-      const w = window.innerWidth;
-      if (w < 480) setFov(65);
-      else if (w < 640) setFov(58);
-      else setFov(45);
-    };
-    updateFov();
-    window.addEventListener("resize", updateFov);
-    return () => window.removeEventListener("resize", updateFov);
+    const updateSettings = () => setSettings(getResponsiveGlobeSettings());
+
+    updateSettings();
+    window.addEventListener("resize", updateSettings);
+
+    return () => window.removeEventListener("resize", updateSettings);
   }, []);
 
-  return fov;
+  return settings;
 };
 
 // Component to sync camera FOV with responsive state
@@ -270,7 +299,7 @@ export const TimelineGlobe = ({
   onLoaded,
 }: TimelineGlobeProps) => {
   const controlsRef = useRef<OrbitControlsImpl>(null);
-  const fov = useResponsiveFov();
+  const { fov, autoRotateSpeed } = useResponsiveGlobeSettings();
 
   useEffect(() => {
     if (controlsRef.current) {
@@ -337,7 +366,7 @@ export const TimelineGlobe = ({
           minDistance={GLOBE_RADIUS * 1.5}
           maxDistance={GLOBE_RADIUS * 4}
           autoRotate={activeEventId === null}
-          autoRotateSpeed={0.5}
+          autoRotateSpeed={autoRotateSpeed}
           enableDamping={true}
           dampingFactor={0.05}
         />
