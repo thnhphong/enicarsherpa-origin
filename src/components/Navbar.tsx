@@ -63,7 +63,7 @@ export const Navbar = () => {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden bg-white border-b border-black/10 px-6 py-6 space-y-4"
+          className="md:hidden bg-white border-b border-black/10 px-6 py-6 space-y-4 text-center"
         >
           {navLinks.map((link) => (
             <Link

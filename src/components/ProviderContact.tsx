@@ -4,8 +4,6 @@ import {
   Mail,
   Phone,
   MapPin,
-  Linkedin,
-  Github,
   Watch,
 } from "lucide-react";
 
@@ -25,7 +23,7 @@ export const ProviderContact = () => {
               <h2 className="text-4xl md:text-5xl font-eurostile-black italic tracking-tight">
                 Thank You
               </h2>
-              <p className="text-xl text-black font-light leading-relaxed">
+              <p className="text-base md:text-lg lg:text-xl text-black font-light leading-relaxed">
                 Our legacy continues through the passion of collectors and
                 explorers. We invite you to explore more of our current
                 collections through our official partner network.
@@ -47,10 +45,10 @@ export const ProviderContact = () => {
 
           <div className="space-y-16">
             <header className="space-y-4">
-              <h2 className="text-3xl md:text-5xl font-serif font-bold italic text-red tracking-tight underline-offset-8 decoration-black underline">
+              <h2 className="text-xl md:text-5xl lg:text-6xl font-serif font-bold italic text-red tracking-tight underline-offset-8 decoration-black underline">
                 Get in Touch
               </h2>
-              <p className="text-black font-light">
+              <p className="text-black font-light text-base md:text-xl lg:text-2xl">
                 For inquiries regarding vintage Enicar models, restoration, or
                 chronicles, please contact our historian network.
               </p>
@@ -62,10 +60,10 @@ export const ProviderContact = () => {
                   <Mail className="w-6 h-6 text-red" />
                 </div>
                 <div className="space-y-1">
-                  <span className="text-black text-xs uppercase tracking-widest font-semibold block">
+                  <span className="text-black text-sm md:text-base lg:text-lg uppercase tracking-widest font-semibold block">
                     Email
                   </span>
-                  <p className="text-xl font-light hover:text-cyan transition-colors underline-offset-4 decoration-cyan/20">
+                  <p className="text-sm md:text-base lg:text-lg font-light hover:text-cyan transition-colors underline-offset-4 decoration-cyan/20">
                     chronicle@enicar-vintage.com
                   </p>
                 </div>
@@ -76,10 +74,10 @@ export const ProviderContact = () => {
                   <Phone className="w-6 h-6 text-red" />
                 </div>
                 <div className="space-y-1">
-                  <span className="text-black text-xs uppercase tracking-widest font-semibold block">
+                  <span className="text-black text-sm md:text-base lg:text-lg uppercase tracking-widest font-semibold block">
                     Phone
                   </span>
-                  <p className="text-xl font-light hover:text-cyan transition-colors underline-offset-4 decoration-cyan/20">
+                  <p className="text-sm md:text-base lg:text-lg font-light hover:text-cyan transition-colors underline-offset-4 decoration-cyan/20">
                     +41 (0) 32 322 00 00
                   </p>
                 </div>
@@ -90,10 +88,10 @@ export const ProviderContact = () => {
                   <MapPin className="w-6 h-6 text-red" />
                 </div>
                 <div className="space-y-1">
-                  <span className="text-black text-xs uppercase tracking-widest font-semibold block">
+                  <span className="text-black text-sm md:text-base lg:text-lg uppercase tracking-widest font-semibold block">
                     Archive Headquarters
                   </span>
-                  <p className="text-xl font-light leading-relaxed">
+                  <p className="text-sm md:text-base lg:text-lg font-light leading-relaxed">
                     Rue de la Gare, 2502 <br />
                     Lengnau, Switzerland
                   </p>
@@ -101,10 +99,6 @@ export const ProviderContact = () => {
               </div>
             </div>
 
-            <div className="flex items-center gap-6 pt-10">
-              <Github className="w-6 h-6 text-gray-500/40 hover:text-cyan transition-colors cursor-pointer" />
-              <Linkedin className="w-6 h-6 text-gray-500/40 hover:text-cyan transition-colors cursor-pointer" />
-            </div>
           </div>
         </div>
 

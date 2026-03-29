@@ -36,7 +36,7 @@ const itemVariants: Variants = {
 export const BrandContext = () => {
   return (
     <div className="w-full bg-black text-white py-24 md:py-32 rounded-3xl overflow-hidden my-32">
-      <div className="max-w-6xl mx-auto px-2 md:px-12">
+      <div className="max-w-6xl mx-auto px-2 md:px-12 px-5">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -51,10 +51,10 @@ export const BrandContext = () => {
                 The Idea
               </span>
               <div className="space-y-4">
-                <span className="font-eurostile-black text-lg tracking-[0.4em] uppercase text-red block">
+                <span className="font-eurostile-black text-xl md:text-2xl lg:text-3xl tracking-[0.4em] uppercase text-red block">
                   THE GOLDEN ERA
                 </span>
-                <div className="font-light text-gray-300 leading-relaxed text-xl space-y-6">
+                <div className="font-light text-gray-300 leading-relaxed text-base md:text-xl space-y-3 md:space-y-6">
                   <p>
                     Enicar earned a reputation in the mid-20th century for
                     producing high-quality tool watches that combined technical
@@ -85,10 +85,10 @@ export const BrandContext = () => {
             />
 
             <motion.div variants={itemVariants} className="space-y-4">
-              <span className="font-eurostile-black text-lg tracking-[0.4em] uppercase text-red block">
+              <span className="font-eurostile-black text-xl md:text-2xl lg:text-3xl tracking-[0.4em] uppercase text-red block">
                 THE BIG PROBLEM
               </span>
-              <div className="font-light text-gray-300 leading-relaxed text-xl space-y-6">
+              <div className="font-light text-gray-300 leading-relaxed text-base md:text-xl space-y-3 md:space-y-6">
                 <p>
                   Enicar was slow to invest in quartz development compared to
                   Japanese and some Swiss rivals, making it vulnerable when
@@ -124,7 +124,7 @@ export const BrandContext = () => {
               <span className="font-eurostile-black text-lg tracking-[0.4em] uppercase text-red block">
                 PROJECT AIM
               </span>
-              <h2 className="font-eurostile-black text-5xl md:text-7xl text-white uppercase leading-none">
+              <h2 className="font-eurostile-black text-xl md:text-2xl lg:text-4xl text-white uppercase leading-none">
                 PREVENT THE BRAND FROM BEING OBSOLETE
               </h2>
             </motion.div>
@@ -136,7 +136,7 @@ export const BrandContext = () => {
 
             <motion.div variants={itemVariants} className="space-y-8">
               <div className="space-y-4">
-                <span className="font-eurostile-black text-lg tracking-[0.4em] uppercase text-red/60 block">
+                <span className="font-eurostile-black text-xl md:text-2xl lg:text-3xl tracking-[0.4em] uppercase text-red/60 block">
                   AIM JUSTIFICATION
                 </span>
                 <ul className="space-y-4">
@@ -147,8 +147,8 @@ export const BrandContext = () => {
                     "There are brands that are on the verge of becoming obsolete that might benefit from this project.",
                   ].map((text, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-red mt-2 shrink-0" />
-                      <span className="font-light text-gray-300 text-lg md:text-xl">
+                      <div className="w-1.5 h-1.5 rounded-full bg-red mt-3 shrink-0" />
+                      <span className="font-light text-gray-300 text-lg leading-relaxed md:text-xl">
                         {text}
                       </span>
                     </li>
@@ -213,10 +213,10 @@ export const SolutionBlock = () => {
             viewport={{ once: true }}
             className="space-y-4"
           >
-            <span className="font-eurostile-black text-2xl tracking-[0.4em] uppercase text-red text-center block">
+            <span className="font-eurostile-black text-xl md:text-2xl lg:text-4xl tracking-[0.4em] uppercase text-red text-center block">
               SOLUTION
             </span>
-            <h2 className="font-serif italic text-4xl md:text-6xl max-w-4xl mx-auto text-center leading-tight">
+            <h2 className="font-serif italic text-2xl md:text-4xl lg:text-6xl max-w-4xl mx-auto text-center leading-tight">
               Presenting the brand's history through an exhibition that shows
               the important achievements and milestones of the brand.
             </h2>
@@ -227,7 +227,7 @@ export const SolutionBlock = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="font-light text-gray-500 text-center text-lg max-w-3xl mx-auto mt-8"
+            className="font-light text-gray-500 text-center text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mt-8"
           >
             Using the existing and the remaining materials of the former brand.
             Staying strictly to the former brand's personality and identity.
@@ -238,7 +238,7 @@ export const SolutionBlock = () => {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="w-16 h-[2px] bg-red/30 mx-auto my-16"
+          className="w-50 md:w-100 lg:w-150 h-[2px] bg-red/30 mx-auto my-16"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -250,10 +250,10 @@ export const SolutionBlock = () => {
             transition={{ delay: 0.1 }}
             className="space-y-4"
           >
-            <span className="font-eurostile-black text-xs tracking-[0.4em] uppercase text-red block">
+            <span className="font-eurostile-black text-sm md:text-base lg:text-xl tracking-[0.4em] uppercase text-red block">
               FOR VISUAL
             </span>
-            <div className="font-light text-gray-600 leading-relaxed text-sm space-y-4">
+            <div className="font-light text-gray-600 leading-relaxed text-lg md:text-xl lg:text-2xl space-y-4">
               <p>
                 Printing archives of important events alongside with the
                 products and description to emphasize the significance of the
@@ -274,11 +274,16 @@ export const SolutionBlock = () => {
             transition={{ delay: 0.2 }}
             className="space-y-4"
           >
-            <span className="font-eurostile-black text-xs tracking-[0.4em] uppercase text-red block">
+            <span className="font-eurostile-black text-sm md:text-lg lg:text-xl tracking-[0.4em] uppercase text-red block">
               FOR PHYSICAL
             </span>
-            <div className="font-light text-gray-600 leading-relaxed text-sm">
-              <p>Display watches: 1 land, 1 dive, 1 racing, 1 sky</p>
+            <div className="font-light text-gray-600 leading-relaxed text-lg md:text-xl lg:text-2xl">
+              <p>
+                Display watches: <span className="font-bold">1 land</span>,{" "}
+                <span className="font-bold">1 dive</span>,{" "}
+                <span className="font-bold">1 racing</span>,{" "}
+                <span className="font-bold">1 sky</span>
+              </p>
             </div>
           </motion.div>
 
@@ -290,10 +295,10 @@ export const SolutionBlock = () => {
             transition={{ delay: 0.3 }}
             className="space-y-4"
           >
-            <span className="font-eurostile-black text-xs tracking-[0.4em] uppercase text-red block">
+            <span className="font-eurostile-black text-sm md:text-lg lg:text-xl tracking-[0.4em] uppercase text-red block">
               FOR DIGITAL
             </span>
-            <div className="font-light text-gray-600 leading-relaxed text-sm">
+            <div className="font-light text-gray-600 leading-relaxed text-lg md:text-xl lg:text-2xl">
               <p>
                 Instagram and Website that contains everything from the project
                 (concept, design process, brand timeline, product collection
@@ -375,7 +380,7 @@ const CollectionCard = ({ product, index }: CollectionCardProps) => {
 
             <div className="relative z-10 space-y-8">
               {/* Collection Label */}
-              <span className="font-eurostile-black text-xs tracking-[0.4em] uppercase text-red block mb-2">
+              <span className="font-eurostile-black text-lg md:text-2xl lg:text-3xl tracking-[0.4em] uppercase text-red block mb-2">
                 {product.collection}
               </span>
 
@@ -385,7 +390,7 @@ const CollectionCard = ({ product, index }: CollectionCardProps) => {
               </h3>
 
               {/* Archive Story Text */}
-              <p className="font-light text-gray-600 text-base md:text-xl leading-relaxed max-w-xl">
+              <p className="font-light text-gray-600 text-base md:text-lg lg:text-xl leading-relaxed max-w-xl">
                 {heroEvent.description}
               </p>
 
@@ -397,10 +402,10 @@ const CollectionCard = ({ product, index }: CollectionCardProps) => {
                       key={event.id}
                       className="border-l-2 border-red/20 pl-4 space-y-1"
                     >
-                      <h4 className="font-eurostile-black text-xs tracking-[0.2em] text-red/60 uppercase">
+                      <h4 className="font-eurostile-black text-sm md:text-base lg:text-lg tracking-[0.2em] text-red/60 uppercase">
                         {event.title}
                       </h4>
-                      <p className="font-light text-gray-500 text-sm">
+                      <p className="font-light text-gray-500 text-sm md:text-base lg:text-lg">
                         {event.description}
                       </p>
                     </div>
@@ -413,7 +418,7 @@ const CollectionCard = ({ product, index }: CollectionCardProps) => {
                 {product.models.map((model) => (
                   <span
                     key={model}
-                    className="inline-flex items-center gap-2 text-xs border border-red/20 px-3 py-1 rounded-full font-eurostile text-black/60 hover:border-red hover:text-red transition-colors duration-300 cursor-default"
+                    className="inline-flex items-center gap-2 text-base md:text-lg lg:text-xl border border-red/20 px-3 py-1 rounded-full font-eurostile text-black/60 hover:border-red hover:text-red transition-colors duration-300 cursor-default"
                   >
                     {model}
                   </span>
@@ -422,7 +427,7 @@ const CollectionCard = ({ product, index }: CollectionCardProps) => {
 
               <motion.button
                 whileHover={{ x: 10 }}
-                className="group flex items-center gap-2 text-red font-eurostile italic text-xl border-b border-red/30 hover:border-red transition-all duration-300 pt-8 pb-1"
+                className="group flex items-center gap-2 text-red font-eurostile italic text-lg md:text-xl lg:text-2xl border-b border-red/30 hover:border-red transition-all duration-300 pt-8 pb-1"
               >
                 Explore Reference Details{" "}
                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -452,7 +457,7 @@ export const ProductShowcase = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="font-eurostile-black text-2xl tracking-[0.4em] uppercase text-red block"
+              className="font-eurostile-black text-xl md:text-2xl lg:text-3xl tracking-[0.4em] uppercase text-red block"
             >
               The Collection
             </motion.span>
@@ -479,7 +484,7 @@ export const ProductShowcase = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="font-eurostile text-2xl md:text-2xl text-black opacity-90 max-w-3xl mx-auto"
+              className="font-eurostile text-xl md:text-2xl lg:text-3xl text-black opacity-90 max-w-3xl mx-auto"
             >
               Each Sherpa was built for a specific extreme. Land, Racing, Dive,
               or Sky.
@@ -504,11 +509,11 @@ export const ProductShowcase = () => {
         <footer className="mt-32 pt-16 border-t border-black/10 text-center space-y-8">
           <div className="w-16 h-[2px] bg-red/30 mx-auto" />
 
-          <p className="font-yellowtail text-3xl md:text-5xl text-black/30 italic">
+          <p className="font-yellowtail text-xl md:text-3xl lg:text-5xl text-black/30 italic">
             Each watch was a tool. Each tool had a story.
           </p>
 
-          <div className="text-gray-500/20 text-xs uppercase tracking-[0.5em] font-sans pb-4">
+          <div className="text-gray-600 text-xs md:text-sm lg:text-base uppercase tracking-[0.5em] font-sans pb-4">
             © 2026 ENICAR CHRONICLE • SWISS PRECISION SINCE 1913
           </div>
         </footer>

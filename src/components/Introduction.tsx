@@ -43,13 +43,13 @@ const introSections = [
 
 export const Introduction = () => {
   return (
-    <section id="intro" className="relative py-48 bg-white overflow-hidden">
-      {/* Background Decorative Element */}
+    /* py-48 -> when mobile: py-10 */
+    <section id="intro" className="relative py-10 md:py-48 bg-white overflow-hidden">
       <div className="absolute top-0 right-0 w-[60%] h-full bg-red/[0.01] skew-x-12 translate-x-1/2 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-cyan/[0.03] rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <header className="mb-32 max-w-3xl">
+        <header className="mb-20 max-w-3xl">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -57,10 +57,10 @@ export const Introduction = () => {
             transition={{ duration: 1 }}
             className="space-y-6"
           >
-            <span className="text-red tracking-[0.5em] font-eurostile-black text-sm uppercase block mb-4">
+            <span className="text-red tracking-[0.5em] font-eurostile-black text-xl md:text-4xl lg:text-5xl uppercase block mb-4 ">
               The Engine of Innovation
             </span>
-            <h2 className="text-6xl md:text-9xl font-serif font-black italic text-black leading-none tracking-tighter">
+            <h2 className="text-6xl md:text-8xl lg:text-9xl font-serif font-black italic text-black leading-none tracking-tighter">
               Legacy of <br />
               <span className="text-red">Exploration</span>
             </h2>
@@ -78,16 +78,16 @@ export const Introduction = () => {
               transition={{ delay: 0.15 * i, duration: 0.8 }}
               className="group relative"
             >
-              <div className="glass h-full p-10 rounded-[2.5rem] border border-black/[0.03] hover:border-red/10 transition-all duration-700 hover:shadow-[0_20px_50px_rgba(189,33,38,0.05)] flex flex-col">
-                <div className="w-16 h-16 bg-black/[0.03] flex items-center justify-center rounded-2xl mb-8 group-hover:bg-red group-hover:text-white group-hover:scale-110 transition-all duration-500 border border-black/[0.05]">
+              <div className="glass h-full py-5 px-5 rounded-[2.5rem] border border-black/[0.03] hover:border-red/10 transition-all duration-700 hover:shadow-[0_20px_50px_rgba(189,33,38,0.05)] flex flex-col">
+                <div className="w-10 h-10 md:w-16 md:h-16 lg:w-18 lg:h-18 bg-black/[0.03] flex items-center justify-center rounded-2xl mb-8 group-hover:bg-red group-hover:text-white group-hover:scale-110 transition-all duration-500 border border-black/[0.05]">
                   {section.icon}
                 </div>
 
-                <h3 className="text-3xl font-serif font-bold mb-6 group-hover:text-red transition-colors duration-500">
+                <h3 className="text-base md:text-2xl lg:text-3xl font-serif font-bold mb-6 group-hover:text-red transition-colors duration-500">
                   {section.title}
                 </h3>
 
-                <p className="text-gray-500/80 font-light leading-relaxed text-lg mb-8 flex-grow">
+                <p className="text-gray-500/80 hover:text-gray-800 transition-colors duration-500 font-light leading-relaxed text-base md:text-lg lg:text-xl mb-2 md:mb-6 flex-grow">
                   {section.description}
                 </p>
 
@@ -95,9 +95,9 @@ export const Introduction = () => {
                   {section.bullets.map((bullet, idx) => (
                     <li
                       key={idx}
-                      className="flex items-center gap-4 text-sm font-medium text-black/60 group-hover:text-black transition-colors duration-500"
+                      className="flex items-center gap-4 md:text-md sm:text-base font-medium text-black/60 group-hover:text-black transition-colors duration-500"
                     >
-                      <div className="w-1.5 h-1.5 bg-red/30 rounded-full group-hover:bg-red group-hover:scale-150 transition-all" />
+                      <div className="w-1.5 h-1.5 md:w-2 md:h-2 lg:w-3 lg:h-3 bg-red/30 rounded-full group-hover:bg-red group-hover:scale-150 transition-all" />
                       {bullet}
                     </li>
                   ))}
@@ -108,7 +108,7 @@ export const Introduction = () => {
                   whileHover={{ opacity: 1, x: 5 }}
                   className="mt-8 flex items-center gap-2 text-red text-xs font-bold uppercase tracking-widest cursor-pointer"
                 >
-                  Learn More <ChevronRight className="w-4 h-4" />
+                  View More <ChevronRight className="w-4 h-4" />
                 </motion.div>
               </div>
             </motion.div>
@@ -129,7 +129,7 @@ export const Introduction = () => {
           >
             <Link
               to="/phase/1"
-              className="group flex items-center gap-4 bg-red text-white px-10 py-5 rounded-full font-serif text-lg hover:bg-black transition-colors duration-500 shadow-xl hover:shadow-[0_10px_40px_rgba(189,33,38,0.4)]"
+              className="group flex items-center gap-4 bg-red text-white px-6 py-3 md:px-10 md:py-5 lg:px-15 lg:py-7 rounded-full font-serif text-lg hover:bg-black transition-colors duration-500 shadow-xl hover:shadow-[0_10px_40px_rgba(189,33,38,0.4)]"
             >
               <Globe2 className="w-6 h-6 group-hover:rotate-12 transition-transform duration-500" />
               <span>Explore Interactive Timeline</span>
