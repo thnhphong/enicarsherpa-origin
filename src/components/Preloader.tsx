@@ -97,7 +97,7 @@ export const Preloader = ({ onComplete }: { onComplete: () => void }) => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 1 }}
-                className="text-white tracking-[0.6em] uppercase text-[10px] md:text-sm font-eurostile-black italic mt-4"
+                className="text-white tracking-[0.6em] uppercase text-[10px] md:text-sm font-script italic mt-4"
               >
                 The Story of Legendary
               </motion.p>
