@@ -367,6 +367,13 @@ export const InteractiveMap = () => {
               <div
                 ref={scrollContainerRef}
                 onScroll={checkScroll}
+                onWheel={(e) => {
+                  if (scrollContainerRef.current) {
+                    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+                      scrollContainerRef.current.scrollLeft += e.deltaY;
+                    }
+                  }
+                }}
                 className={`flex items-center gap-4 sm:gap-6 overflow-x-auto no-scrollbar snap-x ${timelineSnapClass} touch-pan-x relative overflow-y-visible ${timelinePaddingClass} ${timelineSidePaddingClass}`}
               >
                 {phaseEventsData.map((event, index) => (
@@ -464,7 +471,7 @@ export const InteractiveMap = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
-            className="absolute inset-0 z-50 bg-zinc-950/40 overflow-y-auto"
+            className="absolute inset-0 z-50 bg-zinc-950/80 backdrop-blur-sm lg:bg-zinc-950/40 lg:backdrop-blur-none overflow-x-auto overflow-y-hidden lg:overflow-x-hidden lg:overflow-y-auto no-scrollbar snap-x snap-mandatory lg:snap-none touch-pan-x lg:touch-auto"
           >
             <div className="pointer-events-none fixed inset-x-0 top-0 z-[60] flex justify-end px-4 sm:px-8 safe-top-pad">
               <button
@@ -479,15 +486,15 @@ export const InteractiveMap = () => {
             </div>
 
             <div
-              className={`min-h-[100dvh] w-full flex justify-center ${shouldTopAlignOverlay ? "items-start" : "items-center"}`}
+              className={`min-h-[100dvh] w-max lg:w-full flex items-center lg:justify-center ${shouldTopAlignOverlay ? "lg:items-start" : "lg:items-center"}`}
             >
-              <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center py-16 sm:py-8">
+              <div className="flex flex-row lg:grid lg:grid-cols-2 gap-6 sm:gap-10 lg:gap-16 px-4 sm:px-6 md:px-8 lg:px-12 items-center lg:items-start py-0 lg:py-16 max-w-none lg:max-w-7xl lg:mx-auto lg:w-full">
                 {/* Text Content */}
                 <motion.div
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3, duration: 0.8 }}
-                  className="space-y-5 sm:space-y-8"
+                  className="space-y-5 sm:space-y-8 w-[85vw] sm:w-[50vw] lg:w-auto shrink-0 snap-center lg:snap-align-none max-h-[85dvh] lg:max-h-none overflow-y-auto lg:overflow-y-visible no-scrollbar pt-14 pb-8 lg:py-0 pr-4 lg:pr-0"
                 >
                   <div className="inline-block px-3 sm:px-4 py-1.5 border border-red/50 rounded-full text-red font-eurostile-black tracking-[0.12em] sm:tracking-widest text-xs sm:text-sm uppercase">
                     {activeOverlayEvent.year}
@@ -510,17 +517,17 @@ export const InteractiveMap = () => {
                   initial={{ opacity: 0, x: 50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.5, duration: 0.8 }}
-                  className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4"
+                  className="flex flex-row lg:grid lg:grid-cols-2 gap-3 sm:gap-4 shrink-0 lg:shrink pr-4 lg:pr-0"
                 >
                   {activeOverlayEvent.images?.map((img, idx) => (
                     <div
                       key={idx}
-                      className={`rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl ${idx === 0 && activeOverlayEvent.images!.length % 2 !== 0 ? "sm:col-span-2" : ""}`}
+                      className={`rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl relative h-[60svh] lg:h-auto w-[75vw] sm:w-[45vw] lg:w-auto shrink-0 snap-center lg:snap-align-none ${idx === 0 && activeOverlayEvent.images!.length % 2 !== 0 ? "lg:col-span-2" : ""}`}
                     >
                       <img
                         src={getImagePath(img)}
                         alt={activeOverlayEvent.title}
-                        className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                        className="w-full h-full lg:h-auto object-cover hover:scale-105 transition-transform duration-700 bg-black/50"
                       />
                     </div>
                   ))}
