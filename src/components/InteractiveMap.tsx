@@ -1,4 +1,12 @@
-import { Suspense, lazy, useState, useMemo, useCallback, useRef, useEffect } from "react";
+import {
+  Suspense,
+  lazy,
+  useState,
+  useMemo,
+  useCallback,
+  useRef,
+  useEffect,
+} from "react";
 
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
@@ -439,7 +447,7 @@ export const InteractiveMap = () => {
                 <div
                   className={`${timelineCuePositionClass} flex justify-center`}
                 >
-                  <div className="pointer-events-none inline-flex items-center gap-1.5 rounded-full border border-red/15 bg-zinc-950/65 px-2.5 py-0.5 text-[0.6rem] font-eurostile-black uppercase tracking-[0.16em] text-red/65 shadow-[0_0_16px_rgba(189,33,38,0.12)] backdrop-blur-sm">
+                  <div className="pointer-events-none inline-flex items-center gap-1.5 rounded-full border border-red/15 bg-zinc-950/65 px-2.5 py-0.5 text-[1.2rem] font-eurostile-black uppercase tracking-[0.16em] text-red/65 shadow-[0_0_16px_rgba(189,33,38,0.12)] backdrop-blur-sm">
                     <span
                       className={`flex items-center justify-center transition-opacity ${
                         canScrollLeft ? "opacity-70" : "opacity-25"
@@ -496,7 +504,7 @@ export const InteractiveMap = () => {
                   transition={{ delay: 0.3, duration: 0.8 }}
                   className="space-y-5 sm:space-y-8"
                 >
-                  <div className="inline-block px-3 sm:px-4 py-1.5 border border-red/50 rounded-full text-red font-eurostile-black tracking-[0.12em] sm:tracking-widest text-xs sm:text-sm uppercase">
+                  <div className="inline-block px-3 sm:px-4 py-1.5 border border-red/50 rounded-full text-red font-eurostile-black tracking-[0.6em] sm:tracking-widest text-xs sm:text-sm uppercase">
                     {activeOverlayEvent.year}
                   </div>
                   <h2 className="text-[clamp(1.75rem,6vw,4.5rem)] font-eurostile-black font-bold leading-tight">
