@@ -43,7 +43,7 @@ export const Navbar = () => {
               <Link
                 to={link.href}
                 onClick={link.onClick}
-                className="text-2xl font-eurostile tracking-wide hover:text-red transition-colors duration-300"
+                className="text-2xl font-eurostile tracking-wide text-red hover:text-yellow transition-colors duration-300"
               >
                 {link.name}
               </Link>
@@ -52,7 +52,7 @@ export const Navbar = () => {
         </div>
 
         <button
-          className="md:hidden text-black"
+          className="md:hidden text-red hover:text-yellow transition-colors"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X /> : <Menu />}
@@ -63,7 +63,7 @@ export const Navbar = () => {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden bg-white border-b border-black/10 px-6 py-6 space-y-4 text-center"
+          className="md:hidden bg-black/95 backdrop-blur-md border-b border-white/10 px-6 py-6 space-y-4 text-center"
         >
           {navLinks.map((link) => (
             <Link
@@ -73,7 +73,7 @@ export const Navbar = () => {
                 setIsOpen(false);
                 link.onClick?.();
               }}
-              className="block text-lg hover:text-cyan transition-colors"
+              className="block text-lg text-red hover:text-yellow transition-colors"
             >
               {link.name}
             </Link>

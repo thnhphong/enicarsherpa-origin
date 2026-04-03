@@ -8,7 +8,7 @@
   --color-cyan: #00bcf2;
   --color-yellow: #ffde17;
   --color-red: #bd2126;
-  --color-black: #231f20;
+  --color-black: #050505;
   --color-white: #ffffff;
 
   --font-eurostile: "Eurostile", sans-serif;
@@ -18,7 +18,7 @@
 
 @layer base {
   body {
-    @apply bg-white text-black font-sans antialiased selection:bg-red/20 selection:text-white;
+    @apply bg-black text-white font-sans antialiased selection:bg-red/20 selection:text-white;
     overflow-x: hidden;
   }
 
@@ -35,7 +35,7 @@
     width: 6px;
   }
   ::-webkit-scrollbar-track {
-    @apply bg-white;
+    @apply bg-black;
   }
   ::-webkit-scrollbar-thumb {
     @apply bg-red rounded-full hover:bg-red;
@@ -52,7 +52,7 @@
 }
 
 .glass {
-  @apply bg-white/80 backdrop-blur-md border border-black/10;
+  @apply bg-black/80 backdrop-blur-md border border-white/10;
 }
 
 @font-face {
