@@ -496,13 +496,13 @@ export const InteractiveMap = () => {
             <div
               className={`min-h-[100dvh] w-full flex justify-center ${shouldTopAlignOverlay ? "items-start" : "items-center"}`}
             >
-              <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center py-16 sm:py-8">
+              <div className="max-w-[90rem] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-[5fr_7fr] gap-8 lg:gap-16 items-start py-24 sm:py-32">
                 {/* Text Content */}
                 <motion.div
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3, duration: 0.8 }}
-                  className="space-y-5 sm:space-y-8"
+                  className="space-y-5 sm:space-y-8 border-l border-red/20 pl-6 lg:pl-10 lg:sticky lg:top-32"
                 >
                   <div className="inline-block px-3 sm:px-4 py-1.5 border border-red/50 rounded-full text-red font-eurostile-black tracking-[0.6em] sm:tracking-widest text-xs sm:text-sm uppercase">
                     {activeOverlayEvent.year}
@@ -525,17 +525,17 @@ export const InteractiveMap = () => {
                   initial={{ opacity: 0, x: 50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.5, duration: 0.8 }}
-                  className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4"
+                  className="flex flex-col gap-6 sm:gap-8 lg:gap-10 pb-10"
                 >
                   {activeOverlayEvent.images?.map((img, idx) => (
                     <div
                       key={idx}
-                      className={`rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl ${idx === 0 && activeOverlayEvent.images!.length % 2 !== 0 ? "sm:col-span-2" : ""}`}
+                      className="rounded-xl sm:rounded-2xl overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.4)] w-full"
                     >
                       <img
                         src={getImagePath(img)}
-                        alt={activeOverlayEvent.title}
-                        className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                        alt={`${activeOverlayEvent.title} image ${idx + 1}`}
+                        className="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-700 bg-zinc-950/20"
                       />
                     </div>
                   ))}
