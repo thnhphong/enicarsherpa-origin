@@ -6,7 +6,7 @@ interface HeroProps {
 }
 
 const heroSectionClasses =
-  "relative flex min-h-[100dvh] items-center justify-center overflow-hidden bg-black text-white";
+  "relative flex h-screen items-center justify-center overflow-hidden bg-black text-white";
 const heroGradientClasses =
   "pointer-events-none absolute inset-x-0 top-0 z-10 h-24 bg-gradient-to-b from-black via-black/80 to-transparent sm:h-32 md:h-40 lg:h-48";
 const heroContentClasses =

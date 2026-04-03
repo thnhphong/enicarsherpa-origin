@@ -88,4 +88,21 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+
+  .carousel-indicator {
+    @apply flex flex-col gap-4 fixed right-8 top-1/2 -translate-y-1/2 z-[100];
+  }
+
+  .carousel-dot {
+    @apply w-1 h-12 bg-white/10 rounded-full overflow-hidden transition-all duration-500 hover:h-16;
+  }
+
+  .carousel-dot-inner {
+    @apply w-full h-full bg-red origin-top transition-transform duration-300;
+  }
+
+  /* Force pointer for elements that should trigger custom cursor */
+  a, button, .cursor-trigger {
+    cursor: none !important;
+  }
 }

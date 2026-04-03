@@ -3,10 +3,12 @@ import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
-import { Introduction } from "./components/Introduction";
-import { ProductShowcase } from "./components/ProductShowcase";
+import { IntroSlideOne, TimelinePreview } from "./components/Introduction";
+import { CollectionSlide } from "./components/ProductShowcase";
 import { ProviderContact } from "./components/ProviderContact";
 import { Preloader } from "./components/Preloader";
+import { VerticalCarousel } from "./components/VerticalCarousel";
+import { CustomCursor } from "./components/CustomCursor";
 
 interface AppLocationState {
   replayPreloader?: boolean;
@@ -21,7 +23,7 @@ const InteractiveMap = lazy(() =>
 const ProductsPage = () => {
   return (
     <>
-      <ProductShowcase />
+      <CollectionSlide />
       <ProviderContact />
     </>
   );
@@ -71,15 +73,21 @@ function App() {
 
       {showNavbar && <Navbar />}
 
-      {isHomeRoute && (
-        <>
-          <Hero shouldAnimate={shouldAnimateHero} />
-          {!showPreloader && <Introduction />}
-        </>
-      )}
+      <CustomCursor />
 
-      {!showPreloader && (
-        <Routes>
+      {!showPreloader ? (
+        <Routes location={location} key={location.pathname}>
+          <Route
+            path="/"
+            element={
+    <VerticalCarousel ids={["hero", "intro", "preview", "products"]}>
+      <Hero shouldAnimate={shouldAnimateHero} />
+      <IntroSlideOne />
+      <TimelinePreview />
+      <CollectionSlide />
+    </VerticalCarousel>
+            }
+          />
           <Route path="/products" element={<ProductsPage />} />
           <Route
             path="/phase/:phaseId"
@@ -103,6 +111,8 @@ function App() {
             }
           />
         </Routes>
+      ) : (
+        <Hero shouldAnimate={false} />
       )}
     </main>
   );

@@ -1,107 +1,89 @@
 import { motion } from "framer-motion";
 import { ChevronRight, Globe2 } from "lucide-react";
 import { Link } from "react-router-dom";
-import introData from "../data/introductionData.json";
 
-export const Introduction = () => {
+export const IntroSlideOne = () => {
   return (
-    /* py-48 -> when mobile: py-10 */
-    <section id="intro" className="relative py-10 md:py-48 bg-black overflow-hidden">
-      <div className="absolute top-0 right-0 w-[60%] h-full bg-red/[0.01] skew-x-12 translate-x-1/2 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-cyan/[0.03] rounded-full blur-[120px] pointer-events-none" />
+    <section className="relative w-screen h-screen flex flex-col items-center justify-center overflow-hidden bg-black text-white">
+      {/* Background Image: Full width, object-cover to avoid breaking pixels */}
+      <div className="absolute inset-0 z-0 w-full h-full">
+        <img
+          src="/images/Introdcution/Background Problem.webp"
+          alt="Legacy background"
+          className="w-full h-full object-cover opacity-40 mix-blend-luminosity scale-110"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black" />
+      </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <header className="mb-20 max-w-3xl">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
-            className="space-y-6"
-          >
-      
-            <h2 className="text-[clamp(4rem,10vw,9rem)] font-eurostile-black italic leading-[0.85] tracking-tighter">
-              <span className="text-yellow drop-shadow-[0_0_15px_rgba(255,255,255,0.15)] block">
-                Legacy of
-              </span>
-              <span className="text-red drop-shadow-[0_0_35px_rgba(189,33,38,0.8)] ml-4 md:ml-12 lg:ml-16 block relative z-10">
-                Exploration
-              </span>
-            </h2>
-            <div className="w-full max-w-lg mt-10 md:mt-5 flex items-center gap-4">
-              <div className="w-24 md:w-32 h-[3px] bg-red shadow-[0_0_15px_rgba(189,33,38,0.9)] rounded-full" />
-              <div className="w-4 h-[3px] bg-yellow shadow-[0_0_15px_rgba(255,222,23,0.9)] rounded-full" />
-              <div className="flex-1 h-[1px] bg-gradient-to-r from-cyan/60 to-transparent" />
-            </div>
-          </motion.div>
-        </header>
+      <div className="relative z-10 text-center px-6">
+        <motion.div
+           initial={{ opacity: 0, y: 30 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: false }}
+           transition={{ duration: 1.2 }}
+           className="space-y-6"
+        >
+          <h2 className="text-[clamp(3.5rem,10vw,8rem)] md:text-[clamp(4.5rem,12vw,10rem)] font-eurostile-black italic leading-[0.85] tracking-tighter uppercase">
+            <span className="text-yellow block drop-shadow-[0_0_15px_rgba(255,222,23,0.3)]">
+              Legacy of
+            </span>
+            <span className="text-red block drop-shadow-[0_0_35px_rgba(189,33,38,0.6)] ml-12 md:ml-24">
+              Exploration
+            </span>
+          </h2>
+          
+          <div className="max-w-2xl mx-auto mt-12 bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl">
+              <p className="text-gray-300 font-light text-lg md:text-xl leading-relaxed">
+                  In the 1960s, the Enicar Sherpa was more than a watch; it was a trusted instrument for pioneers, climbers, and racers alike. 
+                  A legacy forged in the most extreme conditions known to man.
+              </p>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
 
-        <div className="flex flex-col gap-24 mt-16 md:gap-32">
-          {introData.map((section) => (
-            <motion.div
-              key={section.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8 }}
-              className="flex flex-col gap-10"
-            >
-              {section.images && section.images.length > 0 && (
-                <div className="flex flex-col gap-6">
-                  {section.images.map((imgSrc, imgIdx) => (
-                    <div
-                      key={imgIdx}
-                      className="w-full overflow-hidden rounded-3xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
-                    >
-                      <img
-                        src={imgSrc}
-                        alt={`${section.title} - ${imgIdx + 1}`}
-                        className="w-full h-auto object-cover"
-                      />
-                    </div>
-                  ))}
-                </div>
-              )}
-              <div className="w-full space-y-8 md:space-y-12 mt-6">
-                <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-eurostile-black italic text-red tracking-wider drop-shadow-[0_0_25px_rgba(189,33,38,0.6)] leading-tight">
-                  {section.title}
-                </h3>
-                <div className="space-y-8">
-                  {section.paragraphs.map((p, pIdx) => (
-                    <p
-                      key={pIdx}
-                      className="text-gray-200 font-light leading-[1.8] text-lg sm:text-xl md:text-2xl lg:text-[1.4rem]"
-                    >
-                      {p}
-                    </p>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+export const TimelinePreview = () => {
+  return (
+    <section className="relative w-screen h-screen flex flex-col items-center justify-center overflow-hidden bg-black text-white">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0 w-full h-full">
+        <img
+          src="/images/Introdcution/Unsung Hero.webp"
+          alt="Timeline preview"
+          className="w-full h-full object-cover opacity-20 filter grayscale"
+        />
+        <div className="absolute inset-0 bg-radial-gradient(circle_at_center,rgba(0,188,242,0.1),transparent_70%)" />
+      </div>
+
+      <div className="relative z-10 text-center px-6 space-y-12">
+        <motion.h1
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: false }}
+          transition={{ duration: 1 }}
+          className="text-[clamp(2.5rem,8vw,6.5rem)] font-eurostile-black italic text-cyan tracking-wider drop-shadow-[0_0_20px_rgba(0,188,242,0.4)] uppercase"
+        >
+          Discover The Timeline
+        </motion.h1>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-24 flex justify-center"
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: false }}
+           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <motion.div
-            className="bg-transparent"
-            animate={{ y: [0, -16, 0] }}
-            transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
+          <Link
+            to="/phase/1"
+            className="group relative inline-flex items-center gap-6 bg-red px-10 py-5 rounded-full text-white font-eurostile text-xl tracking-widest hover:bg-white hover:text-black transition-all duration-500 overflow-hidden shadow-[0_0_30px_rgba(189,33,38,0.35)]"
           >
-            <Link
-              to="/phase/1"
-              className="group flex items-center gap-4 bg-red text-white px-6 py-3 md:px-10 md:py-5 lg:px-15 lg:py-7 rounded-full font-serif text-lg hover:bg-white hover:text-black transition-colors duration-500 shadow-xl hover:shadow-[0_10px_40px_rgba(255,255,255,0.2)]"
-            >
-              <Globe2 className="w-6 h-6 group-hover:rotate-12 transition-transform duration-500" />
-              <span>Explore Interactive Timeline</span>
-              <ChevronRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-500" />
-            </Link>
-          </motion.div>
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+            <Globe2 className="w-8 h-8 md:w-10 md:h-10 transition-transform duration-500 group-hover:rotate-180" />
+            <span className="uppercase italic">Open Interactive Map</span>
+            <ChevronRight className="w-6 h-6 md:w-8 md:h-8 transition-transform duration-500 group-hover:translate-x-4" />
+          </Link>
         </motion.div>
       </div>
     </section>

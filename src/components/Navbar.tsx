@@ -22,7 +22,7 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 glass">
+    <nav className="fixed top-0 left-0 w-full z-[110] glass">
       <div className="max-w-7xl mx-auto px-2 h-20 flex items-center justify-between">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
