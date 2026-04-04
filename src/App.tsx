@@ -9,6 +9,7 @@ import { ProviderContact } from "./components/ProviderContact";
 import { Preloader } from "./components/Preloader";
 import { VerticalCarousel } from "./components/VerticalCarousel";
 import { CustomCursor } from "./components/CustomCursor";
+import { AllWatches } from "./components/AllWatches";
 
 interface AppLocationState {
   replayPreloader?: boolean;
@@ -53,7 +54,7 @@ function App() {
       const timer = setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {
-          const carouselIds = ["hero", "intro", "preview", "products"];
+          const carouselIds = ["hero", "intro", "preview"];
           const index = carouselIds.indexOf(id);
 
           if (index !== -1 && isHomeRoute) {
@@ -100,17 +101,18 @@ function App() {
             path="/"
             element={
               <>
-                <VerticalCarousel ids={["hero", "intro", "preview", "products"]}>
+                <VerticalCarousel ids={["hero", "intro", "preview"]}>
                   <Hero shouldAnimate={shouldAnimateHero} />
                   <IntroSlideOne />
                   <TimelinePreview />
-                  <CollectionSlide />
                 </VerticalCarousel>
+                <CollectionSlide />
                 <ProviderContact />
               </>
             }
           />
           <Route path="/products" element={<ProductsPage />} />
+          <Route path="/all-watches" element={<AllWatches />} />
           <Route
             path="/phase/:phaseId"
             element={

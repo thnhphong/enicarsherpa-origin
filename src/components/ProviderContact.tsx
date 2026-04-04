@@ -3,7 +3,6 @@ import {
   ExternalLink,
   Mail,
   Phone,
-  MapPin,
   Watch,
   Instagram
 } from "lucide-react";
