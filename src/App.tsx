@@ -9,7 +9,9 @@ import { ProviderContact } from "./components/ProviderContact";
 import { Preloader } from "./components/Preloader";
 import { VerticalCarousel } from "./components/VerticalCarousel";
 import { CustomCursor } from "./components/CustomCursor";
-import { AllWatches } from "./components/AllWatches";
+
+const AllWatches = lazy(() => import("./components/AllWatches").then(m => ({ default: m.AllWatches })));
+const ProductDetail = lazy(() => import("./components/ProductDetail").then(m => ({ default: m.ProductDetail })));
 
 interface AppLocationState {
   replayPreloader?: boolean;
@@ -112,7 +114,22 @@ function App() {
             }
           />
           <Route path="/products" element={<ProductsPage />} />
-          <Route path="/all-watches" element={<AllWatches />} />
+          <Route 
+            path="/all-watches" 
+            element={
+              <Suspense fallback={<div className="min-h-screen bg-white" />}>
+                <AllWatches />
+              </Suspense>
+            } 
+          />
+          <Route 
+            path="/product/:id" 
+            element={
+              <Suspense fallback={<div className="min-h-screen bg-white" />}>
+                <ProductDetail />
+              </Suspense>
+            } 
+          />
           <Route
             path="/phase/:phaseId"
             element={

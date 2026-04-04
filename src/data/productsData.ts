@@ -7,6 +7,9 @@ export interface Product {
   timelineIds: number[];
   image: string;
   details: string;
+  description: string;
+  reference: string;
+  caliber: string;
 }
 
 export const productsData: Product[] = [
@@ -20,7 +23,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sea%20Pearl%20600/Craft%20%2B%20Tailored%201.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sea Pearl 600 Craft + Tailored 1",
+    "caliber": "N/A"
   },
   {
     "id": "prod_1",
@@ -32,7 +38,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sea%20Pearl%20600/Craft%20%2B%20Tailored.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sea Pearl 600 Craft + Tailored",
+    "caliber": "N/A"
   },
   {
     "id": "prod_2",
@@ -44,7 +53,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sea%20Pearl%20600/waecce%201.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sea Pearl 600 waecce 1",
+    "caliber": "N/A"
   },
   {
     "id": "prod_3",
@@ -56,7 +68,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sea%20Pearl%20600/waecce.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sea Pearl 600 waecce",
+    "caliber": "N/A"
   },
   {
     "id": "prod_4",
@@ -68,7 +83,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sea%20Pearl%20600/Worn%20%26%20Wound%201.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sea Pearl 600 Worn & Wound 1",
+    "caliber": "N/A"
   },
   {
     "id": "prod_5",
@@ -80,7 +98,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sea%20Pearl%20600/Worn%20%26%20Wound.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sea Pearl 600 Worn & Wound",
+    "caliber": "N/A"
   },
   {
     "id": "prod_6",
@@ -92,7 +113,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Aqua%20Graph/Analog_%20Shift%202.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "A masterclass in precision timing, this vintage Enicar chronograph was engineered for professionals. Featuring a robust stainless steel case and a highly legible dial, it remains a sought-after piece for collectors of historic racing and aviation timepieces.",
+    "reference": "Sherpa Aqua Graph Analog_ Shift 2",
+    "caliber": "N/A"
   },
   {
     "id": "prod_7",
@@ -104,7 +128,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Aqua%20Graph/Analog_%20Shift.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "A masterclass in precision timing, this vintage Enicar chronograph was engineered for professionals. Featuring a robust stainless steel case and a highly legible dial, it remains a sought-after piece for collectors of historic racing and aviation timepieces.",
+    "reference": "Sherpa Aqua Graph Analog_ Shift",
+    "caliber": "N/A"
   },
   {
     "id": "prod_8",
@@ -116,7 +143,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Aqua%20Graph/iconeek.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "A masterclass in precision timing, this vintage Enicar chronograph was engineered for professionals. Featuring a robust stainless steel case and a highly legible dial, it remains a sought-after piece for collectors of historic racing and aviation timepieces.",
+    "reference": "Sherpa Aqua Graph iconeek",
+    "caliber": "N/A"
   },
   {
     "id": "prod_9",
@@ -128,7 +158,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Aqua%20Graph/Kliton%20Ceku%20-%20Christie_s.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "A masterclass in precision timing, this vintage Enicar chronograph was engineered for professionals. Featuring a robust stainless steel case and a highly legible dial, it remains a sought-after piece for collectors of historic racing and aviation timepieces.",
+    "reference": "Sherpa Aqua Graph Kliton Ceku - Christie_s",
+    "caliber": "N/A"
   },
   {
     "id": "prod_10",
@@ -140,7 +173,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Aqua%20Graph/Watchpool24.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "A masterclass in precision timing, this vintage Enicar chronograph was engineered for professionals. Featuring a robust stainless steel case and a highly legible dial, it remains a sought-after piece for collectors of historic racing and aviation timepieces.",
+    "reference": "Sherpa Aqua Graph Watchpool24",
+    "caliber": "N/A"
   },
   {
     "id": "prod_11",
@@ -152,7 +188,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Date/Auctionet%201.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "This luxury vintage watch is a timeless and rare piece, produced to be water-tight. The classic vintage watch is designed with timeless numerals, a subsidiary dial, and finished with the ENICAR logo at its centre.",
+    "reference": "Sherpa Date Auctionet 1",
+    "caliber": "N/A"
   },
   {
     "id": "prod_12",
@@ -164,7 +203,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Date/Auctionet.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "This luxury vintage watch is a timeless and rare piece, produced to be water-tight. The classic vintage watch is designed with timeless numerals, a subsidiary dial, and finished with the ENICAR logo at its centre.",
+    "reference": "Sherpa Date Auctionet",
+    "caliber": "N/A"
   },
   {
     "id": "prod_13",
@@ -176,7 +218,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Date/Bukowskis.avif",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "This luxury vintage watch is a timeless and rare piece, produced to be water-tight. The classic vintage watch is designed with timeless numerals, a subsidiary dial, and finished with the ENICAR logo at its centre.",
+    "reference": "Sherpa Date Bukowskis",
+    "caliber": "N/A"
   },
   {
     "id": "prod_14",
@@ -188,7 +233,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Date/Time%20Anagram%201.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "This luxury vintage watch is a timeless and rare piece, produced to be water-tight. The classic vintage watch is designed with timeless numerals, a subsidiary dial, and finished with the ENICAR logo at its centre.",
+    "reference": "Sherpa Date Time Anagram 1",
+    "caliber": "N/A"
   },
   {
     "id": "prod_15",
@@ -200,7 +248,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Date/Time%20Anagram.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "This luxury vintage watch is a timeless and rare piece, produced to be water-tight. The classic vintage watch is designed with timeless numerals, a subsidiary dial, and finished with the ENICAR logo at its centre.",
+    "reference": "Sherpa Date Time Anagram",
+    "caliber": "N/A"
   },
   {
     "id": "prod_16",
@@ -212,7 +263,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Dive/Hodinkee.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Dive Hodinkee",
+    "caliber": "N/A"
   },
   {
     "id": "prod_17",
@@ -224,7 +278,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Dive/The%20Blomman%20Watch%20Report%201.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Dive The Blomman Watch Report 1",
+    "caliber": "N/A"
   },
   {
     "id": "prod_18",
@@ -236,7 +293,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Dive/The%20Blomman%20Watch%20Report.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Dive The Blomman Watch Report",
+    "caliber": "N/A"
   },
   {
     "id": "prod_19",
@@ -248,7 +308,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Dive/Watchcomp%201.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Dive Watchcomp 1",
+    "caliber": "N/A"
   },
   {
     "id": "prod_20",
@@ -260,7 +323,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Dive/Watchcomp%202.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Dive Watchcomp 2",
+    "caliber": "N/A"
   },
   {
     "id": "prod_21",
@@ -272,7 +338,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Dive/Watchcomp.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Dive Watchcomp",
+    "caliber": "N/A"
   },
   {
     "id": "prod_22",
@@ -284,7 +353,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Divette/Bulang%20%26%20Sons.WEBP",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Divette Bulang & Sons",
+    "caliber": "N/A"
   },
   {
     "id": "prod_23",
@@ -296,7 +368,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Divette/CCNY%201.WEBP",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Divette CCNY 1",
+    "caliber": "N/A"
   },
   {
     "id": "prod_24",
@@ -308,7 +383,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Divette/CCNY.WEBP",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Divette CCNY",
+    "caliber": "N/A"
   },
   {
     "id": "prod_25",
@@ -320,7 +398,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Divette/El%20Coleccionista%20Eclectico.JPG",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Divette El Coleccionista Eclectico",
+    "caliber": "N/A"
   },
   {
     "id": "prod_26",
@@ -332,7 +413,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Divette/Everywatch.WEBP",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Divette Everywatch",
+    "caliber": "N/A"
   },
   {
     "id": "prod_27",
@@ -344,7 +428,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Electric/Antonio%20Ferreira.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "This luxury vintage watch is a timeless and rare piece, produced to be water-tight. The classic vintage watch is designed with timeless numerals, a subsidiary dial, and finished with the ENICAR logo at its centre.",
+    "reference": "Sherpa Electric Antonio Ferreira",
+    "caliber": "N/A"
   },
   {
     "id": "prod_28",
@@ -356,7 +443,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Electric/EnabranTain.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "This luxury vintage watch is a timeless and rare piece, produced to be water-tight. The classic vintage watch is designed with timeless numerals, a subsidiary dial, and finished with the ENICAR logo at its centre.",
+    "reference": "Sherpa Electric EnabranTain",
+    "caliber": "N/A"
   },
   {
     "id": "prod_29",
@@ -368,7 +458,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Electric/Martijn%20van%20der%20Ven%201.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "This luxury vintage watch is a timeless and rare piece, produced to be water-tight. The classic vintage watch is designed with timeless numerals, a subsidiary dial, and finished with the ENICAR logo at its centre.",
+    "reference": "Sherpa Electric Martijn van der Ven 1",
+    "caliber": "N/A"
   },
   {
     "id": "prod_30",
@@ -380,7 +473,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Electric/Martijn%20van%20der%20Ven.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "This luxury vintage watch is a timeless and rare piece, produced to be water-tight. The classic vintage watch is designed with timeless numerals, a subsidiary dial, and finished with the ENICAR logo at its centre.",
+    "reference": "Sherpa Electric Martijn van der Ven",
+    "caliber": "N/A"
   },
   {
     "id": "prod_31",
@@ -392,7 +488,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20GMT/img20260311_11582322.png",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Built for the jet-setting traveler, this Enicar GMT model allows tracking of multiple time zones simultaneously. Its distinct 24-hour hand and rotating bezel make it an indispensable tool for pilots and global adventurers.",
+    "reference": "Sherpa GMT img20260311_11582322",
+    "caliber": "N/A"
   },
   {
     "id": "prod_32",
@@ -404,7 +503,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20GMT/img20260311_115823221.png",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Built for the jet-setting traveler, this Enicar GMT model allows tracking of multiple time zones simultaneously. Its distinct 24-hour hand and rotating bezel make it an indispensable tool for pilots and global adventurers.",
+    "reference": "Sherpa GMT img20260311_115823221",
+    "caliber": "N/A"
   },
   {
     "id": "prod_33",
@@ -416,7 +518,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20GMT/Time%20Anagram%201.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Built for the jet-setting traveler, this Enicar GMT model allows tracking of multiple time zones simultaneously. Its distinct 24-hour hand and rotating bezel make it an indispensable tool for pilots and global adventurers.",
+    "reference": "Sherpa GMT Time Anagram 1",
+    "caliber": "N/A"
   },
   {
     "id": "prod_34",
@@ -428,7 +533,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20GMT/Time%20Anagram.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Built for the jet-setting traveler, this Enicar GMT model allows tracking of multiple time zones simultaneously. Its distinct 24-hour hand and rotating bezel make it an indispensable tool for pilots and global adventurers.",
+    "reference": "Sherpa GMT Time Anagram",
+    "caliber": "N/A"
   },
   {
     "id": "prod_35",
@@ -440,7 +548,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Graph/Alberto%20Cervetti.JPG",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "A masterclass in precision timing, this vintage Enicar chronograph was engineered for professionals. Featuring a robust stainless steel case and a highly legible dial, it remains a sought-after piece for collectors of historic racing and aviation timepieces.",
+    "reference": "Sherpa Graph Alberto Cervetti",
+    "caliber": "N/A"
   },
   {
     "id": "prod_36",
@@ -452,7 +563,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Graph/Analog_%20Shift.WEBP",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "A masterclass in precision timing, this vintage Enicar chronograph was engineered for professionals. Featuring a robust stainless steel case and a highly legible dial, it remains a sought-after piece for collectors of historic racing and aviation timepieces.",
+    "reference": "Sherpa Graph Analog_ Shift",
+    "caliber": "N/A"
   },
   {
     "id": "prod_37",
@@ -464,7 +578,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Graph/CCNY.WEBP",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "A masterclass in precision timing, this vintage Enicar chronograph was engineered for professionals. Featuring a robust stainless steel case and a highly legible dial, it remains a sought-after piece for collectors of historic racing and aviation timepieces.",
+    "reference": "Sherpa Graph CCNY",
+    "caliber": "N/A"
   },
   {
     "id": "prod_38",
@@ -476,7 +593,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Graph/Mk1a%20Niko%20Henke.JPG",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "A masterclass in precision timing, this vintage Enicar chronograph was engineered for professionals. Featuring a robust stainless steel case and a highly legible dial, it remains a sought-after piece for collectors of historic racing and aviation timepieces.",
+    "reference": "Sherpa Graph Mk1a Niko Henke",
+    "caliber": "N/A"
   },
   {
     "id": "prod_39",
@@ -488,7 +608,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Graph/Mk2%20Niko%20Henke.JPG",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "A masterclass in precision timing, this vintage Enicar chronograph was engineered for professionals. Featuring a robust stainless steel case and a highly legible dial, it remains a sought-after piece for collectors of historic racing and aviation timepieces.",
+    "reference": "Sherpa Graph Mk2 Niko Henke",
+    "caliber": "N/A"
   },
   {
     "id": "prod_40",
@@ -500,7 +623,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Graph/Oliver%20%26%20Clarke%20Vintage.WEBP",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "A masterclass in precision timing, this vintage Enicar chronograph was engineered for professionals. Featuring a robust stainless steel case and a highly legible dial, it remains a sought-after piece for collectors of historic racing and aviation timepieces.",
+    "reference": "Sherpa Graph Oliver & Clarke Vintage",
+    "caliber": "N/A"
   },
   {
     "id": "prod_41",
@@ -512,7 +638,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Graph/Valjoux%2072%20Niko%20Henke.JPG",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "A masterclass in precision timing, this vintage Enicar chronograph was engineered for professionals. Featuring a robust stainless steel case and a highly legible dial, it remains a sought-after piece for collectors of historic racing and aviation timepieces.",
+    "reference": "Sherpa Graph Valjoux 72 Niko Henke",
+    "caliber": "N/A"
   },
   {
     "id": "prod_42",
@@ -524,7 +653,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Graph/Wind%20Vintage.WEBP",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "A masterclass in precision timing, this vintage Enicar chronograph was engineered for professionals. Featuring a robust stainless steel case and a highly legible dial, it remains a sought-after piece for collectors of historic racing and aviation timepieces.",
+    "reference": "Sherpa Graph Wind Vintage",
+    "caliber": "N/A"
   },
   {
     "id": "prod_43",
@@ -536,7 +668,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Guide/Analog%20Shift.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Built for the jet-setting traveler, this Enicar GMT model allows tracking of multiple time zones simultaneously. Its distinct 24-hour hand and rotating bezel make it an indispensable tool for pilots and global adventurers.",
+    "reference": "Sherpa Guide Analog Shift",
+    "caliber": "N/A"
   },
   {
     "id": "prod_44",
@@ -548,7 +683,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Guide/Bulang%20%26%20Sons%20Mk2.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Built for the jet-setting traveler, this Enicar GMT model allows tracking of multiple time zones simultaneously. Its distinct 24-hour hand and rotating bezel make it an indispensable tool for pilots and global adventurers.",
+    "reference": "Sherpa Guide Bulang & Sons Mk2",
+    "caliber": "N/A"
   },
   {
     "id": "prod_45",
@@ -560,7 +698,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Guide/Craft%20%2B%20Tailored%20Mk2.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Built for the jet-setting traveler, this Enicar GMT model allows tracking of multiple time zones simultaneously. Its distinct 24-hour hand and rotating bezel make it an indispensable tool for pilots and global adventurers.",
+    "reference": "Sherpa Guide Craft + Tailored Mk2",
+    "caliber": "N/A"
   },
   {
     "id": "prod_46",
@@ -572,7 +713,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Guide/Hastagwatchco.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Built for the jet-setting traveler, this Enicar GMT model allows tracking of multiple time zones simultaneously. Its distinct 24-hour hand and rotating bezel make it an indispensable tool for pilots and global adventurers.",
+    "reference": "Sherpa Guide Hastagwatchco",
+    "caliber": "N/A"
   },
   {
     "id": "prod_47",
@@ -584,7 +728,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Guide/Pui%20Tippapong.avif",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Built for the jet-setting traveler, this Enicar GMT model allows tracking of multiple time zones simultaneously. Its distinct 24-hour hand and rotating bezel make it an indispensable tool for pilots and global adventurers.",
+    "reference": "Sherpa Guide Pui Tippapong",
+    "caliber": "N/A"
   },
   {
     "id": "prod_48",
@@ -596,7 +743,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Jet/Bulang%20%26%20Sons.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Built for the jet-setting traveler, this Enicar GMT model allows tracking of multiple time zones simultaneously. Its distinct 24-hour hand and rotating bezel make it an indispensable tool for pilots and global adventurers.",
+    "reference": "Sherpa Jet Bulang & Sons",
+    "caliber": "N/A"
   },
   {
     "id": "prod_49",
@@ -608,7 +758,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Jet/CCNY.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Built for the jet-setting traveler, this Enicar GMT model allows tracking of multiple time zones simultaneously. Its distinct 24-hour hand and rotating bezel make it an indispensable tool for pilots and global adventurers.",
+    "reference": "Sherpa Jet CCNY",
+    "caliber": "N/A"
   },
   {
     "id": "prod_50",
@@ -620,7 +773,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Jet/Oracle%20Time.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Built for the jet-setting traveler, this Enicar GMT model allows tracking of multiple time zones simultaneously. Its distinct 24-hour hand and rotating bezel make it an indispensable tool for pilots and global adventurers.",
+    "reference": "Sherpa Jet Oracle Time",
+    "caliber": "N/A"
   },
   {
     "id": "prod_51",
@@ -632,7 +788,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Jet/Sotheby_s.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Built for the jet-setting traveler, this Enicar GMT model allows tracking of multiple time zones simultaneously. Its distinct 24-hour hand and rotating bezel make it an indispensable tool for pilots and global adventurers.",
+    "reference": "Sherpa Jet Sotheby_s",
+    "caliber": "N/A"
   },
   {
     "id": "prod_52",
@@ -644,7 +803,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Jet/Wind%20Vintage.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Built for the jet-setting traveler, this Enicar GMT model allows tracking of multiple time zones simultaneously. Its distinct 24-hour hand and rotating bezel make it an indispensable tool for pilots and global adventurers.",
+    "reference": "Sherpa Jet Wind Vintage",
+    "caliber": "N/A"
   },
   {
     "id": "prod_53",
@@ -656,7 +818,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Jet%20Graph/Antiquorum.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "A masterclass in precision timing, this vintage Enicar chronograph was engineered for professionals. Featuring a robust stainless steel case and a highly legible dial, it remains a sought-after piece for collectors of historic racing and aviation timepieces.",
+    "reference": "Sherpa Jet Graph Antiquorum",
+    "caliber": "N/A"
   },
   {
     "id": "prod_54",
@@ -668,7 +833,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Jet%20Graph/Jet%20Graph%20Mk3%20Fratello.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "A masterclass in precision timing, this vintage Enicar chronograph was engineered for professionals. Featuring a robust stainless steel case and a highly legible dial, it remains a sought-after piece for collectors of historic racing and aviation timepieces.",
+    "reference": "Sherpa Jet Graph Jet Graph Mk3 Fratello",
+    "caliber": "N/A"
   },
   {
     "id": "prod_55",
@@ -680,7 +848,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Jet%20Graph/Kibble%20Watches.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "A masterclass in precision timing, this vintage Enicar chronograph was engineered for professionals. Featuring a robust stainless steel case and a highly legible dial, it remains a sought-after piece for collectors of historic racing and aviation timepieces.",
+    "reference": "Sherpa Jet Graph Kibble Watches",
+    "caliber": "N/A"
   },
   {
     "id": "prod_56",
@@ -692,7 +863,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Jet%20Graph/Vintage%20Watch%20Inc..jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "A masterclass in precision timing, this vintage Enicar chronograph was engineered for professionals. Featuring a robust stainless steel case and a highly legible dial, it remains a sought-after piece for collectors of historic racing and aviation timepieces.",
+    "reference": "Sherpa Jet Graph Vintage Watch Inc",
+    "caliber": "N/A"
   },
   {
     "id": "prod_57",
@@ -704,7 +878,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Jet%20Graph/Watchpool24.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "A masterclass in precision timing, this vintage Enicar chronograph was engineered for professionals. Featuring a robust stainless steel case and a highly legible dial, it remains a sought-after piece for collectors of historic racing and aviation timepieces.",
+    "reference": "Sherpa Jet Graph Watchpool24",
+    "caliber": "N/A"
   },
   {
     "id": "prod_58",
@@ -716,7 +893,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Kaleidoscope/Martijn%20van%20der%20Ven.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "This luxury vintage watch is a timeless and rare piece, produced to be water-tight. The classic vintage watch is designed with timeless numerals, a subsidiary dial, and finished with the ENICAR logo at its centre.",
+    "reference": "Sherpa Kaleidoscope Martijn van der Ven",
+    "caliber": "N/A"
   },
   {
     "id": "prod_59",
@@ -728,7 +908,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Kaleidoscope/Martijn%20van%20der%20Ven.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "This luxury vintage watch is a timeless and rare piece, produced to be water-tight. The classic vintage watch is designed with timeless numerals, a subsidiary dial, and finished with the ENICAR logo at its centre.",
+    "reference": "Sherpa Kaleidoscope Martijn van der Ven",
+    "caliber": "N/A"
   },
   {
     "id": "prod_60",
@@ -740,7 +923,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20OPS/Analog%20Shift%202.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa OPS Analog Shift 2",
+    "caliber": "N/A"
   },
   {
     "id": "prod_61",
@@ -752,7 +938,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20OPS/Analog%20Shift.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa OPS Analog Shift",
+    "caliber": "N/A"
   },
   {
     "id": "prod_62",
@@ -764,7 +953,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20OPS/Auctionet.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa OPS Auctionet",
+    "caliber": "N/A"
   },
   {
     "id": "prod_63",
@@ -776,7 +968,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20OPS/Craft%20%2B%20Tailored.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa OPS Craft + Tailored",
+    "caliber": "N/A"
   },
   {
     "id": "prod_64",
@@ -788,7 +983,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20OPS/The%20Vintageur.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa OPS The Vintageur",
+    "caliber": "N/A"
   },
   {
     "id": "prod_65",
@@ -800,7 +998,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Star/Colasanti%20Aste.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "This luxury vintage watch is a timeless and rare piece, produced to be water-tight. The classic vintage watch is designed with timeless numerals, a subsidiary dial, and finished with the ENICAR logo at its centre.",
+    "reference": "Sherpa Star Colasanti Aste",
+    "caliber": "N/A"
   },
   {
     "id": "prod_66",
@@ -812,7 +1013,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Star/ECY%20Gallery%201.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "This luxury vintage watch is a timeless and rare piece, produced to be water-tight. The classic vintage watch is designed with timeless numerals, a subsidiary dial, and finished with the ENICAR logo at its centre.",
+    "reference": "Sherpa Star ECY Gallery 1",
+    "caliber": "N/A"
   },
   {
     "id": "prod_67",
@@ -824,7 +1028,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Star/ECY%20Gallery.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "This luxury vintage watch is a timeless and rare piece, produced to be water-tight. The classic vintage watch is designed with timeless numerals, a subsidiary dial, and finished with the ENICAR logo at its centre.",
+    "reference": "Sherpa Star ECY Gallery",
+    "caliber": "N/A"
   },
   {
     "id": "prod_68",
@@ -836,7 +1043,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Star/EveryWatch.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "This luxury vintage watch is a timeless and rare piece, produced to be water-tight. The classic vintage watch is designed with timeless numerals, a subsidiary dial, and finished with the ENICAR logo at its centre.",
+    "reference": "Sherpa Star EveryWatch",
+    "caliber": "N/A"
   },
   {
     "id": "prod_69",
@@ -848,7 +1058,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Star/Gisbert%20A.%20Joseph%20Watches%201.jpeg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "This luxury vintage watch is a timeless and rare piece, produced to be water-tight. The classic vintage watch is designed with timeless numerals, a subsidiary dial, and finished with the ENICAR logo at its centre.",
+    "reference": "Sherpa Star Gisbert A",
+    "caliber": "N/A"
   },
   {
     "id": "prod_70",
@@ -860,7 +1073,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Star/Gisbert%20A.%20Joseph%20Watches.jpeg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "This luxury vintage watch is a timeless and rare piece, produced to be water-tight. The classic vintage watch is designed with timeless numerals, a subsidiary dial, and finished with the ENICAR logo at its centre.",
+    "reference": "Sherpa Star Gisbert A",
+    "caliber": "N/A"
   },
   {
     "id": "prod_71",
@@ -872,7 +1088,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Star/img20260310_015903421.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "This luxury vintage watch is a timeless and rare piece, produced to be water-tight. The classic vintage watch is designed with timeless numerals, a subsidiary dial, and finished with the ENICAR logo at its centre.",
+    "reference": "Sherpa Star img20260310_015903421",
+    "caliber": "N/A"
   },
   {
     "id": "prod_72",
@@ -884,7 +1103,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Star%20Diver/Bulang%20%26%20Sons%201.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Star Diver Bulang & Sons 1",
+    "caliber": "N/A"
   },
   {
     "id": "prod_73",
@@ -896,7 +1118,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Star%20Diver/Bulang%20%26%20Sons%202.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Star Diver Bulang & Sons 2",
+    "caliber": "N/A"
   },
   {
     "id": "prod_74",
@@ -908,7 +1133,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Star%20Diver/Bulang%20%26%20Sons.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Star Diver Bulang & Sons",
+    "caliber": "N/A"
   },
   {
     "id": "prod_75",
@@ -920,7 +1148,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Star%20Diver/Watch%20Old%20Times%202.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Star Diver Watch Old Times 2",
+    "caliber": "N/A"
   },
   {
     "id": "prod_76",
@@ -932,7 +1163,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Star%20Diver/Watch%20Old%20Times.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Star Diver Watch Old Times",
+    "caliber": "N/A"
   },
   {
     "id": "prod_77",
@@ -944,7 +1178,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Super%20Dive/Analog%20Shift.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Super Dive Analog Shift",
+    "caliber": "N/A"
   },
   {
     "id": "prod_78",
@@ -956,7 +1193,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Super%20Dive/CCNY.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Super Dive CCNY",
+    "caliber": "N/A"
   },
   {
     "id": "prod_79",
@@ -968,7 +1208,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Super%20Dive/L_Atelier%20du%20Temps%202.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Super Dive L_Atelier du Temps 2",
+    "caliber": "N/A"
   },
   {
     "id": "prod_80",
@@ -980,7 +1223,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Super%20Dive/L_Atelier%20du%20Temps%203.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Super Dive L_Atelier du Temps 3",
+    "caliber": "N/A"
   },
   {
     "id": "prod_81",
@@ -992,7 +1238,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Super%20Dive/L_Atelier%20du%20Temps.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Super Dive L_Atelier du Temps",
+    "caliber": "N/A"
   },
   {
     "id": "prod_82",
@@ -1004,7 +1253,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Super%20Dive/Niko%20Henke.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Super Dive Niko Henke",
+    "caliber": "N/A"
   },
   {
     "id": "prod_83",
@@ -1016,7 +1268,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Super%20Divette/Bukowskis.AVIF",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Super Divette Bukowskis",
+    "caliber": "N/A"
   },
   {
     "id": "prod_84",
@@ -1028,7 +1283,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Super%20Divette/Bulang%20%26%20Sons.WEBP",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Super Divette Bulang & Sons",
+    "caliber": "N/A"
   },
   {
     "id": "prod_85",
@@ -1040,7 +1298,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Super%20Divette/Craft%20%2B%20Tailored.WEBP",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Super Divette Craft + Tailored",
+    "caliber": "N/A"
   },
   {
     "id": "prod_86",
@@ -1052,7 +1313,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Super%20Divette/Shuck%20the%20Oyster.JPG",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Super Divette Shuck the Oyster",
+    "caliber": "N/A"
   },
   {
     "id": "prod_87",
@@ -1064,7 +1328,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Super%20Divette/Watchpool24.JPG",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Super Divette Watchpool24",
+    "caliber": "N/A"
   },
   {
     "id": "prod_88",
@@ -1076,7 +1343,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Supergraph/Niko%20Henke%201.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "A masterclass in precision timing, this vintage Enicar chronograph was engineered for professionals. Featuring a robust stainless steel case and a highly legible dial, it remains a sought-after piece for collectors of historic racing and aviation timepieces.",
+    "reference": "Sherpa Supergraph Niko Henke 1",
+    "caliber": "N/A"
   },
   {
     "id": "prod_89",
@@ -1088,7 +1358,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Supergraph/Niko%20Henke%202.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "A masterclass in precision timing, this vintage Enicar chronograph was engineered for professionals. Featuring a robust stainless steel case and a highly legible dial, it remains a sought-after piece for collectors of historic racing and aviation timepieces.",
+    "reference": "Sherpa Supergraph Niko Henke 2",
+    "caliber": "N/A"
   },
   {
     "id": "prod_90",
@@ -1100,7 +1373,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Supergraph/Niko%20Henke%203.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "A masterclass in precision timing, this vintage Enicar chronograph was engineered for professionals. Featuring a robust stainless steel case and a highly legible dial, it remains a sought-after piece for collectors of historic racing and aviation timepieces.",
+    "reference": "Sherpa Supergraph Niko Henke 3",
+    "caliber": "N/A"
   },
   {
     "id": "prod_91",
@@ -1112,7 +1388,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Supergraph/Sherpa%20Super%20Graph%20Simonet%20Niko%20Henke%202.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "A masterclass in precision timing, this vintage Enicar chronograph was engineered for professionals. Featuring a robust stainless steel case and a highly legible dial, it remains a sought-after piece for collectors of historic racing and aviation timepieces.",
+    "reference": "Sherpa Supergraph Sherpa Super Graph Simonet Niko Henke 2",
+    "caliber": "N/A"
   },
   {
     "id": "prod_92",
@@ -1124,7 +1403,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Supergraph/Sherpa%20Super%20Graph%20Simonet%20Niko%20Henke.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "A masterclass in precision timing, this vintage Enicar chronograph was engineered for professionals. Featuring a robust stainless steel case and a highly legible dial, it remains a sought-after piece for collectors of historic racing and aviation timepieces.",
+    "reference": "Sherpa Supergraph Sherpa Super Graph Simonet Niko Henke",
+    "caliber": "N/A"
   },
   {
     "id": "prod_93",
@@ -1136,7 +1418,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Ultradive/CCNY.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Ultradive CCNY",
+    "caliber": "N/A"
   },
   {
     "id": "prod_94",
@@ -1148,7 +1433,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Ultradive/L_Atelier%20Du%20Temps.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Ultradive L_Atelier Du Temps",
+    "caliber": "N/A"
   },
   {
     "id": "prod_95",
@@ -1160,7 +1448,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Ultradive/Wind%20Vintage%201.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Ultradive Wind Vintage 1",
+    "caliber": "N/A"
   },
   {
     "id": "prod_96",
@@ -1172,7 +1463,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Ultradive/Wind%20Vintage%203.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Ultradive Wind Vintage 3",
+    "caliber": "N/A"
   },
   {
     "id": "prod_97",
@@ -1184,7 +1478,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpa%20Ultradive/Wind%20Vintage.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "Designed for the depths, this Enicar dive watch features the iconic Super Compressor case technology. Known for exceptional water resistance and distinctive dual crowns, it represents the golden era of underwater exploration.",
+    "reference": "Sherpa Ultradive Wind Vintage",
+    "caliber": "N/A"
   },
   {
     "id": "prod_98",
@@ -1196,7 +1493,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpas/Atelier%20Lesoon.jpeg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "This luxury vintage watch is a timeless and rare piece, produced to be water-tight. The classic vintage watch is designed with timeless numerals, a subsidiary dial, and finished with the ENICAR logo at its centre.",
+    "reference": "Sherpas Atelier Lesoon",
+    "caliber": "N/A"
   },
   {
     "id": "prod_99",
@@ -1208,7 +1508,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpas/Niko%20Henke%201.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "This luxury vintage watch is a timeless and rare piece, produced to be water-tight. The classic vintage watch is designed with timeless numerals, a subsidiary dial, and finished with the ENICAR logo at its centre.",
+    "reference": "Sherpas Niko Henke 1",
+    "caliber": "N/A"
   },
   {
     "id": "prod_100",
@@ -1220,7 +1523,10 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpas/Niko%20Henke.jpg",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "This luxury vintage watch is a timeless and rare piece, produced to be water-tight. The classic vintage watch is designed with timeless numerals, a subsidiary dial, and finished with the ENICAR logo at its centre.",
+    "reference": "Sherpas Niko Henke",
+    "caliber": "N/A"
   },
   {
     "id": "prod_101",
@@ -1232,6 +1538,9 @@ export const productsData: Product[] = [
     ],
     "timelineIds": [],
     "image": "/images/Products/Sherpas/Niko%20Henke.webp",
-    "details": "Stainless Steel Case"
+    "details": "Stainless Steel Case",
+    "description": "This luxury vintage watch is a timeless and rare piece, produced to be water-tight. The classic vintage watch is designed with timeless numerals, a subsidiary dial, and finished with the ENICAR logo at its centre.",
+    "reference": "Sherpas Niko Henke",
+    "caliber": "N/A"
   }
 ];

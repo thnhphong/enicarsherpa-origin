@@ -75,33 +75,41 @@ export const AllWatches = () => {
                             {productsData
                                 .filter(product => selectedFamily === "All Watches" || product.family === selectedFamily)
                                 .map((product) => (
-                                <motion.div 
+                                <motion.div
                                     key={product.id}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    className="group cursor-pointer flex flex-col"
+                                    layout
+                                    initial={{ opacity: 0, scale: 0.95 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    exit={{ opacity: 0, scale: 0.95 }}
+                                    transition={{ duration: 0.3 }}
                                 >
-                                    <div className="bg-[#f8f8f8] aspect-[3/4] flex items-center justify-center p-8 mb-6 relative overflow-hidden group-hover:bg-[#f2f2f2] transition-colors rounded-sm">
-                                        <span className="absolute top-4 left-4 bg-white text-[9px] font-eurostile-black uppercase px-2 py-1 tracking-widest border border-gray-100 shadow-sm z-10 font-bold">
-                                            NEW
-                                        </span>
-                                        <img 
-                                            src={product.image} 
-                                            alt={product.name} 
-                                            className="w-full h-full object-contain filter drop-shadow-xl mix-blend-multiply transition-transform duration-700 group-hover:scale-110" 
-                                        />
-                                    </div>
-                                    <div className="text-center px-4 flex-1 flex flex-col">
-                                        <h3 className="font-eurostile-black text-xs tracking-widest uppercase text-gray-800 mb-3 font-bold">
-                                            {product.collection}
-                                        </h3>
-                                        <p className="text-[11px] text-gray-500 font-sans leading-relaxed mb-6">
-                                            {product.details}
-                                        </p>
-                                        <div className="mt-auto">
-                                            <span className="text-[10px] tracking-widest text-[#d1d1d1] uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold">Details</span>
+                                    <Link to={`/product/${product.id}`} className="block group cursor-pointer h-full">
+                                        {/* Product Image Card */}
+                                        <div className="bg-[#f8f8f8] aspect-[3/4] flex items-center justify-center p-8 mb-6 relative overflow-hidden group-hover:bg-[#f2f2f2] transition-colors rounded-sm shadow-sm group-hover:shadow-md">
+                                            <img 
+                                                src={product.image} 
+                                                alt={product.name} 
+                                                loading="lazy"
+                                                decoding="async"
+                                                className="w-full h-full object-contain filter drop-shadow-xl mix-blend-multiply transition-transform duration-700 group-hover:scale-110" 
+                                            />
                                         </div>
-                                    </div>
+                                        
+                                        {/* Product Info */}
+                                        <div className="text-center px-4">
+                                            <h3 className="font-eurostile-black text-xs tracking-widest uppercase text-gray-800 mb-3 font-bold group-hover:text-red transition-colors">
+                                                {product.collection}
+                                            </h3>
+                                            <p className="text-[11px] text-gray-500 font-sans leading-relaxed mb-6 group-hover:text-black transition-colors">
+                                                {product.name}
+                                            </p>
+                                            <div className="flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                                <span className="w-8 h-px bg-red"></span>
+                                                <span className="text-[9px] font-eurostile-black tracking-widest uppercase text-red font-bold">Discover</span>
+                                                <span className="w-8 h-px bg-red"></span>
+                                            </div>
+                                        </div>
+                                    </Link>
                                 </motion.div>
                             ))}
                         </div>

@@ -65,24 +65,26 @@ export const CollectionSlide = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.9 }}
                     transition={{ duration: 0.3 }}
-                    className="group cursor-pointer flex flex-col"
                 >
-                    <div className="bg-[#f8f8f8] aspect-[3/4] flex items-center justify-center p-8 mb-6 relative overflow-hidden group-hover:bg-[#f2f2f2] transition-colors rounded-sm">
-                        <img 
-                            src={product.image} 
-                            alt={product.name} 
-                            loading="lazy"
-                            className="w-full h-full object-contain filter drop-shadow-xl mix-blend-multiply transition-transform duration-700 group-hover:scale-110" 
-                        />
-                    </div>
-                    <div className="text-center px-4 flex-1 flex flex-col">
-                        <h3 className="font-eurostile-black text-xs tracking-widest uppercase text-gray-800 mb-3 font-bold">
-                            {product.collection}
-                        </h3>
-                        <p className="text-[11px] text-gray-500 font-sans leading-relaxed mb-6">
-                            {product.name}
-                        </p>
-                    </div>
+                    <Link to={`/product/${product.id}`} className="block group cursor-pointer flex-col h-full">
+                        <div className="bg-[#f8f8f8] aspect-[3/4] flex items-center justify-center p-8 mb-6 relative overflow-hidden group-hover:bg-[#f2f2f2] transition-colors rounded-sm">
+                            <img 
+                                src={product.image} 
+                                alt={product.name} 
+                                loading="lazy"
+                                decoding="async"
+                                className="w-full h-full object-contain filter drop-shadow-xl mix-blend-multiply transition-transform duration-700 group-hover:scale-110" 
+                            />
+                        </div>
+                        <div className="text-center px-4 flex-1 flex flex-col">
+                            <h3 className="font-eurostile-black text-xs tracking-widest uppercase text-gray-800 mb-3 font-bold group-hover:text-red transition-colors">
+                                {product.collection}
+                            </h3>
+                            <p className="text-[11px] text-gray-500 font-sans leading-relaxed mb-6 group-hover:text-black transition-colors">
+                                {product.name}
+                            </p>
+                        </div>
+                    </Link>
                 </motion.div>
               ))}
             </AnimatePresence>
