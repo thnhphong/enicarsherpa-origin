@@ -19,7 +19,7 @@ export const productsData: Product[] = [
       "Sea Pearl 600"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sea Pearl 600/Craft + Tailored 1.jpg",
+    "image": "/images/Products/Sea%20Pearl%20600/Craft%20%2B%20Tailored%201.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -31,7 +31,7 @@ export const productsData: Product[] = [
       "Sea Pearl 600"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sea Pearl 600/Craft + Tailored.jpg",
+    "image": "/images/Products/Sea%20Pearl%20600/Craft%20%2B%20Tailored.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -43,7 +43,7 @@ export const productsData: Product[] = [
       "Sea Pearl 600"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sea Pearl 600/waecce 1.webp",
+    "image": "/images/Products/Sea%20Pearl%20600/waecce%201.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -55,7 +55,7 @@ export const productsData: Product[] = [
       "Sea Pearl 600"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sea Pearl 600/waecce.webp",
+    "image": "/images/Products/Sea%20Pearl%20600/waecce.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -67,7 +67,7 @@ export const productsData: Product[] = [
       "Sea Pearl 600"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sea Pearl 600/Worn & Wound 1.jpg",
+    "image": "/images/Products/Sea%20Pearl%20600/Worn%20%26%20Wound%201.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -79,7 +79,7 @@ export const productsData: Product[] = [
       "Sea Pearl 600"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sea Pearl 600/Worn & Wound.jpg",
+    "image": "/images/Products/Sea%20Pearl%20600/Worn%20%26%20Wound.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -91,7 +91,7 @@ export const productsData: Product[] = [
       "Sherpa Aqua Graph"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Aqua Graph/Analog_ Shift 2.webp",
+    "image": "/images/Products/Sherpa%20Aqua%20Graph/Analog_%20Shift%202.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -103,7 +103,7 @@ export const productsData: Product[] = [
       "Sherpa Aqua Graph"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Aqua Graph/Analog_ Shift.webp",
+    "image": "/images/Products/Sherpa%20Aqua%20Graph/Analog_%20Shift.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -115,7 +115,7 @@ export const productsData: Product[] = [
       "Sherpa Aqua Graph"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Aqua Graph/iconeek.jpg",
+    "image": "/images/Products/Sherpa%20Aqua%20Graph/iconeek.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -127,7 +127,7 @@ export const productsData: Product[] = [
       "Sherpa Aqua Graph"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Aqua Graph/Kliton Ceku - Christie_s.jpg",
+    "image": "/images/Products/Sherpa%20Aqua%20Graph/Kliton%20Ceku%20-%20Christie_s.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -139,7 +139,7 @@ export const productsData: Product[] = [
       "Sherpa Aqua Graph"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Aqua Graph/Watchpool24.jpg",
+    "image": "/images/Products/Sherpa%20Aqua%20Graph/Watchpool24.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -151,7 +151,7 @@ export const productsData: Product[] = [
       "Sherpa Date"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Date/Auctionet 1.jpg",
+    "image": "/images/Products/Sherpa%20Date/Auctionet%201.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -163,7 +163,7 @@ export const productsData: Product[] = [
       "Sherpa Date"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Date/Auctionet.jpg",
+    "image": "/images/Products/Sherpa%20Date/Auctionet.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -175,7 +175,7 @@ export const productsData: Product[] = [
       "Sherpa Date"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Date/Bukowskis.avif",
+    "image": "/images/Products/Sherpa%20Date/Bukowskis.avif",
     "details": "Stainless Steel Case"
   },
   {
@@ -187,7 +187,7 @@ export const productsData: Product[] = [
       "Sherpa Date"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Date/Time Anagram 1.webp",
+    "image": "/images/Products/Sherpa%20Date/Time%20Anagram%201.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -199,7 +199,7 @@ export const productsData: Product[] = [
       "Sherpa Date"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Date/Time Anagram.webp",
+    "image": "/images/Products/Sherpa%20Date/Time%20Anagram.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -211,7 +211,7 @@ export const productsData: Product[] = [
       "Sherpa Dive"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Dive/Hodinkee.webp",
+    "image": "/images/Products/Sherpa%20Dive/Hodinkee.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -223,7 +223,7 @@ export const productsData: Product[] = [
       "Sherpa Dive"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Dive/The Blomman Watch Report 1.jpg",
+    "image": "/images/Products/Sherpa%20Dive/The%20Blomman%20Watch%20Report%201.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -235,7 +235,7 @@ export const productsData: Product[] = [
       "Sherpa Dive"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Dive/The Blomman Watch Report.jpg",
+    "image": "/images/Products/Sherpa%20Dive/The%20Blomman%20Watch%20Report.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -247,7 +247,7 @@ export const productsData: Product[] = [
       "Sherpa Dive"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Dive/Watchcomp 1.jpg",
+    "image": "/images/Products/Sherpa%20Dive/Watchcomp%201.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -259,7 +259,7 @@ export const productsData: Product[] = [
       "Sherpa Dive"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Dive/Watchcomp 2.jpg",
+    "image": "/images/Products/Sherpa%20Dive/Watchcomp%202.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -271,7 +271,7 @@ export const productsData: Product[] = [
       "Sherpa Dive"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Dive/Watchcomp.jpg",
+    "image": "/images/Products/Sherpa%20Dive/Watchcomp.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -283,7 +283,7 @@ export const productsData: Product[] = [
       "Sherpa Divette"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Divette/Bulang & Sons.WEBP",
+    "image": "/images/Products/Sherpa%20Divette/Bulang%20%26%20Sons.WEBP",
     "details": "Stainless Steel Case"
   },
   {
@@ -295,7 +295,7 @@ export const productsData: Product[] = [
       "Sherpa Divette"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Divette/CCNY 1.WEBP",
+    "image": "/images/Products/Sherpa%20Divette/CCNY%201.WEBP",
     "details": "Stainless Steel Case"
   },
   {
@@ -307,7 +307,7 @@ export const productsData: Product[] = [
       "Sherpa Divette"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Divette/CCNY.WEBP",
+    "image": "/images/Products/Sherpa%20Divette/CCNY.WEBP",
     "details": "Stainless Steel Case"
   },
   {
@@ -319,7 +319,7 @@ export const productsData: Product[] = [
       "Sherpa Divette"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Divette/El Coleccionista Eclectico.JPG",
+    "image": "/images/Products/Sherpa%20Divette/El%20Coleccionista%20Eclectico.JPG",
     "details": "Stainless Steel Case"
   },
   {
@@ -331,7 +331,7 @@ export const productsData: Product[] = [
       "Sherpa Divette"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Divette/Everywatch.WEBP",
+    "image": "/images/Products/Sherpa%20Divette/Everywatch.WEBP",
     "details": "Stainless Steel Case"
   },
   {
@@ -343,7 +343,7 @@ export const productsData: Product[] = [
       "Sherpa Electric"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Electric/Antonio Ferreira.jpg",
+    "image": "/images/Products/Sherpa%20Electric/Antonio%20Ferreira.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -355,7 +355,7 @@ export const productsData: Product[] = [
       "Sherpa Electric"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Electric/EnabranTain.jpg",
+    "image": "/images/Products/Sherpa%20Electric/EnabranTain.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -367,7 +367,7 @@ export const productsData: Product[] = [
       "Sherpa Electric"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Electric/Martijn van der Ven 1.webp",
+    "image": "/images/Products/Sherpa%20Electric/Martijn%20van%20der%20Ven%201.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -379,7 +379,7 @@ export const productsData: Product[] = [
       "Sherpa Electric"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Electric/Martijn van der Ven.webp",
+    "image": "/images/Products/Sherpa%20Electric/Martijn%20van%20der%20Ven.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -391,7 +391,7 @@ export const productsData: Product[] = [
       "Sherpa GMT"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa GMT/img20260311_11582322.png",
+    "image": "/images/Products/Sherpa%20GMT/img20260311_11582322.png",
     "details": "Stainless Steel Case"
   },
   {
@@ -403,7 +403,7 @@ export const productsData: Product[] = [
       "Sherpa GMT"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa GMT/img20260311_115823221.png",
+    "image": "/images/Products/Sherpa%20GMT/img20260311_115823221.png",
     "details": "Stainless Steel Case"
   },
   {
@@ -415,7 +415,7 @@ export const productsData: Product[] = [
       "Sherpa GMT"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa GMT/Time Anagram 1.webp",
+    "image": "/images/Products/Sherpa%20GMT/Time%20Anagram%201.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -427,7 +427,7 @@ export const productsData: Product[] = [
       "Sherpa GMT"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa GMT/Time Anagram.webp",
+    "image": "/images/Products/Sherpa%20GMT/Time%20Anagram.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -439,7 +439,7 @@ export const productsData: Product[] = [
       "Sherpa Graph"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Graph/Alberto Cervetti.JPG",
+    "image": "/images/Products/Sherpa%20Graph/Alberto%20Cervetti.JPG",
     "details": "Stainless Steel Case"
   },
   {
@@ -451,7 +451,7 @@ export const productsData: Product[] = [
       "Sherpa Graph"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Graph/Analog_ Shift.WEBP",
+    "image": "/images/Products/Sherpa%20Graph/Analog_%20Shift.WEBP",
     "details": "Stainless Steel Case"
   },
   {
@@ -463,7 +463,7 @@ export const productsData: Product[] = [
       "Sherpa Graph"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Graph/CCNY.WEBP",
+    "image": "/images/Products/Sherpa%20Graph/CCNY.WEBP",
     "details": "Stainless Steel Case"
   },
   {
@@ -475,7 +475,7 @@ export const productsData: Product[] = [
       "Sherpa Graph"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Graph/Mk1a Niko Henke.JPG",
+    "image": "/images/Products/Sherpa%20Graph/Mk1a%20Niko%20Henke.JPG",
     "details": "Stainless Steel Case"
   },
   {
@@ -487,7 +487,7 @@ export const productsData: Product[] = [
       "Sherpa Graph"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Graph/Mk2 Niko Henke.JPG",
+    "image": "/images/Products/Sherpa%20Graph/Mk2%20Niko%20Henke.JPG",
     "details": "Stainless Steel Case"
   },
   {
@@ -499,7 +499,7 @@ export const productsData: Product[] = [
       "Sherpa Graph"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Graph/Oliver & Clarke Vintage.WEBP",
+    "image": "/images/Products/Sherpa%20Graph/Oliver%20%26%20Clarke%20Vintage.WEBP",
     "details": "Stainless Steel Case"
   },
   {
@@ -511,7 +511,7 @@ export const productsData: Product[] = [
       "Sherpa Graph"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Graph/Valjoux 72 Niko Henke.JPG",
+    "image": "/images/Products/Sherpa%20Graph/Valjoux%2072%20Niko%20Henke.JPG",
     "details": "Stainless Steel Case"
   },
   {
@@ -523,7 +523,7 @@ export const productsData: Product[] = [
       "Sherpa Graph"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Graph/Wind Vintage.WEBP",
+    "image": "/images/Products/Sherpa%20Graph/Wind%20Vintage.WEBP",
     "details": "Stainless Steel Case"
   },
   {
@@ -535,7 +535,7 @@ export const productsData: Product[] = [
       "Sherpa Guide"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Guide/Analog Shift.webp",
+    "image": "/images/Products/Sherpa%20Guide/Analog%20Shift.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -547,7 +547,7 @@ export const productsData: Product[] = [
       "Sherpa Guide"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Guide/Bulang & Sons Mk2.webp",
+    "image": "/images/Products/Sherpa%20Guide/Bulang%20%26%20Sons%20Mk2.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -559,7 +559,7 @@ export const productsData: Product[] = [
       "Sherpa Guide"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Guide/Craft + Tailored Mk2.webp",
+    "image": "/images/Products/Sherpa%20Guide/Craft%20%2B%20Tailored%20Mk2.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -571,7 +571,7 @@ export const productsData: Product[] = [
       "Sherpa Guide"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Guide/Hastagwatchco.webp",
+    "image": "/images/Products/Sherpa%20Guide/Hastagwatchco.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -583,7 +583,7 @@ export const productsData: Product[] = [
       "Sherpa Guide"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Guide/Pui Tippapong.avif",
+    "image": "/images/Products/Sherpa%20Guide/Pui%20Tippapong.avif",
     "details": "Stainless Steel Case"
   },
   {
@@ -595,7 +595,7 @@ export const productsData: Product[] = [
       "Sherpa Jet"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Jet/Bulang & Sons.webp",
+    "image": "/images/Products/Sherpa%20Jet/Bulang%20%26%20Sons.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -607,7 +607,7 @@ export const productsData: Product[] = [
       "Sherpa Jet"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Jet/CCNY.webp",
+    "image": "/images/Products/Sherpa%20Jet/CCNY.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -619,7 +619,7 @@ export const productsData: Product[] = [
       "Sherpa Jet"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Jet/Oracle Time.jpg",
+    "image": "/images/Products/Sherpa%20Jet/Oracle%20Time.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -631,7 +631,7 @@ export const productsData: Product[] = [
       "Sherpa Jet"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Jet/Sotheby_s.jpg",
+    "image": "/images/Products/Sherpa%20Jet/Sotheby_s.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -643,7 +643,7 @@ export const productsData: Product[] = [
       "Sherpa Jet"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Jet/Wind Vintage.webp",
+    "image": "/images/Products/Sherpa%20Jet/Wind%20Vintage.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -655,7 +655,7 @@ export const productsData: Product[] = [
       "Sherpa Jet Graph"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Jet Graph/Antiquorum.jpg",
+    "image": "/images/Products/Sherpa%20Jet%20Graph/Antiquorum.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -667,7 +667,7 @@ export const productsData: Product[] = [
       "Sherpa Jet Graph"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Jet Graph/Jet Graph Mk3 Fratello.jpg",
+    "image": "/images/Products/Sherpa%20Jet%20Graph/Jet%20Graph%20Mk3%20Fratello.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -679,7 +679,7 @@ export const productsData: Product[] = [
       "Sherpa Jet Graph"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Jet Graph/Kibble Watches.webp",
+    "image": "/images/Products/Sherpa%20Jet%20Graph/Kibble%20Watches.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -691,7 +691,7 @@ export const productsData: Product[] = [
       "Sherpa Jet Graph"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Jet Graph/Vintage Watch Inc..jpg",
+    "image": "/images/Products/Sherpa%20Jet%20Graph/Vintage%20Watch%20Inc..jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -703,7 +703,7 @@ export const productsData: Product[] = [
       "Sherpa Jet Graph"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Jet Graph/Watchpool24.jpg",
+    "image": "/images/Products/Sherpa%20Jet%20Graph/Watchpool24.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -715,7 +715,7 @@ export const productsData: Product[] = [
       "Sherpa Kaleidoscope"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Kaleidoscope/Martijn van der Ven.jpg",
+    "image": "/images/Products/Sherpa%20Kaleidoscope/Martijn%20van%20der%20Ven.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -727,7 +727,7 @@ export const productsData: Product[] = [
       "Sherpa Kaleidoscope"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Kaleidoscope/Martijn van der Ven.webp",
+    "image": "/images/Products/Sherpa%20Kaleidoscope/Martijn%20van%20der%20Ven.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -739,7 +739,7 @@ export const productsData: Product[] = [
       "Sherpa OPS"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa OPS/Analog Shift 2.webp",
+    "image": "/images/Products/Sherpa%20OPS/Analog%20Shift%202.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -751,7 +751,7 @@ export const productsData: Product[] = [
       "Sherpa OPS"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa OPS/Analog Shift.webp",
+    "image": "/images/Products/Sherpa%20OPS/Analog%20Shift.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -763,7 +763,7 @@ export const productsData: Product[] = [
       "Sherpa OPS"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa OPS/Auctionet.jpg",
+    "image": "/images/Products/Sherpa%20OPS/Auctionet.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -775,7 +775,7 @@ export const productsData: Product[] = [
       "Sherpa OPS"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa OPS/Craft + Tailored.webp",
+    "image": "/images/Products/Sherpa%20OPS/Craft%20%2B%20Tailored.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -787,7 +787,7 @@ export const productsData: Product[] = [
       "Sherpa OPS"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa OPS/The Vintageur.jpg",
+    "image": "/images/Products/Sherpa%20OPS/The%20Vintageur.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -799,7 +799,7 @@ export const productsData: Product[] = [
       "Sherpa Star"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Star/Colasanti Aste.jpg",
+    "image": "/images/Products/Sherpa%20Star/Colasanti%20Aste.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -811,7 +811,7 @@ export const productsData: Product[] = [
       "Sherpa Star"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Star/ECY Gallery 1.jpg",
+    "image": "/images/Products/Sherpa%20Star/ECY%20Gallery%201.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -823,7 +823,7 @@ export const productsData: Product[] = [
       "Sherpa Star"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Star/ECY Gallery.jpg",
+    "image": "/images/Products/Sherpa%20Star/ECY%20Gallery.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -835,7 +835,7 @@ export const productsData: Product[] = [
       "Sherpa Star"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Star/EveryWatch.webp",
+    "image": "/images/Products/Sherpa%20Star/EveryWatch.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -847,7 +847,7 @@ export const productsData: Product[] = [
       "Sherpa Star"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Star/Gisbert A. Joseph Watches 1.jpeg",
+    "image": "/images/Products/Sherpa%20Star/Gisbert%20A.%20Joseph%20Watches%201.jpeg",
     "details": "Stainless Steel Case"
   },
   {
@@ -859,7 +859,7 @@ export const productsData: Product[] = [
       "Sherpa Star"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Star/Gisbert A. Joseph Watches.jpeg",
+    "image": "/images/Products/Sherpa%20Star/Gisbert%20A.%20Joseph%20Watches.jpeg",
     "details": "Stainless Steel Case"
   },
   {
@@ -871,7 +871,7 @@ export const productsData: Product[] = [
       "Sherpa Star"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Star/img20260310_015903421.jpg",
+    "image": "/images/Products/Sherpa%20Star/img20260310_015903421.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -883,7 +883,7 @@ export const productsData: Product[] = [
       "Sherpa Star Diver"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Star Diver/Bulang & Sons 1.webp",
+    "image": "/images/Products/Sherpa%20Star%20Diver/Bulang%20%26%20Sons%201.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -895,7 +895,7 @@ export const productsData: Product[] = [
       "Sherpa Star Diver"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Star Diver/Bulang & Sons 2.webp",
+    "image": "/images/Products/Sherpa%20Star%20Diver/Bulang%20%26%20Sons%202.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -907,7 +907,7 @@ export const productsData: Product[] = [
       "Sherpa Star Diver"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Star Diver/Bulang & Sons.webp",
+    "image": "/images/Products/Sherpa%20Star%20Diver/Bulang%20%26%20Sons.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -919,7 +919,7 @@ export const productsData: Product[] = [
       "Sherpa Star Diver"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Star Diver/Watch Old Times 2.jpg",
+    "image": "/images/Products/Sherpa%20Star%20Diver/Watch%20Old%20Times%202.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -931,7 +931,7 @@ export const productsData: Product[] = [
       "Sherpa Star Diver"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Star Diver/Watch Old Times.jpg",
+    "image": "/images/Products/Sherpa%20Star%20Diver/Watch%20Old%20Times.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -943,7 +943,7 @@ export const productsData: Product[] = [
       "Sherpa Super Dive"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Super Dive/Analog Shift.webp",
+    "image": "/images/Products/Sherpa%20Super%20Dive/Analog%20Shift.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -955,7 +955,7 @@ export const productsData: Product[] = [
       "Sherpa Super Dive"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Super Dive/CCNY.webp",
+    "image": "/images/Products/Sherpa%20Super%20Dive/CCNY.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -967,7 +967,7 @@ export const productsData: Product[] = [
       "Sherpa Super Dive"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Super Dive/L_Atelier du Temps 2.webp",
+    "image": "/images/Products/Sherpa%20Super%20Dive/L_Atelier%20du%20Temps%202.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -979,7 +979,7 @@ export const productsData: Product[] = [
       "Sherpa Super Dive"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Super Dive/L_Atelier du Temps 3.webp",
+    "image": "/images/Products/Sherpa%20Super%20Dive/L_Atelier%20du%20Temps%203.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -991,7 +991,7 @@ export const productsData: Product[] = [
       "Sherpa Super Dive"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Super Dive/L_Atelier du Temps.webp",
+    "image": "/images/Products/Sherpa%20Super%20Dive/L_Atelier%20du%20Temps.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -1003,7 +1003,7 @@ export const productsData: Product[] = [
       "Sherpa Super Dive"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Super Dive/Niko Henke.webp",
+    "image": "/images/Products/Sherpa%20Super%20Dive/Niko%20Henke.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -1015,7 +1015,7 @@ export const productsData: Product[] = [
       "Sherpa Super Divette"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Super Divette/Bukowskis.AVIF",
+    "image": "/images/Products/Sherpa%20Super%20Divette/Bukowskis.AVIF",
     "details": "Stainless Steel Case"
   },
   {
@@ -1027,7 +1027,7 @@ export const productsData: Product[] = [
       "Sherpa Super Divette"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Super Divette/Bulang & Sons.WEBP",
+    "image": "/images/Products/Sherpa%20Super%20Divette/Bulang%20%26%20Sons.WEBP",
     "details": "Stainless Steel Case"
   },
   {
@@ -1039,7 +1039,7 @@ export const productsData: Product[] = [
       "Sherpa Super Divette"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Super Divette/Craft + Tailored.WEBP",
+    "image": "/images/Products/Sherpa%20Super%20Divette/Craft%20%2B%20Tailored.WEBP",
     "details": "Stainless Steel Case"
   },
   {
@@ -1051,7 +1051,7 @@ export const productsData: Product[] = [
       "Sherpa Super Divette"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Super Divette/Shuck the Oyster.JPG",
+    "image": "/images/Products/Sherpa%20Super%20Divette/Shuck%20the%20Oyster.JPG",
     "details": "Stainless Steel Case"
   },
   {
@@ -1063,7 +1063,7 @@ export const productsData: Product[] = [
       "Sherpa Super Divette"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Super Divette/Watchpool24.JPG",
+    "image": "/images/Products/Sherpa%20Super%20Divette/Watchpool24.JPG",
     "details": "Stainless Steel Case"
   },
   {
@@ -1075,7 +1075,7 @@ export const productsData: Product[] = [
       "Sherpa Supergraph"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Supergraph/Niko Henke 1.jpg",
+    "image": "/images/Products/Sherpa%20Supergraph/Niko%20Henke%201.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -1087,7 +1087,7 @@ export const productsData: Product[] = [
       "Sherpa Supergraph"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Supergraph/Niko Henke 2.jpg",
+    "image": "/images/Products/Sherpa%20Supergraph/Niko%20Henke%202.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -1099,7 +1099,7 @@ export const productsData: Product[] = [
       "Sherpa Supergraph"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Supergraph/Niko Henke 3.webp",
+    "image": "/images/Products/Sherpa%20Supergraph/Niko%20Henke%203.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -1111,7 +1111,7 @@ export const productsData: Product[] = [
       "Sherpa Supergraph"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Supergraph/Sherpa Super Graph Simonet Niko Henke 2.webp",
+    "image": "/images/Products/Sherpa%20Supergraph/Sherpa%20Super%20Graph%20Simonet%20Niko%20Henke%202.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -1123,7 +1123,7 @@ export const productsData: Product[] = [
       "Sherpa Supergraph"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Supergraph/Sherpa Super Graph Simonet Niko Henke.webp",
+    "image": "/images/Products/Sherpa%20Supergraph/Sherpa%20Super%20Graph%20Simonet%20Niko%20Henke.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -1135,7 +1135,7 @@ export const productsData: Product[] = [
       "Sherpa Ultradive"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Ultradive/CCNY.webp",
+    "image": "/images/Products/Sherpa%20Ultradive/CCNY.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -1147,7 +1147,7 @@ export const productsData: Product[] = [
       "Sherpa Ultradive"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Ultradive/L_Atelier Du Temps.webp",
+    "image": "/images/Products/Sherpa%20Ultradive/L_Atelier%20Du%20Temps.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -1159,7 +1159,7 @@ export const productsData: Product[] = [
       "Sherpa Ultradive"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Ultradive/Wind Vintage 1.webp",
+    "image": "/images/Products/Sherpa%20Ultradive/Wind%20Vintage%201.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -1171,7 +1171,7 @@ export const productsData: Product[] = [
       "Sherpa Ultradive"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Ultradive/Wind Vintage 3.webp",
+    "image": "/images/Products/Sherpa%20Ultradive/Wind%20Vintage%203.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -1183,7 +1183,7 @@ export const productsData: Product[] = [
       "Sherpa Ultradive"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpa Ultradive/Wind Vintage.webp",
+    "image": "/images/Products/Sherpa%20Ultradive/Wind%20Vintage.webp",
     "details": "Stainless Steel Case"
   },
   {
@@ -1195,7 +1195,7 @@ export const productsData: Product[] = [
       "Sherpas"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpas/Atelier Lesoon.jpeg",
+    "image": "/images/Products/Sherpas/Atelier%20Lesoon.jpeg",
     "details": "Stainless Steel Case"
   },
   {
@@ -1207,7 +1207,7 @@ export const productsData: Product[] = [
       "Sherpas"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpas/Niko Henke 1.jpg",
+    "image": "/images/Products/Sherpas/Niko%20Henke%201.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -1219,7 +1219,7 @@ export const productsData: Product[] = [
       "Sherpas"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpas/Niko Henke.jpg",
+    "image": "/images/Products/Sherpas/Niko%20Henke.jpg",
     "details": "Stainless Steel Case"
   },
   {
@@ -1231,7 +1231,7 @@ export const productsData: Product[] = [
       "Sherpas"
     ],
     "timelineIds": [],
-    "image": "/images/Products/Sherpas/Niko Henke.webp",
+    "image": "/images/Products/Sherpas/Niko%20Henke.webp",
     "details": "Stainless Steel Case"
   }
 ];

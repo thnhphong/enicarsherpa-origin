@@ -23,7 +23,7 @@ const products = files.map((f, i) => {
     name: collection + ' ' + name,
     models: [collection],
     timelineIds: [],
-    image: '/images/Products/' + f.replace(/\\/g, '/'),
+    image: '/images/Products/' + f.split('\\').map(encodeURIComponent).join('/'),
     details: 'Stainless Steel Case'
   };
 });
