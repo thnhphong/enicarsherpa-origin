@@ -10,7 +10,7 @@ import {
 
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ChevronLeft, ChevronRight, Home } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, Home, Plus } from "lucide-react";
 import type { GlobeEventData } from "./TimelineGlobe";
 import timelineData from "../Timeline.json";
 
@@ -120,6 +120,66 @@ const useViewportProfile = () => {
   }, []);
 
   return profile;
+};
+
+const TimelineImage = ({
+  src,
+  alt,
+  location,
+}: {
+  src: string;
+  alt: string;
+  location: string;
+}) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  return (
+    <div className="relative group rounded-xl sm:rounded-2xl overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.4)] w-full">
+      <img
+        src={src}
+        alt={alt}
+        className="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-700 bg-zinc-950/20"
+      />
+      <div className="absolute bottom-0 left-0 z-20 ">
+        <motion.div
+          animate={{
+            width: isExpanded ? "auto" : "44px",
+            height: isExpanded ? "auto" : "44px",
+            minWidth: "44px",
+            minHeight: "44px",
+          }}
+          transition={{ duration: 0.4, ease: "circOut" }}
+          className="bg-red flex items-center overflow-hidden text-white cursor-pointer"
+          onClick={() => setIsExpanded(!isExpanded)}
+        >
+          <div className="w-11 h-11 flex items-center justify-center shrink-0">
+            {isExpanded ? (
+              <X className="w-5 h-5" />
+            ) : (
+              <Plus className="w-5 h-5 rounded-full" />
+            )}
+          </div>
+          <AnimatePresence initial={false}>
+            {isExpanded && (
+              <motion.div
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -10 }}
+                transition={{ duration: 0.3 }}
+                className="pr-6 py-2 whitespace-nowrap overflow-hidden"
+              >
+                <div className="font-eurostile italic text-xs sm:text-sm tracking-widest leading-tight">
+                  {location.split(",").map((line, i) => (
+                    <div key={i}>{line.trim()}{i === 0 && location.includes(",") ? "," : ""}</div>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
+      </div>
+    </div>
+  );
 };
 
 export const InteractiveMap = () => {
@@ -320,7 +380,6 @@ export const InteractiveMap = () => {
       >
         <Link
           to="/"
-          state={{ replayPreloader: true }}
           className="flex items-center font-eurostile-black font-bold gap-1.5 sm:gap-2 text-red hover:text-white transition-colors min-h-11 min-w-11 shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 rounded-full"
         >
           <Home className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -528,16 +587,15 @@ export const InteractiveMap = () => {
                   className="flex flex-col gap-6 sm:gap-8 lg:gap-10 pb-10"
                 >
                   {activeOverlayEvent.images?.map((img, idx) => (
-                    <div
+                    <TimelineImage
                       key={idx}
-                      className="rounded-xl sm:rounded-2xl overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.4)] w-full"
-                    >
-                      <img
-                        src={getImagePath(img)}
-                        alt={`${activeOverlayEvent.title} image ${idx + 1}`}
-                        className="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-700 bg-zinc-950/20"
-                      />
-                    </div>
+                      src={getImagePath(img)}
+                      alt={`${activeOverlayEvent.title} image ${idx + 1}`}
+                      location={
+                        ALL_LOCATIONS[activeOverlayEvent.id]?.label ||
+                        "Unknown Location"
+                      }
+                    />
                   ))}
                 </motion.div>
               </div>

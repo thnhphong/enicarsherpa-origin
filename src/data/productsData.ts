@@ -1,6 +1,6 @@
 export interface Product {
   id: string;
-  collection: 'LAND' | 'RACING' | 'DIVE' | 'SKY';
+  collection: 'LAND' | 'RACING' | 'DIVING';
   name: string;
   models: string[];
   timelineIds: number[];
@@ -23,16 +23,9 @@ export const productsData: Product[] = [
   },
   {
     id: 'dive',
-    collection: 'DIVE',
-    name: 'The Depth',
+    collection: 'DIVING',
+    name: 'The Dive',
     models: ['Sherpa OPS', 'Sherpa Dive', 'Aquagraph'],
     timelineIds: [1, 5, 9, 19],
-  },
-  {
-    id: 'sky',
-    collection: 'SKY',
-    name: 'The GMT',
-    models: ['Sherpa Super Jet', 'Sherpa GMT'],
-    timelineIds: [4, 11, 18],
   },
 ];

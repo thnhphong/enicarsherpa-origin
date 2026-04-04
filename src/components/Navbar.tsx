@@ -14,8 +14,8 @@ const navLinks: NavLink[] = [
   { name: "Home", href: "/", onClick: () => window.scrollTo(0, 0) },
   { name: "Introduction", href: "/#intro" },
   { name: "Timeline", href: "/phase/1" },
-  { name: "Products", href: "/products#products" },
-  { name: "Contact", href: "/products#contact" },
+  { name: "Products", href: "/#products" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 export const Navbar = () => {

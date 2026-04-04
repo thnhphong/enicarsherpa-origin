@@ -32,7 +32,10 @@ const ProductsPage = () => {
 function App() {
   const location = useLocation();
   const navigate = useNavigate();
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(() => {
+    // Only show preloader if the landing page is the home page
+    return typeof window !== "undefined" && window.location.pathname === "/";
+  });
   const locationState = location.state as AppLocationState | null;
   const isHomeRoute = location.pathname === "/";
   const shouldReplayPreloader =
@@ -43,16 +46,32 @@ function App() {
   const showNavbar = !isPhaseRoute && (isHomeRoute || !showPreloader);
 
   useEffect(() => {
-    if (location.hash) {
+    if (!showPreloader && location.hash) {
       const id = location.hash.replace("#", "");
-      const element = document.getElementById(id);
-      if (element) {
-        setTimeout(() => {
-          element.scrollIntoView({ behavior: "smooth" });
-        }, 100);
-      }
+      
+      // Increased timeout to ensure components are ready, especially after route changes
+      const timer = setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          const carouselIds = ["hero", "intro", "preview", "products"];
+          const index = carouselIds.indexOf(id);
+
+          if (index !== -1 && isHomeRoute) {
+            // Home page: scroll based on carousel index
+            window.scrollTo({
+              top: index * window.innerHeight,
+              behavior: "smooth",
+            });
+          } else {
+            // Other pages/sections: standard scrollIntoView with explicit block positioning
+            element.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        }
+      }, 400); // 400ms is safer for page transitions
+      
+      return () => clearTimeout(timer);
     }
-  }, [location]);
+  }, [location.pathname, location.hash, showPreloader, isHomeRoute]);
 
   const handlePreloaderComplete = () => {
     if (shouldReplayPreloader) {
@@ -80,12 +99,15 @@ function App() {
           <Route
             path="/"
             element={
-    <VerticalCarousel ids={["hero", "intro", "preview", "products"]}>
-      <Hero shouldAnimate={shouldAnimateHero} />
-      <IntroSlideOne />
-      <TimelinePreview />
-      <CollectionSlide />
-    </VerticalCarousel>
+              <>
+                <VerticalCarousel ids={["hero", "intro", "preview", "products"]}>
+                  <Hero shouldAnimate={shouldAnimateHero} />
+                  <IntroSlideOne />
+                  <TimelinePreview />
+                  <CollectionSlide />
+                </VerticalCarousel>
+                <ProviderContact />
+              </>
             }
           />
           <Route path="/products" element={<ProductsPage />} />

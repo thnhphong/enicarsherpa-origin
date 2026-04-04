@@ -5,6 +5,7 @@ import {
   Phone,
   MapPin,
   Watch,
+  Instagram
 } from "lucide-react";
 
 export const ProviderContact = () => {
@@ -64,7 +65,7 @@ export const ProviderContact = () => {
                     Email
                   </span>
                   <p className="text-sm md:text-base lg:text-lg font-light hover:text-cyan transition-colors underline-offset-4 decoration-cyan/20">
-                    chronicle@enicar-vintage.com
+                    nattanan.boonyachai1122@gmail.com
                   </p>
                 </div>
               </div>
@@ -78,22 +79,21 @@ export const ProviderContact = () => {
                     Phone
                   </span>
                   <p className="text-sm md:text-base lg:text-lg font-light hover:text-cyan transition-colors underline-offset-4 decoration-cyan/20">
-                    +41 (0) 32 322 00 00
+                    (+66) 0655809210
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-6 group">
                 <div className="p-4 bg-black/5 rounded-2xl group-hover:bg-cyan/10 transition-colors">
-                  <MapPin className="w-6 h-6 text-red" />
+                  <Instagram className="w-6 h-6 text-red" />
                 </div>
                 <div className="space-y-1">
                   <span className="text-black text-sm md:text-base lg:text-lg uppercase tracking-widest font-semibold block">
-                    Archive Headquarters
+                    Instagram
                   </span>
                   <p className="text-sm md:text-base lg:text-lg font-light leading-relaxed">
-                    Rue de la Gare, 2502 <br />
-                    Lengnau, Switzerland
+                    enicarsherpa_origins
                   </p>
                 </div>
               </div>
