@@ -11,11 +11,11 @@ type NavLink = {
 };
 
 const navLinks: NavLink[] = [
-  { name: "Home", href: "/", onClick: () => window.scrollTo(0, 0) },
-  { name: "Introduction", href: "/#intro" },
-  { name: "Timeline", href: "/phase/1" },
-  { name: "Products", href: "/#products" },
-  { name: "Contact", href: "/#contact" },
+  { name: "HOME", href: "/", onClick: () => window.scrollTo(0, 0) },
+  { name: "INTRODUCTION", href: "/#intro" },
+  { name: "TIMELINE", href: "/phase/1" },
+  { name: "PRODUCTS", href: "/#products" },
+  { name: "CONTACT", href: "/#contact" },
 ];
 
 export const Navbar = () => {
