@@ -104,12 +104,12 @@ function App() {
             path="/"
             element={
               <>
-                <VerticalCarousel ids={["hero", "intro", "preview"]}>
+                <VerticalCarousel ids={["hero", "intro", "preview", "products"]}>
                   <Hero shouldAnimate={shouldAnimateHero} />
                   <IntroSlideOne />
                   <TimelinePreview />
+                  <CollectionSlide />
                 </VerticalCarousel>
-                <CollectionSlide />
                 <ProviderContact />
               </>
             }

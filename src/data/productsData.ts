@@ -14,6 +14,21 @@ export interface Product {
 
 export const productsData: Product[] = [
   {
+    "id": "prod_35",
+    "family": "Chronograph",
+    "collection": "Sherpa Graph",
+    "name": "Sherpa Graph ",
+    "models": [
+      "Sherpa Graph MkIII"
+    ],
+    "timelineIds": [],
+    "image": "/images/Products/Sherpa%20Graph/Alberto%20Cervetti.JPG",
+    "details": " EPSA Stainless Steel Compressor Case",
+    "description": "A masterclass in precision timing, this vintage Enicar chronograph was engineered for professionals. Featuring a robust stainless steel case and a highly legible dial, it remains a sought-after piece for collectors of historic racing and aviation timepieces.",
+    "reference": "Sherpa Graph MkIII",
+    "caliber": "Valjoux 72"
+  },
+  {
     "id": "prod_0",
     "family": "Dive",
     "collection": "Sea Pearl 600",
@@ -536,21 +551,6 @@ export const productsData: Product[] = [
     "details": "Stainless Steel Case",
     "description": "Built for the jet-setting traveler, this Enicar GMT model allows tracking of multiple time zones simultaneously. Its distinct 24-hour hand and rotating bezel make it an indispensable tool for pilots and global adventurers.",
     "reference": "Sherpa GMT Time Anagram",
-    "caliber": "N/A"
-  },
-  {
-    "id": "prod_35",
-    "family": "Chronograph",
-    "collection": "Sherpa Graph",
-    "name": "Sherpa Graph Alberto Cervetti",
-    "models": [
-      "Sherpa Graph"
-    ],
-    "timelineIds": [],
-    "image": "/images/Products/Sherpa%20Graph/Alberto%20Cervetti.JPG",
-    "details": "Stainless Steel Case",
-    "description": "A masterclass in precision timing, this vintage Enicar chronograph was engineered for professionals. Featuring a robust stainless steel case and a highly legible dial, it remains a sought-after piece for collectors of historic racing and aviation timepieces.",
-    "reference": "Sherpa Graph Alberto Cervetti",
     "caliber": "N/A"
   },
   {

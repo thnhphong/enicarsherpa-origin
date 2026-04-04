@@ -61,9 +61,9 @@ export const TimelinePreview = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0 w-full h-full">
         <img
-          src="/images/Introdcution/Unsung Hero.webp"
+          src="/images/Products/Sherpa Graph/Alberto Cervetti.JPG"
           alt="Timeline preview"
-          className="w-full h-full object-cover opacity-20 filter grayscale"
+          className="w-full h-full object-cover opacity-25 filter grayscale"
         />
         <div className="absolute inset-0 bg-radial-gradient(circle_at_center,rgba(0,188,242,0.1),transparent_70%)" />
       </div>

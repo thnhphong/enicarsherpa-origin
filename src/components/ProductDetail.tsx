@@ -52,8 +52,8 @@ export const ProductDetail = () => {
                     >
                         {/* Title Block */}
                         <div className="mb-12">
-                            <h2 className="font-eurostile-black uppercase text-3xl md:text-4xl tracking-widest mb-4 font-bold text-red drop-shadow-[0_0_15px_rgba(189,33,38,0.4)]">Enicar</h2>
-                            <h1 className="font-sans text-gray-300 font-light text-2xl md:text-3xl lg:text-4xl leading-tight">{product.name}</h1>
+                            <h2 className="font-eurostile-black uppercase text-4xl md:text-5xl tracking-widest mb-4 font-bold text-red drop-shadow-[0_0_15px_rgba(189,33,38,0.4)]">Enicar</h2>
+                            <h1 className="font-sans text-gray-300 font-light text-3xl md:text-4xl lg:text-5xl leading-tight">{product.collection}</h1>
                         </div>
 
                         {/* Divider */}
@@ -61,43 +61,31 @@ export const ProductDetail = () => {
 
                         {/* Description Section */}
                         <div className="mb-12 space-y-6">
-                            <h3 className="font-eurostile-black text-red text-sm md:text-base tracking-[0.2em] uppercase font-bold border-b border-red/20 pb-2 inline-block">
+                            <h3 className="font-eurostile-black text-red text-base md:text-lg tracking-[0.2em] uppercase font-bold border-b border-red/20 pb-2 inline-block">
                                 Description
                             </h3>
-                            <p className="font-sans text-sm md:text-lg text-gray-400 font-light leading-relaxed">
+                            <p className="font-sans text-base md:text-xl text-gray-400 font-light leading-relaxed">
                                 {product.description}
                             </p>
                         </div>
 
                         {/* Technical Specs Grid */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-                            {/* Technical Data Section */}
-                            <div className="space-y-6">
-                                <h3 className="font-eurostile-black text-red text-sm md:text-base tracking-[0.2em] uppercase font-bold border-b border-red/20 pb-2 inline-block">
-                                    Technical Data
-                                </h3>
-                                <div className="space-y-4">
-                                    <div className="flex flex-col">
-                                        <span className="font-sans text-[11px] uppercase tracking-widest text-gray-500 mb-1">Reference</span>
-                                        <span className="font-sans text-base md:text-lg text-white">{product.reference}</span>
-                                    </div>
-                                    <div className="flex flex-col">
-                                        <span className="font-sans text-[11px] uppercase tracking-widest text-gray-500 mb-1">Case</span>
-                                        <span className="font-sans text-base md:text-lg text-white">{product.details}</span>
-                                    </div>
+                        <div className="space-y-6">
+                            <h3 className="font-eurostile-black text-red text-base md:text-lg tracking-[0.2em] uppercase font-bold border-b border-red/20 pb-2 inline-block">
+                                Technical Data
+                            </h3>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+                                <div className="flex flex-col">
+                                    <span className="font-sans text-xs md:text-[13px] uppercase tracking-widest text-gray-500 mb-2">Model</span>
+                                    <span className="font-sans text-lg md:text-xl text-white">{product.reference}</span>
                                 </div>
-                            </div>
-
-                            {/* Movement Section */}
-                            <div className="space-y-6">
-                                <h3 className="font-eurostile-black text-red text-sm md:text-base tracking-[0.2em] uppercase font-bold border-b border-red/20 pb-2 inline-block">
-                                    Movement
-                                </h3>
-                                <div className="space-y-4">
-                                    <div className="flex flex-col">
-                                        <span className="font-sans text-[11px] uppercase tracking-widest text-gray-500 mb-1">Caliber number</span>
-                                        <span className="font-sans text-base md:text-lg text-white">{product.caliber}</span>
-                                    </div>
+                                <div className="flex flex-col">
+                                    <span className="font-sans text-xs md:text-[13px] uppercase tracking-widest text-gray-500 mb-2">Movement</span>
+                                    <span className="font-sans text-lg md:text-xl text-white">{product.caliber}</span>
+                                </div>
+                                <div className="flex flex-col md:col-span-2">
+                                    <span className="font-sans text-xs md:text-[13px] uppercase tracking-widest text-gray-500 mb-2">Case</span>
+                                    <span className="font-sans text-lg md:text-xl text-white leading-relaxed">{product.details}</span>
                                 </div>
                             </div>
                         </div>

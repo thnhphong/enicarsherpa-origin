@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Home } from "lucide-react";
+import { Home, ArrowRight } from "lucide-react";
 import introData from "../data/introductionData.json";
 
 export const ShowIntroduction = () => {
@@ -89,6 +89,23 @@ export const ShowIntroduction = () => {
             )}
           </motion.div>
         ))}
+
+        {/* CTA to Timeline Globe */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="flex justify-center mt-8 mb-16"
+        >
+            <Link 
+              to="/phase/1"
+              className="px-10 py-5 bg-red text-white font-eurostile-black uppercase tracking-[0.2em] hover:bg-yellow hover:text-black transition-colors duration-300 rounded-full flex items-center gap-3 shadow-[0_0_20px_rgba(189,33,38,0.4)] hover:shadow-[0_0_30px_rgba(255,222,23,0.6)]"
+            >
+              Explore the Timeline <ArrowRight className="w-5 h-5" />
+            </Link>
+        </motion.div>
+
       </div>
     </div>
   );
