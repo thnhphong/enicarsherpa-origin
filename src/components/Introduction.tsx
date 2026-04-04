@@ -39,6 +39,16 @@ export const IntroSlideOne = () => {
                   A legacy forged in the most extreme conditions known to man.
               </p>
           </div>
+          
+          <div className="mt-12 flex justify-center">
+            <Link
+              to="/show-introduction"
+              className="inline-flex items-center gap-4 px-8 py-4 bg-red text-white rounded-full font-eurostile text-lg tracking-widest uppercase hover:bg-white hover:text-black transition-all group shadow-[0_0_20px_rgba(189,33,38,0.3)] hover:shadow-[0_0_35px_rgba(255,255,255,0.4)]"
+            >
+              <span className="italic">Explore The Legacy</span>
+              <ChevronRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
+            </Link>
+          </div>
         </motion.div>
       </div>
     </section>

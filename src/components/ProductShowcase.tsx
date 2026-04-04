@@ -29,7 +29,7 @@ export const CollectionSlide = () => {
             <motion.h2
                initial={{ opacity: 0, y: 20 }}
                whileInView={{ opacity: 1, y: 0 }}
-               className="font-eurostile-black italic text-5xl md:text-7xl lg:text-8xl leading-tight uppercase"
+               className="font-eurostile-black italic text-5xl md:text-7xl lg:text-8xl leading-tight uppercase text-red drop-shadow-[0_0_25px_rgba(189,33,38,0.6)]"
             >
               Enicar Sherpas
             </motion.h2>
@@ -44,8 +44,8 @@ export const CollectionSlide = () => {
                     onClick={() => setSelectedFamily(family)}
                     className={`px-6 py-2 rounded-full text-xs font-eurostile-black uppercase tracking-widest transition-colors ${
                         selectedFamily === family 
-                        ? "bg-black text-white" 
-                        : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                        ? "bg-red text-white shadow-[0_0_15px_rgba(189,33,38,0.5)]" 
+                        : "bg-white/10 text-gray-400 hover:bg-white/20"
                     }`}
                 >
                     {family}
@@ -67,20 +67,21 @@ export const CollectionSlide = () => {
                     transition={{ duration: 0.3 }}
                 >
                     <Link to={`/product/${product.id}`} className="block group cursor-pointer flex-col h-full">
-                        <div className="bg-[#f8f8f8] aspect-[3/4] flex items-center justify-center p-8 mb-6 relative overflow-hidden group-hover:bg-[#f2f2f2] transition-colors rounded-sm">
+                        {/* Product Image Card Minimal Flat */}
+                        <div className="bg-[#f8f8f8] border border-[#dcdcdc] aspect-[4/5] flex items-center justify-center p-6 mb-4 relative overflow-hidden transition-colors duration-500 group-hover:bg-[#e8e8e8] group-hover:border-[#b0b0b0] rounded-sm">
                             <img 
                                 src={product.image} 
                                 alt={product.name} 
                                 loading="lazy"
                                 decoding="async"
-                                className="w-full h-full object-contain filter drop-shadow-xl mix-blend-multiply transition-transform duration-700 group-hover:scale-110" 
+                                className="w-full h-full object-contain filter drop-shadow-md mix-blend-multiply transition-transform duration-700 group-hover:scale-110" 
                             />
                         </div>
-                        <div className="text-center px-4 flex-1 flex flex-col">
-                            <h3 className="font-eurostile-black text-xs tracking-widest uppercase text-gray-800 mb-3 font-bold group-hover:text-red transition-colors">
+                        <div className="text-center sm:text-left flex-1 flex flex-col">
+                            <h3 className="font-sans text-[11px] sm:text-[12px] md:text-sm tracking-[0.1em] uppercase text-gray-400 group-hover:text-red transition-colors">
                                 {product.collection}
                             </h3>
-                            <p className="text-[11px] text-gray-500 font-sans leading-relaxed mb-6 group-hover:text-black transition-colors">
+                            <p className="text-[13px] sm:text-[12px] md:text-[14px] lg:text-[15px] text-gray-600 font-sans mt-1 group-hover:text-red-300 transition-colors">
                                 {product.name}
                             </p>
                         </div>
@@ -95,13 +96,13 @@ export const CollectionSlide = () => {
         <div className="flex justify-center mt-4">
             <Link 
               to="/all-watches"
-              className="px-10 py-5 bg-black text-white font-eurostile-black uppercase tracking-[0.2em] hover:bg-red transition-colors duration-300 rounded-full flex items-center gap-3 shadow-xl hover:shadow-2xl"
+              className="px-10 py-5 bg-red text-white font-eurostile-black uppercase tracking-[0.2em] hover:bg-yellow hover:text-black transition-colors duration-300 rounded-full flex items-center gap-3 shadow-[0_0_20px_rgba(189,33,38,0.4)] hover:shadow-[0_0_30px_rgba(255,222,23,0.6)]"
             >
               View Full Catalog <ArrowRight className="w-5 h-5" />
             </Link>
         </div>
 
-        <footer className="mt-8 pt-8 border-t border-black/10 flex justify-between items-center w-full text-xs text-gray-500 tracking-[0.4em] uppercase">
+        <footer className="mt-8 pt-8 border-t border-white/10 flex justify-between items-center w-full text-xs text-gray-500/50 tracking-[0.4em] uppercase">
             <span>© 2026 ENICAR CHRONICLE</span>
             <span className="md:block hidden">Swiss Precision Since 1913</span>
         </footer>

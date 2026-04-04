@@ -41,7 +41,6 @@ const ALL_LOCATIONS: Record<
   15: { lat: 53.0, lng: 3.0, label: "Lengnau HQ" },
   16: { lat: 47.0, lng: 13.0, label: "Alps: Ski Test" },
   17: { lat: 32.0, lng: 142.0, label: "Tokyo" },
-  18: { lat: 48.0, lng: 12.0, label: "Zurich Airport" },
   19: { lat: -22.0, lng: -145.0, label: "Tahiti" },
   20: { lat: 43.0, lng: 10.0, label: "Lengnau" },
   21: { lat: 45.0, lng: 13.0, label: "Switzerland: Racing" },

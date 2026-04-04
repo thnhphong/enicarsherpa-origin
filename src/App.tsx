@@ -9,6 +9,7 @@ import { ProviderContact } from "./components/ProviderContact";
 import { Preloader } from "./components/Preloader";
 import { VerticalCarousel } from "./components/VerticalCarousel";
 import { CustomCursor } from "./components/CustomCursor";
+import { ShowIntroduction } from "./components/ShowIntroduction";
 
 const AllWatches = lazy(() => import("./components/AllWatches").then(m => ({ default: m.AllWatches })));
 const ProductDetail = lazy(() => import("./components/ProductDetail").then(m => ({ default: m.ProductDetail })));
@@ -114,6 +115,7 @@ function App() {
             }
           />
           <Route path="/products" element={<ProductsPage />} />
+          <Route path="/show-introduction" element={<ShowIntroduction />} />
           <Route 
             path="/all-watches" 
             element={
