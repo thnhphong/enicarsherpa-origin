@@ -46,7 +46,7 @@ function App() {
   const showPreloader = isLoading || shouldReplayPreloader;
   const shouldAnimateHero = isHomeRoute && !showPreloader;
   const isPhaseRoute = location.pathname.startsWith("/phase");
-  const showNavbar = !isPhaseRoute && (isHomeRoute || !showPreloader);
+  const showNavbar = !isPhaseRoute && !showPreloader;
 
   useEffect(() => {
     if (!showPreloader && location.hash) {
