@@ -1,11 +1,18 @@
 import { useParams, Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
 import { productsData } from "../data/productsData";
 
 
 export const ProductDetail = () => {
     const { id } = useParams<{ id: string }>();
     const product = productsData.find((p) => p.id === id);
+    const [activeImgIndex, setActiveImgIndex] = useState(0);
+    const scrollRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [id]);
 
     if (!product) {
         return (
@@ -16,7 +23,7 @@ export const ProductDetail = () => {
     }
 
     return (
-        <div className="w-full min-h-screen bg-[#050505] text-white flex flex-col pt-32 pb-24 selection:bg-red selection:text-white">
+        <div key={id} className="w-full min-h-screen bg-[#050505] text-white flex flex-col pt-32 pb-24 selection:bg-red selection:text-white">
 
             <div className="max-w-[1600px] w-full mx-auto px-6 md:px-12 lg:px-20">
                 {/* Breadcrumbs */}
@@ -25,22 +32,69 @@ export const ProductDetail = () => {
                     <span>/</span>
                     <Link to="/all-watches" className="hover:text-red transition-colors">All Watches</Link>
                     <span>/</span>
-                    <span className="text-red drop-shadow-[0_0_10px_rgba(189,33,38,0.3)]">{product.collection.toUpperCase()}</span>
+                    <span className="text-red drop-shadow-[0_0_10px_rgba(189,33,38,0.3)]">{product.name.toUpperCase()}</span>
                 </nav>
 
-                <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 w-full h-full">
-                    {/* Left side: Image */}
-                    <div className="w-full lg:w-[55%] flex-shrink-0 flex items-center justify-center bg-[#f8f8f8] py-16 md:py-24 rounded-sm border border-[#e0e0e0] shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-                        <motion.img
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.6, ease: "easeOut" }}
-                            src={product.image}
-                            alt={product.name}
-                            loading="lazy"
-                            decoding="async"
-                            className="max-h-[50vh] md:max-h-[60vh] object-contain drop-shadow-2xl mix-blend-multiply"
-                        />
+                <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 w-full h-full mb-16">
+                    {/* Left side: Image and Thumbnails */}
+                    <div className="w-full lg:w-[55%] flex-shrink-0 flex flex-col gap-8">
+                        {/* Main Image Viewport */}
+                        <div className="w-full aspect-[4/3] md:aspect-[5/4] flex items-center justify-center bg-[#f8f8f8] p-12 rounded-sm border border-[#e0e0e0] shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative overflow-hidden">
+                            <AnimatePresence mode="wait">
+                                <motion.img
+                                    key={activeImgIndex}
+                                    initial={{ opacity: 0, scale: 0.95 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    exit={{ opacity: 0, scale: 1.05 }}
+                                    transition={{ duration: 0.4, ease: "easeOut" }}
+                                    src={product.images[activeImgIndex]}
+                                    alt={product.name}
+                                    loading="lazy"
+                                    decoding="async"
+                                    className="max-h-full max-w-full object-contain drop-shadow-2xl mix-blend-multiply"
+                                />
+                            </AnimatePresence>
+                        </div>
+
+                        {/* Thumbnail Row */}
+                        <div ref={scrollRef} className="relative group overflow-hidden">
+                            <motion.div 
+                                drag="x"
+                                dragConstraints={scrollRef}
+                                className="flex gap-4 pb-6 scrollbar-hide no-scrollbar select-none cursor-grab active:cursor-grabbing w-max"
+                            >
+                                {product.images.map((img, idx) => (
+                                    <div key={idx} className="flex-shrink-0 flex flex-col items-center gap-2">
+                                        <motion.div 
+                                            onTap={() => setActiveImgIndex(idx)}
+                                            className={`w-20 h-24 md:w-24 md:h-28 bg-[#f8f8f8] p-3 rounded-sm border transition-all duration-300 flex items-center justify-center cursor-pointer ${activeImgIndex === idx ? "border-red shadow-[0_0_15px_rgba(189,33,38,0.3)]" : "border-white/10 hover:border-white/30"}`}
+                                        >
+                                            <motion.img 
+                                                src={img} 
+                                                className="w-full h-full object-contain mix-blend-multiply pointer-events-none" 
+                                                alt={`${product.name} variant ${idx}`}
+                                                whileHover={{ scale: 1.05 }}
+                                            />
+                                        </motion.div>
+                                        {/* Active indicator dot */}
+                                        <motion.div 
+                                            animate={{ 
+                                                opacity: activeImgIndex === idx ? 1 : 0,
+                                                scale: activeImgIndex === idx ? 1 : 0 
+                                            }}
+                                            transition={{ duration: 0.2 }}
+                                            className="w-1.5 h-1.5 rounded-full bg-red shadow-[0_0_5px_#bd2126]"
+                                        />
+                                    </div>
+                                ))}
+
+                                {/* Optional ending padding for better scroll feel */}
+                                <div className="w-10 flex-shrink-0"></div>
+                            </motion.div>
+                            
+                            {/* Scroll Indicator Gradient */}
+                            <div className="absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-[#050505] to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        </div>
                     </div>
 
                     {/* Right side: Details */}
@@ -52,8 +106,8 @@ export const ProductDetail = () => {
                     >
                         {/* Title Block */}
                         <div className="mb-12">
-                            <h2 className="font-eurostile-black uppercase text-4xl md:text-5xl tracking-widest mb-4 font-bold text-red drop-shadow-[0_0_15px_rgba(189,33,38,0.4)]">Enicar</h2>
-                            <h1 className="font-sans text-gray-300 font-light text-3xl md:text-4xl lg:text-5xl leading-tight">{product.collection}</h1>
+                            <h2 className="font-eurostile-black uppercase text-xl md:text-2xl tracking-[0.3em] mb-4 font-bold text-red drop-shadow-[0_0_15px_rgba(189,33,38,0.4)]">Enicar</h2>
+                            <h1 className="font-sans text-gray-300 font-light text-3xl md:text-4xl lg:text-5xl leading-tight">{product.name}</h1>
                         </div>
 
                         {/* Divider */}
