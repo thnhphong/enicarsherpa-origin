@@ -70,7 +70,7 @@ export const AllWatches = () => {
                                         {/* Product Image Card Minimal Flat */}
                                         <div className="bg-[#f8f8f8] border border-[#dcdcdc] aspect-[4/5] flex items-center justify-center p-6 mb-4 relative overflow-hidden transition-colors duration-500 group-hover:bg-[#e8e8e8] group-hover:border-[#b0b0b0] rounded-sm">
                                             <img 
-                                                src={product.image} 
+                                                src={product.images[0]} 
                                                 alt={product.name} 
                                                 loading="lazy"
                                                 decoding="async"
@@ -81,10 +81,10 @@ export const AllWatches = () => {
                                         {/* Product Info */}
                                         <div className="text-center sm:text-left flex-1 flex flex-col">
                                             <h3 className="font-sans text-[11px] sm:text-[12px] md:text-sm tracking-[0.1em] uppercase text-gray-400 group-hover:text-white transition-colors">
-                                                {product.collection}
+                                                {product.name}
                                             </h3>
                                             <p className="text-[13px] sm:text-[12px] md:text-[14px] lg:text-[15px] text-gray-600 font-sans mt-1 group-hover:text-gray-300 transition-colors">
-                                                {product.name}
+                                                {product.family}
                                             </p>
                                             <div className="flex items-center justify-center sm:justify-start gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
                                                 <span className="w-8 h-px bg-red"></span>
