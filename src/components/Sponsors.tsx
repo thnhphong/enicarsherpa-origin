@@ -3,21 +3,24 @@ import { motion } from "framer-motion";
 const sponsors = [
   {
     name: "Vintage Eye Watches",
+    herf: "https://vintageeyewatches.com/",
     imageSrc: "/images/vintage-eye-watches-logo.webp",
     backgroundClassName: "bg-yellow",
-    imageClassName: "scale-[1.65]",
+    imageClassName: "scale-[1.85]",
   },
   {
     name: "Enicar Org",
     imageSrc: "/images/enicar-org-logo.webp",
+    herf: "https://enicar.org/",
     backgroundClassName: "bg-cyan",
     imageClassName: "scale-[1.65]",
   },
   {
     name: "Enicar 101",
     imageSrc: "/images/enicar-101-logo.webp",
+    herf: "https://enicar101.com/",
     backgroundClassName: "bg-red",
-    imageClassName: "scale-[1.95]",
+    imageClassName: "scale-[2.95]",
   },
 ] as const;
 
@@ -44,7 +47,7 @@ export const Sponsors = () => {
           {sponsors.map((sponsor, index) => (
             <motion.a
               key={sponsor.name}
-              href="https://enicar.org/"
+              href={sponsor.herf}
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 18 }}

@@ -1,11 +1,15 @@
 import { motion } from "framer-motion";
 import {
-  ExternalLink,
+  
   Mail,
   Phone,
   Watch,
-  Instagram
+  Instagram,
+  ArrowRight
 } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const MotionLink = motion(Link);
 
 export const ProviderContact = () => {
   return (
@@ -34,17 +38,15 @@ export const ProviderContact = () => {
               </p>
             </div>
 
-            <motion.a
+            <MotionLink
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              href="https://www.enicar.ch/"
-              target="_blank"
-              rel="noopener noreferrer"
+              to="/sponsors"
               className="group flex items-center justify-between p-6 bg-red rounded-2xl text-white font-serif font-bold text-xl hover:bg-white hover:text-black transition-all duration-300 shadow-[0_0_20px_rgba(189,33,38,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)]"
             >
-              <span className="italic font-eurostile-black tracking-wider uppercase text-sm md:text-lg">Visit Official Provider</span>
-              <ExternalLink className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-            </motion.a>
+              <span className="italic font-eurostile-black tracking-wider uppercase text-sm md:text-lg">Visit Our Sponsors</span>
+              <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+            </MotionLink>
           </motion.div>
 
           <div className="space-y-16">
