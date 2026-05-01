@@ -416,11 +416,11 @@ export const InteractiveMap = () => {
 
       {/* Top Navigation */}
       <div
-        className={`safe-top-pad absolute top-0 left-0 w-full max-w-full px-3 sm:px-6 pb-3 sm:pb-6 flex items-center gap-2 sm:gap-4 z-40 transition-opacity duration-500 ${showOverlayId ? "opacity-0 pointer-events-none" : "opacity-100"}`}
+        className={`safe-top-pad absolute top-2 left-0 w-full max-w-full px-3 sm:px-6 pb-3 sm:pb-6 flex items-center justify-center z-40 transition-opacity duration-500 ${showOverlayId ? "opacity-0 pointer-events-none" : "opacity-100"}`}
       >
         <Link
           to="/"
-          className="flex items-center font-eurostile-black font-bold gap-1.5 sm:gap-2 text-red hover:text-white transition-colors min-h-11 min-w-11 shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 rounded-full"
+          className="absolute left-3 sm:left-6 flex items-center font-eurostile-black font-bold gap-1.5 sm:gap-2 text-red hover:text-white transition-colors min-h-11 min-w-11 shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 rounded-full"
         >
           <Home className="w-4 h-4 sm:w-5 sm:h-5" />
           <span className="uppercase tracking-[0.12em] md:tracking-widest text-[10px] sm:text-xs font-bold hidden sm:inline">
@@ -428,7 +428,7 @@ export const InteractiveMap = () => {
           </span>
         </Link>
 
-        <div className="flex gap-1.5 sm:gap-3 flex-1 min-w-0 overflow-x-auto no-scrollbar justify-center">
+        <div className="flex gap-1.5 sm:gap-3 overflow-x-auto no-scrollbar">
           {PHASES.map((p) => (
             <button
               key={p.id}

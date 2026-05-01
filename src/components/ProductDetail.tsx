@@ -39,7 +39,7 @@ export const ProductDetail = () => {
                     {/* Left side: Image and Thumbnails */}
                     <div className="w-full lg:w-[55%] flex-shrink-0 flex flex-col gap-8">
                         {/* Main Image Viewport */}
-                        <div className="w-full aspect-[4/3] md:aspect-[5/4] flex items-center justify-center bg-[#f8f8f8] p-12 rounded-sm border border-[#e0e0e0] shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative overflow-hidden">
+                        <div className="w-full aspect-[4/3] md:aspect-[5/4] flex items-center justify-center bg-[#d1d1d1] p-12 rounded-sm border border-[#b8b8b8] shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative overflow-hidden">
                             <AnimatePresence mode="wait">
                                 <motion.img
                                     key={activeImgIndex}
@@ -67,7 +67,7 @@ export const ProductDetail = () => {
                                     <div key={idx} className="flex-shrink-0 flex flex-col items-center gap-2">
                                         <motion.div 
                                             onTap={() => setActiveImgIndex(idx)}
-                                            className={`w-20 h-24 md:w-24 md:h-28 bg-[#f8f8f8] p-3 rounded-sm border transition-all duration-300 flex items-center justify-center cursor-pointer ${activeImgIndex === idx ? "border-red shadow-[0_0_15px_rgba(189,33,38,0.3)]" : "border-white/10 hover:border-white/30"}`}
+                                            className={`w-20 h-24 md:w-24 md:h-28 bg-[#d1d1d1] p-3 rounded-sm border transition-all duration-300 flex items-center justify-center cursor-pointer ${activeImgIndex === idx ? "border-red shadow-[0_0_15px_rgba(189,33,38,0.3)]" : "border-[#b8b8b8] hover:border-white/30"}`}
                                         >
                                             <motion.img 
                                                 src={img} 
@@ -107,7 +107,7 @@ export const ProductDetail = () => {
                         {/* Title Block */}
                         <div className="mb-12">
                             <h2 className="font-eurostile-black uppercase text-xl md:text-2xl tracking-[0.3em] mb-4 font-bold text-red drop-shadow-[0_0_15px_rgba(189,33,38,0.4)]">Enicar</h2>
-                            <h1 className="font-eurostile text-gray-400 font-light text-3xl md:text-4xl lg:text-5xl leading-tight">{product.name}</h1>
+                            <h1 className="font-eurostile text-gray-300 font-light text-3xl md:text-4xl lg:text-5xl leading-tight">{product.name}</h1>
                         </div>
 
                         {/* Divider */}
@@ -118,7 +118,7 @@ export const ProductDetail = () => {
                             <h3 className="font-eurostile-black text-red text-base md:text-lg tracking-[0.2em] uppercase font-bold border-b border-red/20 pb-2 inline-block">
                                 Description
                             </h3>
-                            <p className="font-eurostile-black text-base md:text-lg text-gray-400 font-light leading-relaxed whitespace-pre-line">
+                            <p className="font-eurostile-black text-base md:text-lg text-gray-300 font-light leading-relaxed whitespace-pre-line">
                                 {product.description}
                             </p>
                         </div>
@@ -131,15 +131,15 @@ export const ProductDetail = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
                                 <div className="flex flex-col">
                                     <span className="font-eurostile-black text-xs md:text-[13px] uppercase tracking-widest text-gray-500 mb-2">Model</span>
-                                    <span className="font-eurostile-black text-lg md:text-xl text-gray-400">{product.reference}</span>
+                                    <span className="font-eurostile-black text-lg md:text-xl text-gray-300">{product.reference}</span>
                                 </div>
                                 <div className="flex flex-col">
                                     <span className="font-eurostile-black text-xs md:text-[13px] uppercase tracking-widest text-gray-500 mb-2">Movement</span>
-                                    <span className="font-eurostile-black  text-lg md:text-xl text-gray-400">{product.caliber}</span>
+                                    <span className="font-eurostile-black  text-lg md:text-xl text-gray-300">{product.caliber}</span>
                                 </div>
                                 <div className="flex flex-col md:col-span-2">
                                     <span className="font-eurostile-black text-xs md:text-[13px] uppercase tracking-widest text-gray-500 mb-2">Case</span>
-                                    <span className="font-eurostile-black  text-lg md:text-xl text-gray-400 leading-relaxed">{product.details}</span>
+                                    <span className="font-eurostile-black  text-lg md:text-xl text-gray-300 leading-relaxed">{product.details}</span>
                                 </div>
                             </div>
                         </div>

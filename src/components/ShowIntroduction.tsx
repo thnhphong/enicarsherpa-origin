@@ -1,41 +1,8 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useEffect } from "react";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Home, ArrowRight, Plus } from "lucide-react";
+import { Home, ArrowRight } from "lucide-react";
 import introData from "../data/introductionData.json";
-
-const HotspotOverlay = ({ text }: { text: string }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <>
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="absolute bottom-6 left-6 w-10 h-10 bg-red text-white flex items-center justify-center rounded-lg shadow-[0_0_20px_rgba(189,33,38,0.6)] hover:bg-white hover:text-red transition-all duration-300 z-20 group/btn"
-      >
-        <Plus className={`w-6 h-6 transition-transform duration-500 ${isOpen ? "rotate-45" : ""}`} />
-      </button>
-
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: 10 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9, y: 10 }}
-            className="absolute bottom-20 left-6 right-6 md:right-auto md:max-w-md bg-black/95 backdrop-blur-xl border border-red/30 p-6 rounded-2xl z-30 shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
-          >
-            <div className="relative">
-              <div className="absolute -bottom-2 left-4 w-4 h-4 bg-black/95 rotate-45 border-r border-b border-red/30" />
-              <p className="text-gray-200 font-light leading-relaxed text-sm sm:text-base italic">
-                "{text}"
-              </p>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
-  );
-};
 
 export const ShowIntroduction = () => {
   useEffect(() => {
@@ -77,61 +44,80 @@ export const ShowIntroduction = () => {
           </div>
         </header>
 
-        {introData.map((section) => (
-          <motion.div
-            key={section.id}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-            className="flex flex-col gap-12 md:gap-16"
-          >
-            {/* Text First */}
-            <div className="w-full space-y-8 md:space-y-12">
-              <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-eurostile-black italic text-red tracking-wider drop-shadow-[0_0_25px_rgba(189,33,38,0.6)] leading-tight">
-                {section.title}
-              </h3>
-              <div className="space-y-8">
-                {section.paragraphs.map((p, pIdx) => (
-                  <p
-                    key={pIdx}
-                    className="text-gray-200 font-light leading-[1.8] text-lg sm:text-xl md:text-2xl lg:text-[1.4rem]"
-                  >
-                    {p}
-                  </p>
-                ))}
-              </div>
-            </div>
+        {introData.map((section) => {
+          // Find if any image in this section has a hotspot description
+          const hotspotText = section.images?.find(
+            (img): img is { src: string; hotspot: { text: string } } => 
+              typeof img === "object" && img !== null && "hotspot" in img
+          )?.hotspot.text;
 
-            {/* Images Second */}
-            {section.images && section.images.length > 0 && (
-              <div className={`grid grid-cols-1 ${section.images.length > 1 ? "md:grid-cols-2" : ""} gap-6`}>
-                {section.images.map((img, imgIdx) => {
-                  const isObject = typeof img === "object" && img !== null;
-                  const imgSrc = isObject ? img.src : img;
-                  const hotspot = isObject ? img.hotspot : null;
-
-                  return (
-                    <div
-                      key={imgIdx}
-                      className="w-full overflow-hidden rounded-3xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative group"
+          return (
+            <motion.div
+              key={section.id}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8 }}
+              className="flex flex-col gap-12 md:gap-16"
+            >
+              {/* Text First */}
+              <div className="w-full space-y-8 md:space-y-12">
+                <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-eurostile-black italic text-red tracking-wider drop-shadow-[0_0_25px_rgba(189,33,38,0.6)] leading-tight">
+                  {section.title}
+                </h3>
+                <div className="space-y-8">
+                  {section.paragraphs.map((p, pIdx) => (
+                    <p
+                      key={pIdx}
+                      className="text-gray-200 font-light leading-[1.8] text-lg sm:text-xl md:text-2xl lg:text-[1.4rem]"
                     >
-                      <img
-                        src={imgSrc}
-                        alt={`${section.title} - ${imgIdx + 1}`}
-                        className="w-full h-full object-cover"
-                      />
-                      
-                      {hotspot && (
-                        <HotspotOverlay text={hotspot.text} />
-                      )}
-                    </div>
-                  );
-                })}
+                      {p}
+                    </p>
+                  ))}
+                </div>
               </div>
-            )}
-          </motion.div>
-        ))}
+
+              {/* Images Second */}
+              {section.images && section.images.length > 0 && (
+                <div className="space-y-12">
+                  <div className={`grid grid-cols-1 ${section.images.length > 1 ? "md:grid-cols-2" : ""} gap-6`}>
+                    {section.images.map((img, imgIdx) => {
+                      const isObject = typeof img === "object" && img !== null;
+                      const imgSrc = isObject ? (img as { src: string }).src : (img as string);
+
+                      return (
+                        <div
+                          key={imgIdx}
+                          className="w-full overflow-hidden rounded-3xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative group"
+                        >
+                          <img
+                            src={imgSrc}
+                            alt={`${section.title} - ${imgIdx + 1}`}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  {/* Centered Hotspot Description Text */}
+                  {hotspotText && (
+                    <motion.div 
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ duration: 1, delay: 0.2 }}
+                      className="flex justify-center"
+                    >
+                      <p className="max-w-4xl text-center text-gray-300 font-light italic leading-relaxed px-4 text-base sm:text-lg md:text-xl border-t border-white/10 pt-8">
+                        "{hotspotText}"
+                      </p>
+                    </motion.div>
+                  )}
+                </div>
+              )}
+            </motion.div>
+          );
+        })}
 
         {/* CTA to Timeline Globe */}
         <motion.div
@@ -143,7 +129,7 @@ export const ShowIntroduction = () => {
         >
             <Link 
               to="/phase/1"
-              className="px-10 py-5 bg-red text-white font-eurostile-black uppercase tracking-[0.2em] hover:bg-yellow hover:text-black transition-colors duration-300 rounded-full flex items-center gap-3 shadow-[0_0_20px_rgba(189,33,38,0.4)] hover:shadow-[0_0_30px_rgba(255,222,23,0.6)]"
+              className="px-10 py-5 bg-red text-white font-eurostile-black uppercase tracking-[0.2em] hover:bg-yellow hover:text-black transition-colors duration-300 rounded-full flex items-center gap-3 shadow-[0_0_20px_rgba(189,33,38,0.4)] hover:shadow-[0_0_30_rgba(255,222,23,0.6)]"
             >
               Explore the Timeline <ArrowRight className="w-5 h-5" />
             </Link>

@@ -89,8 +89,10 @@
     scrollbar-width: none; /* Firefox */
   }
 
-  /* Force pointer for elements that should trigger custom cursor */
-  a, button, .cursor-trigger {
-    cursor: none !important;
+  /* Force pointer for elements that should trigger custom cursor - Only on devices with a mouse */
+  @media (pointer: fine) {
+    a, button, .cursor-trigger {
+      cursor: none !important;
+    }
   }
 }

@@ -48,6 +48,7 @@ export const AllWatches = () => {
                         </div>
                     </aside>
 
+
                     {/* Main Grid */}
                     <div className="flex-1">
                         <div className="mb-8 text-xs font-eurostile-black text-red tracking-widest font-bold">
@@ -68,7 +69,7 @@ export const AllWatches = () => {
                                 >
                                     <Link to={`/product/${product.id}`} className="block group cursor-pointer h-full">
                                         {/* Product Image Card Minimal Flat */}
-                                        <div className="bg-[#f8f8f8] border border-[#dcdcdc] aspect-[4/5] flex items-center justify-center p-6 mb-4 relative overflow-hidden transition-colors duration-500 group-hover:bg-[#e8e8e8] group-hover:border-[#b0b0b0] rounded-sm">
+                                        <div className="bg-[#d1d1d1] border border-[#b8b8b8] aspect-[4/5] flex items-center justify-center p-6 mb-4 relative overflow-hidden transition-colors duration-500 group-hover:bg-[#c4c4c4] group-hover:border-[#a0a0a0] rounded-sm">
                                             <img 
                                                 src={product.images[0]} 
                                                 alt={product.name} 

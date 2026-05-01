@@ -3,11 +3,17 @@ import { motion, useSpring } from "framer-motion";
 
 export const CustomCursor = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const mouseX = useSpring(0, { stiffness: 500, damping: 28 });
   const mouseY = useSpring(0, { stiffness: 500, damping: 28 });
 
   useEffect(() => {
+    // Check if device has a mouse/fine pointer
+    const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
+    if (isTouchDevice) return;
+
     const handleMouseMove = (e: MouseEvent) => {
+      if (!isVisible) setIsVisible(true);
       mouseX.set(e.clientX);
       mouseY.set(e.clientY);
     };
@@ -35,6 +41,8 @@ export const CustomCursor = () => {
       window.removeEventListener("mouseover", handleMouseOver);
     };
   }, [mouseX, mouseY]);
+
+  if (!isVisible) return null;
 
   return (
     <>
