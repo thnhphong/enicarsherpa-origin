@@ -311,10 +311,10 @@ export const InteractiveMap = () => {
         ? "28%"
         : "30%";
   const phaseTitleTopClass = isShortViewport
-    ? "top-12"
+    ? "top-20"
     : isMobile
-      ? "top-16"
-      : "top-24";
+      ? "top-28"
+      : "top-32";
   const timelinePaddingClass = isShortViewport
     ? "pt-16 pb-16"
     : isMobile
@@ -325,7 +325,7 @@ export const InteractiveMap = () => {
   const timelineCueLabel = isMobile || isTablet ? "Swipe" : "Scroll";
   const timelineSnapClass = isMobile ? "snap-proximity" : "snap-mandatory";
   const timelineSidePaddingClass = isMobile ? "px-8" : "px-4 md:px-6";
-  const timelineCuePositionClass = isMobile ? "-mt-16 pb-2" : "-mt-24 pb-3";
+  const timelineCuePositionClass = isMobile ? "-mt-10 pb-4" : "-mt-20 pb-6";
 
   return (
     <div className="relative w-full min-h-[100dvh] bg-zinc-950 text-white overflow-hidden font-sans">
@@ -402,10 +402,10 @@ export const InteractiveMap = () => {
                 }}
                 className="flex flex-col items-center gap-2"
               >
-                <div className="text-white tracking-[0.18em] md:tracking-[0.4em] text-xs md:text-base font-eurostile-black uppercase">
+                <div className="text-white tracking-[0.18em] md:tracking-[0.4em] text-[10px] md:text-base font-eurostile-black uppercase">
                   Initializing the Chronicle
                 </div>
-                <div className="text-white/40 tracking-[0.12em] md:tracking-[0.2em] text-[10px] md:text-xs">
+                <div className="text-white/40 tracking-[0.12em] md:tracking-[0.2em] text-[9px] md:text-xs">
                   Loading Global Interface
                 </div>
               </motion.div>
@@ -433,7 +433,7 @@ export const InteractiveMap = () => {
             <button
               key={p.id}
               onClick={() => handlePhaseChange(p.id)}
-              className={`px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all duration-300 min-h-11 shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 ${p.id === currentPhaseId ? "bg-red text-white" : "bg-white/10 text-white/50 hover:bg-white/20"}`}
+              className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[9px] sm:text-xs font-bold uppercase tracking-wider transition-all duration-300 min-h-9 sm:min-h-11 shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 ${p.id === currentPhaseId ? "bg-red text-white" : "bg-white/10 text-white/50 hover:bg-white/20"}`}
             >
               {p.years}
             </button>
@@ -449,7 +449,7 @@ export const InteractiveMap = () => {
           key={`title-${currentPhaseId}`}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className={`text-[clamp(2rem,7vw,5rem)] font-script italic tracking-wide drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] ${currentPhase.colorClass}`}
+          className={`text-[clamp(1.5rem,7vw,5rem)] font-script italic tracking-wide drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] ${currentPhase.colorClass}`}
         >
           {currentPhase.title}
         </motion.h1>
@@ -542,7 +542,7 @@ export const InteractiveMap = () => {
                 <div
                   className={`${timelineCuePositionClass} flex justify-center`}
                 >
-                  <div className="pointer-events-none inline-flex items-center gap-1.5 rounded-full border border-red/15 bg-zinc-950/65 px-2.5 py-0.5 text-[1.2rem] font-eurostile-black uppercase tracking-[0.16em] text-red/65 shadow-[0_0_16px_rgba(189,33,38,0.12)] backdrop-blur-sm">
+                  <div className="pointer-events-none inline-flex items-center gap-1.5 rounded-full border border-red/15 bg-zinc-950/65 px-2.5 py-1 text-[10px] sm:text-xs font-eurostile-black uppercase tracking-[0.16em] text-red/65 shadow-[0_0_16px_rgba(189,33,38,0.12)] backdrop-blur-sm">
                     <span
                       className={`flex items-center justify-center transition-opacity ${
                         canScrollLeft ? "opacity-70" : "opacity-25"
@@ -602,10 +602,10 @@ export const InteractiveMap = () => {
                   <div className="inline-block px-3 sm:px-4 py-1.5 border border-red/50 rounded-full text-red font-eurostile-black tracking-[0.6em] sm:tracking-widest text-xs sm:text-sm uppercase">
                     {activeOverlayEvent.year}
                   </div>
-                  <h2 className="text-[clamp(1.75rem,6vw,4.5rem)] font-eurostile-black font-bold leading-tight">
+                  <h2 className="text-[clamp(1.5rem,6vw,4.5rem)] font-eurostile-black font-bold leading-tight">
                     {activeOverlayEvent.title}
                   </h2>
-                  <p className="text-base md:text-lg lg:text-2xl font-light text-white/70 leading-relaxed max-w-[65ch]">
+                  <p className="text-sm sm:text-base md:text-lg lg:text-2xl font-light text-white/70 leading-relaxed max-w-[65ch]">
                     {activeOverlayEvent.description}
                   </p>
                   {activeOverlayEvent.month && (
