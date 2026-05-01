@@ -33,7 +33,11 @@ export const Navbar = () => {
           animate={{ opacity: 1, x: 0 }}
           className="flex items-center gap-2"
         >
-          <img src={logo} alt="Logo" className="h-16 md:h-24 object-contain" />
+          <img
+            src={logo}
+            alt="Logo"
+            className="h-16 md:h-24 object-contain invert"
+          />
         </motion.div>
 
         <div className="hidden md:flex items-center gap-10">

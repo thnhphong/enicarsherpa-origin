@@ -9,7 +9,6 @@ export const ProductDetail = () => {
     const product = productsData.find((p) => p.id === id);
     const [activeImgIndex, setActiveImgIndex] = useState(0);
     const [isPopupOpen, setIsPopupOpen] = useState(false);
-    const [showPopupCredit, setShowPopupCredit] = useState(false);
     const scrollRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -42,7 +41,6 @@ export const ProductDetail = () => {
                         className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-sm p-4 md:p-12"
                         onClick={() => {
                             setIsPopupOpen(false);
-                            setShowPopupCredit(false);
                         }}
                     >
                         <motion.button
