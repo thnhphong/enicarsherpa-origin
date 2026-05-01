@@ -12,7 +12,7 @@ const heroGradientClasses =
 const heroContentClasses =
   "mx-auto flex w-full max-w-7xl flex-col items-center px-4 pt-28 pb-10 text-center sm:px-6 sm:pt-32 sm:pb-12 md:px-8 md:pt-36 md:pb-16 lg:px-12";
 const heroSubtitleClasses =
-  "relative z-10 mb-6 text-[10px] font-eurostile-black uppercase tracking-[0.24em] text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] sm:mb-8 sm:text-xs sm:tracking-[0.32em] md:mb-10 md:text-sm md:tracking-[0.45em] lg:tracking-[0.6em]";
+  "relative z-10 mb-10 text-[10px] font-eurostile-black uppercase tracking-[0.24em] text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] sm:mb-8 sm:text-xs sm:tracking-[0.32em] md:mb-15 md:text-sm md:tracking-[0.45em] lg:tracking-[0.6em]";
 const enicarTitleClasses =
   "text-[clamp(3.5rem,18vw,13rem)] font-eurostile-black italic leading-[0.78] text-red drop-shadow-[0_8px_12px_rgba(0,0,0,0.7)] drop-shadow-[0_1px_1px_rgba(255,255,255,0.1)]";
 const sherpaTitleClasses =
@@ -29,14 +29,16 @@ const HeroFrame = ({ children }: { children: ReactNode }) => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(237,32,36,0.1),transparent_50%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(0,188,242,0.1),transparent_50%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.03),transparent_45%)]" />
-      
+
       <div className={heroGradientClasses} />
       {children}
-      
+
       {/* Decorative refined accents */}
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-30">
         <div className="w-[1px] h-12 bg-gradient-to-b from-white to-transparent" />
-        <span className="text-[10px] tracking-[0.4em] uppercase font-light">Scroll Discovery</span>
+        <span className="text-[10px] tracking-[0.4em] uppercase font-light">
+          Scroll Discovery
+        </span>
       </div>
     </section>
   );
@@ -52,13 +54,17 @@ const HeroShell = () => {
 
             <div className="relative z-10 flex flex-col items-center">
               <div className="relative">
-                <h1 className={`${enicarTitleClasses} opacity-10 blur-[10px] absolute inset-0 translate-y-4 scale-95`}>ENICAR</h1>
+                <h1
+                  className={`${enicarTitleClasses} opacity-10 blur-[10px] absolute inset-0 translate-y-4 scale-95`}
+                >
+                  ENICAR
+                </h1>
                 <h1 className={enicarTitleClasses}>ENICAR</h1>
               </div>
               <h2 className={sherpaTitleClasses}>Sherpa</h2>
 
               <div className="relative mt-4 inline-block md:mt-6">
-                <h1 className={chronicleTitleClasses}>CHRONICLE</h1>
+                <h1 className={chronicleTitleClasses}>ORIGINS</h1>
                 <div className="absolute inset-x-0 -bottom-2 h-[1px] bg-gradient-to-r from-transparent via-red/50 to-transparent" />
               </div>
             </div>
@@ -85,7 +91,7 @@ export const Hero = ({ shouldAnimate }: HeroProps) => {
         <div className={heroContentClasses}>
           <div className="relative inline-block">
             <motion.p
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 1.0, ease: [0.16, 1, 0.3, 1] }}
               className={`${heroSubtitleClasses} transition-all duration-700 hover:tracking-[0.3em] sm:hover:tracking-[0.4em] md:hover:tracking-[0.6em] lg:hover:tracking-[0.8em]`}
@@ -97,7 +103,11 @@ export const Hero = ({ shouldAnimate }: HeroProps) => {
               <motion.h1
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.2, delay: 1.3, ease: [0.16, 1, 0.3, 1] }}
+                transition={{
+                  duration: 1.2,
+                  delay: 1.3,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
                 className={enicarTitleClasses}
               >
                 ENICAR
@@ -105,7 +115,11 @@ export const Hero = ({ shouldAnimate }: HeroProps) => {
               <motion.h2
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.2, delay: 1.6, ease: [0.16, 1, 0.3, 1] }}
+                transition={{
+                  duration: 1.2,
+                  delay: 1.6,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
                 className={sherpaTitleClasses}
               >
                 Sherpa
@@ -115,10 +129,14 @@ export const Hero = ({ shouldAnimate }: HeroProps) => {
                 <motion.h1
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1.2, delay: 1.9, ease: [0.16, 1, 0.3, 1] }}
+                  transition={{
+                    duration: 1.2,
+                    delay: 1.9,
+                    ease: [0.16, 1, 0.3, 1],
+                  }}
                   className={chronicleTitleClasses}
                 >
-                  CHRONICLE
+                  ORIGINS
                 </motion.h1>
 
                 <motion.div
@@ -141,7 +159,9 @@ export const Hero = ({ shouldAnimate }: HeroProps) => {
             transition={{ delay: 2.2, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             className={descriptionClasses}
           >
-            A legacy of Swiss precision and exploration. Discover the storied history of the watches that conquered Everest, challenged speed and mastered the depths.
+            A legacy of Swiss precision and exploration. Discover the storied
+            history of the watches that conquered Everest, challenged speed and
+            mastered the depths.
           </motion.p>
         </div>
       </motion.div>

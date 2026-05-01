@@ -22,7 +22,7 @@ export const AllWatches = () => {
                 {/* Header */}
                 <div className="mb-12">
                    <h1 className="text-4xl md:text-5xl font-eurostile-black italic text-red uppercase text-center tracking-widest drop-shadow-[0_0_20px_rgba(189,33,38,0.5)]">
-                       Watch Finder
+                       Sherpa Collection
                    </h1>
                 </div>
 

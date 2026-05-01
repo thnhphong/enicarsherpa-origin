@@ -38,8 +38,6 @@ export const VerticalCarousel = ({ children, ids = [] }: VerticalCarouselProps) 
         },
       });
 
-      const indicatorDots = container.querySelectorAll(".carousel-dot-inner");
-      
       // Initial positions: all but the first section off-screen
       sections.forEach((section, i) => {
         if (i > 0) {
@@ -60,27 +58,7 @@ export const VerticalCarousel = ({ children, ids = [] }: VerticalCarouselProps) 
             i - 1
           );
         }
-
-        // Indicator animation: fill the indicator as the slide comes in
-        const dotInner = indicatorDots[i];
-        if (dotInner && i > 0) {
-          gsap.set(dotInner, { yPercent: 100 });
-          tl.to(
-            dotInner,
-            { 
-              yPercent: 0, 
-              duration: 1,
-              ease: "none"
-            },
-            i - 1
-          );
-        }
       });
-
-      // Reset slide 0 indicator since it's the starting state
-      if (indicatorDots[0]) {
-        gsap.set(indicatorDots[0], { yPercent: 0 });
-      }
     }, wrapper);
 
     return () => ctx.revert(); // Reverts all GSAP modifications safely
@@ -102,15 +80,6 @@ export const VerticalCarousel = ({ children, ids = [] }: VerticalCarouselProps) 
             {child}
           </div>
         ))}
-        
-        {/* Scroll Indicator */}
-        <div className="carousel-indicator">
-          {children.map((_, index) => (
-            <div key={index} className="carousel-dot">
-              <div className="carousel-dot-inner" />
-            </div>
-          ))}
-        </div>
       </div>
     </div>
   );

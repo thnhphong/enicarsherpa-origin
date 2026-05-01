@@ -96,7 +96,7 @@ const ParticleGlobe = ({ onLoaded }: { onLoaded?: () => void }) => {
     <points geometry={geometry}>
       <pointsMaterial
         color="#ffffff"
-        size={0.6}
+        size={0.8}
         sizeAttenuation={true}
         transparent
         opacity={1}
@@ -136,8 +136,8 @@ const MarkerItem = ({
   const baseColor = getBaseColor(event.id);
   const markerColor = isActive ? "#ffffff" : baseColor;
 
-  // Scale: Active (4.0), Hover (2.5), Default (1.0)
-  const scale = isActive ? 4.0 : isHovered ? 2.5 : 1.0;
+  // Scale: Active (7.0), Hover (4.0), Default (1.8)
+  const scale = isActive ? 5.0 : isHovered ? 3.0 : 1.5;
 
   // Align orientation so ring is flat on surface
   const quaternion = useMemo(() => {
@@ -166,7 +166,7 @@ const MarkerItem = ({
           onMarkerClick?.(event.id);
         }}
       >
-        <sphereGeometry args={[isActive ? 8 : 4, 16, 16]} />
+        <sphereGeometry args={[isActive ? 12 : 6, 16, 16]} />
         <meshBasicMaterial visible={false} />
       </mesh>
 
@@ -179,7 +179,7 @@ const MarkerItem = ({
       {/* Pulsing ring for active */}
       {isActive && (
         <mesh ref={ringRef}>
-          <ringGeometry args={[8.0, 10.0, 64]} />
+          <ringGeometry args={[12.0, 15.0, 64]} />
           <meshBasicMaterial
             color="#ffffff"
             transparent
@@ -328,7 +328,7 @@ export const TimelineGlobe = ({
         // Zoom back out to default overview distance (maxDistance)
         import("gsap").then(({ gsap }) => {
           const currentPos = controlsRef.current!.object.position.clone();
-          const targetDist = GLOBE_RADIUS * 4;
+          const targetDist = GLOBE_RADIUS * 3;
           // Move camera back along its current ray to the max distance
           const targetPos = currentPos.normalize().multiplyScalar(targetDist);
 
@@ -346,7 +346,7 @@ export const TimelineGlobe = ({
 
   return (
     <div className="w-full h-full pointer-events-auto bg-transparent cursor-pointer">
-      <Canvas camera={{ position: [0, 0, GLOBE_RADIUS * 4], fov }}>
+      <Canvas camera={{ position: [0, 0, GLOBE_RADIUS * 3], fov }}>
         <ambientLight intensity={0.5} />
         <CameraFovSync fov={fov} />
 
@@ -364,7 +364,7 @@ export const TimelineGlobe = ({
           enablePan={false}
           enableZoom={true}
           minDistance={GLOBE_RADIUS * 1.5}
-          maxDistance={GLOBE_RADIUS * 4}
+          maxDistance={GLOBE_RADIUS * 3.5}
           autoRotate={activeEventId === null}
           autoRotateSpeed={autoRotateSpeed}
           enableDamping={true}

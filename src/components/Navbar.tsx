@@ -12,9 +12,9 @@ type NavLink = {
 
 const navLinks: NavLink[] = [
   { name: "HOME", href: "/", onClick: () => window.scrollTo(0, 0) },
-  { name: "INTRODUCTION", href: "/#intro" },
+  { name: "INTRODUCTION", href: "/show-introduction" },
   { name: "TIMELINE", href: "/phase/1" },
-  { name: "PRODUCTS", href: "/#products" },
+  { name: "PRODUCTS", href: "/all-watches" },
   { name: "CONTACT", href: "/#contact" },
 ];
 

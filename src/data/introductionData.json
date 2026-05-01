@@ -15,8 +15,18 @@
     "id": "unsung-hero",
     "title": "The Unsung Hero",
     "images": [
-      "/images/Introdcution/Unsung Hero.webp",
-      "/images/Introdcution/Unsung Hero 2.webp"
+      {
+        "src": "/images/Introdcution/Unsung Hero.webp",
+        "hotspot": {
+          "text": "Alongside Rolex and Blancpain, Enicar was a primary architect of the mid-century quality standards that defined the Swiss tool-watch legacy. The subsequent Quartz Crisis served as a brutal industry filter; while Rolex maintained its dominance and Blancpain struggled through a period of dormancy, Enicar was unable to weather the financial turmoil, leading to its eventual collapse."
+        }
+      },
+      {
+        "src": "/images/Introdcution/Unsung Hero 2.webp",
+        "hotspot": {
+          "text": "Alongside Rolex and Blancpain, Enicar was a primary architect of the mid-century quality standards that defined the Swiss tool-watch legacy. The subsequent Quartz Crisis served as a brutal industry filter; while Rolex maintained its dominance and Blancpain struggled through a period of dormancy, Enicar was unable to weather the financial turmoil, leading to its eventual collapse."
+        }
+      }
     ],
     "paragraphs": [
       "Despite a mid-century pedigree rivaling giants like Rolex and Blancpain, vintage Enicar watches remain severely undervalued in today's market.",

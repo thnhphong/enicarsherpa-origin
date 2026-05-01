@@ -55,19 +55,22 @@ const PHASES = [
   {
     id: 1,
     title: "Predecessors of Sherpa",
-    years: "1955 - 1956",
+    years: "Part 1",
+    colorClass: "text-red",
     filter: (id: number) => id === 1 || id === 2,
   },
   {
     id: 2,
     title: "The Golden Era",
-    years: "1957 - 1971",
+    years: "Part 2",
+    colorClass: "text-yellow",
     filter: (id: number) => id >= 3 && id <= 25,
   },
   {
     id: 3,
     title: "The Downfall of Enicar",
-    years: "1977 - 1987",
+    years: "Part 3",
+    colorClass: "text-cyan",
     filter: (id: number) => id === 26,
   },
 ];
@@ -207,6 +210,9 @@ export const InteractiveMap = () => {
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const scrollLeftStart = useRef(0);
 
   const checkScroll = useCallback(() => {
     if (scrollContainerRef.current) {
@@ -216,6 +222,41 @@ export const InteractiveMap = () => {
       setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
     }
   }, []);
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!scrollContainerRef.current) return;
+    isDragging.current = true;
+    startX.current = e.pageX - scrollContainerRef.current.offsetLeft;
+    scrollLeftStart.current = scrollContainerRef.current.scrollLeft;
+    scrollContainerRef.current.style.cursor = "grabbing";
+    scrollContainerRef.current.style.userSelect = "none";
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging.current || !scrollContainerRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - scrollContainerRef.current.offsetLeft;
+    const walk = (x - startX.current) * 1.5; // multiplier for drag speed
+    scrollContainerRef.current.scrollLeft = scrollLeftStart.current - walk;
+  };
+
+  const handleMouseUp = () => {
+    isDragging.current = false;
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.style.cursor = "grab";
+      scrollContainerRef.current.style.userSelect = "auto";
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (isDragging.current) {
+      isDragging.current = false;
+      if (scrollContainerRef.current) {
+        scrollContainerRef.current.style.cursor = "grab";
+        scrollContainerRef.current.style.userSelect = "auto";
+      }
+    }
+  };
 
   useEffect(() => {
     const timer = setTimeout(checkScroll, 500); // Check after render/phase change
@@ -387,14 +428,14 @@ export const InteractiveMap = () => {
           </span>
         </Link>
 
-        <div className="flex gap-1.5 sm:gap-3 flex-1 min-w-0 overflow-x-auto no-scrollbar justify-end">
+        <div className="flex gap-1.5 sm:gap-3 flex-1 min-w-0 overflow-x-auto no-scrollbar justify-center">
           {PHASES.map((p) => (
             <button
               key={p.id}
               onClick={() => handlePhaseChange(p.id)}
               className={`px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all duration-300 min-h-11 shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 ${p.id === currentPhaseId ? "bg-red text-white" : "bg-white/10 text-white/50 hover:bg-white/20"}`}
             >
-              {p.years.replace(/\s+/g, "")}
+              {p.years}
             </button>
           ))}
         </div>
@@ -408,19 +449,11 @@ export const InteractiveMap = () => {
           key={`title-${currentPhaseId}`}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-[clamp(2rem,7vw,5rem)] font-script italic tracking-wide drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]"
+          className={`text-[clamp(2rem,7vw,5rem)] font-script italic tracking-wide drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] ${currentPhase.colorClass}`}
         >
           {currentPhase.title}
         </motion.h1>
-        <motion.p
-          key={`years-${currentPhaseId}`}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-          className="text-red font-eurostile-black tracking-[0.18em] md:tracking-[0.5em] text-xs sm:text-sm mt-3 md:mt-4 uppercase"
-        >
-          {currentPhase.years}
-        </motion.p>
+
       </div>
 
       {/* Bottom Timeline Bar */}
@@ -433,6 +466,10 @@ export const InteractiveMap = () => {
               <div
                 ref={scrollContainerRef}
                 onScroll={checkScroll}
+                onMouseDown={handleMouseDown}
+                onMouseMove={handleMouseMove}
+                onMouseUp={handleMouseUp}
+                onMouseLeave={handleMouseLeave}
                 onWheel={(e) => {
                   if (scrollContainerRef.current) {
                     if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
@@ -440,7 +477,7 @@ export const InteractiveMap = () => {
                     }
                   }
                 }}
-                className={`flex items-center gap-4 sm:gap-6 overflow-x-auto no-scrollbar snap-x ${timelineSnapClass} touch-pan-x relative overflow-y-visible ${timelinePaddingClass} ${timelineSidePaddingClass}`}
+                className={`flex items-center gap-4 sm:gap-6 overflow-x-auto no-scrollbar snap-x ${timelineSnapClass} touch-pan-x relative overflow-y-visible ${timelinePaddingClass} ${timelineSidePaddingClass} cursor-grab`}
               >
                 {phaseEventsData.map((event, index) => (
                   <div key={event.id} className="relative group shrink-0">

@@ -1,8 +1,41 @@
-import { useEffect } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Home, ArrowRight } from "lucide-react";
+import { Home, ArrowRight, Plus } from "lucide-react";
 import introData from "../data/introductionData.json";
+
+const HotspotOverlay = ({ text }: { text: string }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <>
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="absolute bottom-6 left-6 w-10 h-10 bg-red text-white flex items-center justify-center rounded-lg shadow-[0_0_20px_rgba(189,33,38,0.6)] hover:bg-white hover:text-red transition-all duration-300 z-20 group/btn"
+      >
+        <Plus className={`w-6 h-6 transition-transform duration-500 ${isOpen ? "rotate-45" : ""}`} />
+      </button>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, y: 10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.9, y: 10 }}
+            className="absolute bottom-20 left-6 right-6 md:right-auto md:max-w-md bg-black/95 backdrop-blur-xl border border-red/30 p-6 rounded-2xl z-30 shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
+          >
+            <div className="relative">
+              <div className="absolute -bottom-2 left-4 w-4 h-4 bg-black/95 rotate-45 border-r border-b border-red/30" />
+              <p className="text-gray-200 font-light leading-relaxed text-sm sm:text-base italic">
+                "{text}"
+              </p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+};
 
 export const ShowIntroduction = () => {
   useEffect(() => {
@@ -73,18 +106,28 @@ export const ShowIntroduction = () => {
             {/* Images Second */}
             {section.images && section.images.length > 0 && (
               <div className={`grid grid-cols-1 ${section.images.length > 1 ? "md:grid-cols-2" : ""} gap-6`}>
-                {section.images.map((imgSrc, imgIdx) => (
-                  <div
-                    key={imgIdx}
-                    className="w-full overflow-hidden rounded-3xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
-                  >
-                    <img
-                      src={imgSrc}
-                      alt={`${section.title} - ${imgIdx + 1}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ))}
+                {section.images.map((img, imgIdx) => {
+                  const isObject = typeof img === "object" && img !== null;
+                  const imgSrc = isObject ? img.src : img;
+                  const hotspot = isObject ? img.hotspot : null;
+
+                  return (
+                    <div
+                      key={imgIdx}
+                      className="w-full overflow-hidden rounded-3xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative group"
+                    >
+                      <img
+                        src={imgSrc}
+                        alt={`${section.title} - ${imgIdx + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                      
+                      {hotspot && (
+                        <HotspotOverlay text={hotspot.text} />
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             )}
           </motion.div>

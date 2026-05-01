@@ -37,7 +37,7 @@ export const CollectionSlide = () => {
             className="group relative inline-flex items-center gap-4 md:gap-6 bg-red px-10 py-5 rounded-full text-white font-eurostile text-lg md:text-xl tracking-widest hover:bg-white hover:text-black transition-all duration-500 overflow-hidden shadow-[0_0_30px_rgba(189,33,38,0.35)]"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-            <span className="uppercase italic">View Full Catalog</span>
+            <span className="uppercase italic">View Full Collection</span>
             <ChevronRight className="w-6 h-6 md:w-8 md:h-8 transition-transform duration-500 group-hover:translate-x-4" />
           </Link>
         </motion.div>
