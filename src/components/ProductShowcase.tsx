@@ -43,10 +43,7 @@ export const CollectionSlide = () => {
         </motion.div>
       </div>
 
-      <footer className="absolute bottom-8 px-6 md:px-12 flex justify-between items-center w-full text-[10px] sm:text-xs text-gray-500/50 tracking-[0.3em] sm:tracking-[0.4em] uppercase z-10 pointer-events-none">
-          <span>© 2026 ENICAR CHRONICLE</span>
-          <span className="md:block hidden">Swiss Precision Since 1913</span>
-      </footer>
+   
     </section>
   );
 };
