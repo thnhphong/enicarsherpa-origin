@@ -13,7 +13,7 @@ import { ShowIntroduction } from "./components/ShowIntroduction";
 
 const AllWatches = lazy(() => import("./components/AllWatches").then(m => ({ default: m.AllWatches })));
 const ProductDetail = lazy(() => import("./components/ProductDetail").then(m => ({ default: m.ProductDetail })));
-const Sponsors = lazy(() => import("./pages/Sponsors").then((module) => ({ default: module.Sponsors })));
+const Sponsors = lazy(() => import("./components/Sponsors").then((module) => ({ default: module.Sponsors })));
 
 interface AppLocationState {
   replayPreloader?: boolean;
@@ -88,85 +88,86 @@ function App() {
   };
 
   return (
-    <main className="bg-white min-h-screen text-black">
-      <AnimatePresence mode="wait">
-        {showPreloader && (
-          <Preloader key="loader" onComplete={handlePreloaderComplete} />
-        )}
-      </AnimatePresence>
+    <>
+      <main className="bg-white min-h-screen text-black relative">
+        <AnimatePresence mode="wait">
+          {showPreloader && (
+            <Preloader key="loader" onComplete={handlePreloaderComplete} />
+          )}
+        </AnimatePresence>
 
-      {showNavbar && <Navbar />}
-
-      <CustomCursor />
-
-      {!showPreloader ? (
-        <Routes location={location} key={location.pathname}>
-          <Route
-            path="/"
-            element={
-              <>
-                <VerticalCarousel ids={["hero", "intro", "preview", "products"]}>
-                  <Hero shouldAnimate={shouldAnimateHero} />
-                  <IntroSlideOne />
-                  <TimelinePreview />
-                  <CollectionSlide />
-                </VerticalCarousel>
-                <ProviderContact />
-              </>
-            }
-          />
-          <Route path="/products" element={<ProductsPage />} />
-          <Route path="/show-introduction" element={<ShowIntroduction />} />
-          <Route
-            path="/sponsors"
-            element={
-              <Suspense fallback={<div className="min-h-screen bg-black" />}>
-                <Sponsors />
-              </Suspense>
-            }
-          />
-          <Route 
-            path="/all-watches" 
-            element={
-              <Suspense fallback={<div className="min-h-screen bg-white" />}>
-                <AllWatches />
-              </Suspense>
-            } 
-          />
-          <Route 
-            path="/product/:id" 
-            element={
-              <Suspense fallback={<div className="min-h-screen bg-white" />}>
-                <ProductDetail />
-              </Suspense>
-            } 
-          />
-          <Route
-            path="/phase/:phaseId"
-            element={
-              <Suspense
-                fallback={
-                  <div className="min-h-[100dvh] bg-zinc-950 text-white flex items-center justify-center px-6">
-                    <div className="text-center space-y-3">
-                      <div className="font-eurostile-black uppercase tracking-[0.24em] text-red text-xs sm:text-sm">
-                        Loading Timeline
-                      </div>
-                      <div className="text-white/45 text-sm sm:text-base">
-                        Preparing the globe interface
+        {!showPreloader ? (
+          <Routes location={location} key={location.pathname}>
+            <Route
+              path="/"
+              element={
+                <>
+                  <VerticalCarousel ids={["hero", "intro", "preview", "products"]}>
+                    <Hero shouldAnimate={shouldAnimateHero} />
+                    <IntroSlideOne />
+                    <TimelinePreview />
+                    <CollectionSlide />
+                  </VerticalCarousel>
+                  <ProviderContact />
+                </>
+              }
+            />
+            <Route path="/products" element={<ProductsPage />} />
+            <Route path="/show-introduction" element={<ShowIntroduction />} />
+            <Route
+              path="/sponsors"
+              element={
+                <Suspense fallback={<div className="min-h-screen bg-black" />}>
+                  <Sponsors />
+                </Suspense>
+              }
+            />
+            <Route 
+              path="/all-watches" 
+              element={
+                <Suspense fallback={<div className="min-h-screen bg-white" />}>
+                  <AllWatches />
+                </Suspense>
+              } 
+            />
+            <Route 
+              path="/product/:id" 
+              element={
+                <Suspense fallback={<div className="min-h-screen bg-white" />}>
+                  <ProductDetail />
+                </Suspense>
+              } 
+            />
+            <Route
+              path="/phase/:phaseId"
+              element={
+                <Suspense
+                  fallback={
+                    <div className="min-h-[100dvh] bg-zinc-950 text-white flex items-center justify-center px-6">
+                      <div className="text-center space-y-3">
+                        <div className="font-eurostile-black uppercase tracking-[0.24em] text-red text-xs sm:text-sm">
+                          Loading Timeline
+                        </div>
+                        <div className="text-white/45 text-sm sm:text-base">
+                          Preparing the globe interface
+                        </div>
                       </div>
                     </div>
-                  </div>
-                }
-              >
-                <InteractiveMap />
-              </Suspense>
-            }
-          />
-        </Routes>
-      ) : (
-        <Hero shouldAnimate={false} />
-      )}
-    </main>
+                  }
+                >
+                  <InteractiveMap />
+                </Suspense>
+              }
+            />
+          </Routes>
+        ) : (
+          <Hero shouldAnimate={false} />
+        )}
+      </main>
+
+      {showNavbar && <Navbar />}
+      <CustomCursor />
+    </>
   );
 }
 

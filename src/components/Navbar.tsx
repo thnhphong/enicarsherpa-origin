@@ -23,14 +23,17 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-[110] glass">
-      <div className="max-w-7xl mx-auto px-2 h-20 flex items-center justify-between">
+    <nav 
+      className="fixed top-0 left-0 w-full z-[9999] bg-black border-b border-white/10 md:bg-black/80 backdrop-blur-md"
+      style={{ zIndex: 9999, top: 0, left: 0 }}
+    >
+      <div className="max-w-7xl mx-auto px-4 md:px-6 h-16 md:h-20 flex items-center justify-between">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           className="flex items-center gap-2"
         >
-          <img src={logo} alt="Logo" className="h-24" />
+          <img src={logo} alt="Logo" className="h-16 md:h-24 object-contain" />
         </motion.div>
 
         <div className="hidden md:flex items-center gap-10">
@@ -53,10 +56,11 @@ export const Navbar = () => {
         </div>
 
         <button
-          className="md:hidden text-red hover:text-yellow transition-colors"
+          className="md:hidden text-red hover:text-yellow transition-colors p-2"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
         >
-          {isOpen ? <X /> : <Menu />}
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 

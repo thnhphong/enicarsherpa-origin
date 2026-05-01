@@ -23,7 +23,7 @@ const sponsors = [
 
 export const Sponsors = () => {
   return (
-    <section className="min-h-[100dvh] bg-black text-white pt-28 pb-16">
+    <section className="min-h-[100dvh] bg-black text-white pt-24 md:pt-32 pb-16">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
