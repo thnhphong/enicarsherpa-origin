@@ -15,6 +15,7 @@ const navLinks: NavLink[] = [
   { name: "INTRODUCTION", href: "/show-introduction" },
   { name: "TIMELINE", href: "/phase/1" },
   { name: "PRODUCTS", href: "/all-watches" },
+  { name: "SPONSORS", href: "/sponsors" },
   { name: "CONTACT", href: "/#contact" },
 ];
 

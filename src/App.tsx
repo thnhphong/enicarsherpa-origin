@@ -13,6 +13,7 @@ import { ShowIntroduction } from "./components/ShowIntroduction";
 
 const AllWatches = lazy(() => import("./components/AllWatches").then(m => ({ default: m.AllWatches })));
 const ProductDetail = lazy(() => import("./components/ProductDetail").then(m => ({ default: m.ProductDetail })));
+const Sponsors = lazy(() => import("./pages/Sponsors").then((module) => ({ default: module.Sponsors })));
 
 interface AppLocationState {
   replayPreloader?: boolean;
@@ -116,6 +117,14 @@ function App() {
           />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/show-introduction" element={<ShowIntroduction />} />
+          <Route
+            path="/sponsors"
+            element={
+              <Suspense fallback={<div className="min-h-screen bg-black" />}>
+                <Sponsors />
+              </Suspense>
+            }
+          />
           <Route 
             path="/all-watches" 
             element={
