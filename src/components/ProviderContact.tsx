@@ -88,8 +88,13 @@ export const ProviderContact = () => {
                   </p>
                 </div>
               </div>
-
-              <div className="flex items-start gap-6 group">
+        
+              <a 
+                href="https://www.instagram.com/enicarsherpa_origins/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-start gap-6 group hover:cursor-pointer"
+              >
                 <div className="p-4 bg-white/5 rounded-2xl group-hover:bg-red/10 transition-colors border border-white/5">
                   <Instagram className="w-6 h-6 text-red" />
                 </div>
@@ -97,11 +102,11 @@ export const ProviderContact = () => {
                   <span className="text-gray-400 text-sm md:text-base lg:text-lg uppercase tracking-widest font-eurostile block">
                     Instagram
                   </span>
-                  <p className="text-sm md:text-base lg:text-lg text-white font-light leading-relaxed">
+                  <p className="text-sm md:text-base lg:text-lg text-white font-light leading-relaxed hover:text-red transition-colors">
                     enicarsherpa_origins
                   </p>
                 </div>
-              </div>
+              </a>
             </div>
 
           </div>
