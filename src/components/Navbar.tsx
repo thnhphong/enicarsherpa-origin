@@ -24,7 +24,7 @@ export const Navbar = () => {
 
   return (
     <nav 
-      className="fixed top-0 left-0 w-full z-[9999] bg-black border-b border-white/10 md:bg-black/80 backdrop-blur-md"
+      className="fixed top-0 left-0 w-full z-[9999] bg-black border-b border-white/10 lg:bg-black/80 backdrop-blur-md"
       style={{ zIndex: 9999, top: 0, left: 0 }}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-6 h-16 md:h-20 flex items-center justify-between">
@@ -36,11 +36,11 @@ export const Navbar = () => {
           <img
             src={logo}
             alt="Logo"
-            className="h-16 md:h-24 object-contain invert"
+            className="h-12 lg:h-20 xl:h-24 object-contain"
           />
         </motion.div>
 
-        <div className="hidden md:flex items-center gap-10">
+        <div className="hidden lg:flex items-center gap-6 xl:gap-10">
           {navLinks.map((link, i) => (
             <motion.div
               key={link.name}
@@ -51,7 +51,7 @@ export const Navbar = () => {
               <Link
                 to={link.href}
                 onClick={link.onClick}
-                className="text-2xl font-eurostile tracking-wide text-red hover:text-yellow transition-colors duration-300"
+                className="text-xl xl:text-2xl font-eurostile tracking-wide text-red hover:text-yellow transition-colors duration-300"
               >
                 {link.name}
               </Link>
@@ -60,11 +60,11 @@ export const Navbar = () => {
         </div>
 
         <button
-          className="md:hidden text-red hover:text-yellow transition-colors p-2"
+          className="lg:hidden text-red hover:text-yellow transition-colors p-2 relative z-[10001]"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
+          {isOpen ? <X size={32} /> : <Menu size={32} />}
         </button>
       </div>
 
@@ -72,7 +72,7 @@ export const Navbar = () => {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden bg-black/95 backdrop-blur-md border-b border-white/10 px-6 py-6 space-y-4 text-center"
+          className="lg:hidden bg-black/95 backdrop-blur-md border-b border-white/10 px-6 py-6 space-y-4 text-center"
         >
           {navLinks.map((link) => (
             <Link
